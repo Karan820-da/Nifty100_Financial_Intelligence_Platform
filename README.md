@@ -2,9 +2,9 @@
 
 ## Project Overview
 
-The Nifty100 Financial Intelligence Platform is a data engineering project that ingests, validates, and stores financial data for Nifty100 companies.
+The Nifty100 Financial Intelligence Platform is a data engineering project that ingests, validates, and stores financial data for Nifty 100 companies.
 
-The project loads data from 12 source Excel files into MySQL, performs validation checks, and provides analytical SQL queries for exploration.
+The project loads data from multiple Excel datasets into a MySQL database, performs data validation checks, and provides analytical SQL queries for financial analysis and exploration.
 
 ## Technologies Used
 
@@ -14,6 +14,7 @@ The project loads data from 12 source Excel files into MySQL, performs validatio
 * SQLAlchemy
 * PyMySQL
 * VS Code
+* Git & GitHub
 
 ## Database Tables
 
@@ -21,7 +22,7 @@ The project loads data from 12 source Excel files into MySQL, performs validatio
 2. balancesheet
 3. cashflow
 4. profitandloss
-5. financial_ratio
+5. financial_ratios
 6. market_cap
 7. sectors
 8. stock_prices
@@ -40,58 +41,48 @@ The project loads data from 12 source Excel files into MySQL, performs validatio
 
 ## Load Summary
 
-| Table           | Rows |
-| --------------- | ---- |
-| companies       | 92   |
-| balancesheet    | 1312 |
-| cashflow        | 1187 |
-| profitandloss   | 1276 |
-| financial_ratio | 1184 |
-| market_cap      | 552  |
-| sectors         | 92   |
-| stock_prices    | 5520 |
-| documents       | 1585 |
-| peer_groups     | 56   |
-| prosandcons     | 16   |
-| analysis        | 20   |
+| Table            | Rows |
+| ---------------- | ---: |
+| companies        |   92 |
+| balancesheet     | 1312 |
+| cashflow         | 1187 |
+| profitandloss    | 1276 |
+| financial_ratios | 1184 |
+| market_cap       |  552 |
+| sectors          |   92 |
+| stock_prices     | 5520 |
+| documents        | 1585 |
+| peer_groups      |   56 |
+| prosandcons      |   16 |
+| analysis         |   20 |
 
 ## Deliverables
 
-* Database schema
-* ETL scripts
-* Validation reports
-* Audit reports
-* SQL queries
-* Unit tests
+* Database Schema
+* ETL Scripts
+* Validation Reports
+* Audit Reports
+* SQL Queries
+* Unit Tests
 
 ## Sprint 1 Completion Summary
 
 ### Database
-- MySQL database created
-- 12 tables populated
-- Data successfully loaded
 
-### Row Counts
-- Companies: 92
-- Balance Sheet: 1312
-- Cash Flow: 1187
-- Profit & Loss: 1276
-- Financial Ratios: 1184
-- Market Cap: 552
-- Stock Prices: 5520
-- Documents: 1585
-- Peer Groups: 56
-- Pros & Cons: 16
-- Analysis: 20
-- Sectors: 92
+* MySQL database created
+* 12 tables populated
+* Data successfully loaded
 
-### Deliverables
-- ETL Pipeline
-- SQL Schema
-- Load Audit Report
-- Validation Report
-- Exploratory Queries
-- Unit Test Structure
+### Deliverables Completed
+
+* ETL Pipeline
+* SQL Schema Design
+* Data Validation
+* Load Audit Report
+* Exploratory SQL Queries
+* Unit Test Structure
+* Documentation
+* GitHub Repository
 
 ## Author
 

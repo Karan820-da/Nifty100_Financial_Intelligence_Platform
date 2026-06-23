@@ -56,13 +56,13 @@ print("\nRows:", len(df))
 
 try:
     df.to_sql(
-      name="financial_ratio",  #---------
+      name="financial_ratios",  #---------
         con=engine,
         if_exists="append",
         index=False
     )
 
-    print(f"\n✅ {len(df)} rows inserted into MySQL table 'financial_ratio' successfully!")
+    print(f"\n✅ {len(df)} rows inserted into MySQL table 'financial_ratios' successfully!")
 
 except Exception as e:
     print("\n❌ ERROR:")
