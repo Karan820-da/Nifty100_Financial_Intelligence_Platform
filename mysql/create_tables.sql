@@ -24,22 +24,26 @@ CREATE TABLE companies (
 -- Table: balancesheet
 -- =====================================================
 
-CREATE TABLE balancesheet (
-    id INT PRIMARY KEY,
-    company_id INT NOT NULL,
+create table balancesheet (
+    id int primary key,
 
-    equity_capital DECIMAL(15,2),
-    reserves DECIMAL(15,2),
-    borrowing DECIMAL(15,2),
-    other_liabilities DECIMAL(15,2),
-    fixed_assets DECIMAL(15,2),
-    cwip DECIMAL(15,2),
-    investments DECIMAL(15,2),
-    other_asset DECIMAL(15,2),
-    total_assets DECIMAL(15,2),
+    company_id varchar(20) not null,
 
-    FOREIGN KEY (company_id)
-        REFERENCES companies(id)
+    year varchar(20),
+
+    equity_capital decimal(15,2),
+    reserves decimal(15,2),
+    borrowings decimal(15,2),
+    other_liabilities decimal(15,2),
+    total_liabilities decimal(15,2),
+
+    fixed_assets decimal(15,2),
+    cwip decimal(15,2),
+    investments decimal(15,2),
+    other_asset decimal(15,2),
+    total_assets decimal(15,2)
+
+    
 );
 -- =====================================================
 -- table: cashflow
@@ -47,16 +51,15 @@ CREATE TABLE balancesheet (
 
 create table cashflow (
     id int primary key,
-    company_id int not null,
-    year year,
+  company_id VARCHAR(20) NOT NULL,
+    year VARCHAR(20),
 
     operating_activity decimal(15,2),
     investing_activity decimal(15,2),
     financing_activity decimal(15,2),
-    net_cash_flow decimal(15,2),
+    net_cash_flow decimal(15,2)
 
-    foreign key (company_id)
-        references companies(id)
+    
 );
 -- =====================================================
 -- table: profitandloss
@@ -64,8 +67,8 @@ create table cashflow (
 
 create table profitandloss (
     id int primary key,
-    company_id int not null,
-    year year,
+    company_id VARCHAR(20) NOT NULL,
+    year VARCHAR(20),
 
     sales decimal(15,2),
     expenses decimal(15,2),
@@ -78,10 +81,9 @@ create table profitandloss (
     tax_percentage decimal(10,2),
     net_profit decimal(15,2),
     eps decimal(10,2),
-    dividend_payout decimal(10,2),
+    dividend_payout decimal(10,2)
 
-    foreign key (company_id)
-        references companies(id)
+    
 );
 -- =====================================================
 -- table: financial_ratio
@@ -89,8 +91,8 @@ create table profitandloss (
 
 create table financial_ratio (
     id int primary key,
-    company_id int not null,
-    year year,
+    company_id VARCHAR(20) NOT NULL,
+    year VARCHAR(20),
     net_profit_margin_pct decimal(10,2),
     operating_profit_margin_pct decimal(10,2),
     return_on_equity_pct decimal(10,2),
@@ -103,10 +105,8 @@ create table financial_ratio (
     book_value_per_share decimal(10,2),
     dividend_payout_ratio_pct decimal(10,2),
     total_debt_cr decimal(15,2),
-    cash_from_operations_cr decimal(15,2),
+    cash_from_operations_cr decimal(15,2)
 
-    foreign key (company_id)
-        references companies(id)
 );
 -- =====================================================
 -- table: market_cap
@@ -114,18 +114,17 @@ create table financial_ratio (
 
 create table market_cap (
     id int primary key,
-    company_id int not null,
-    year year,
+    company_id VARCHAR(20) NOT NULL,
+    year VARCHAR(20),
 
     market_cap_crore decimal(15,2),
     enterprise_value_crore decimal(15,2),
     pe_ratio decimal(10,2),
     pb_ratio decimal(10,2),
     ev_ebitda decimal(10,2),
-    dividend_yield_pct decimal(10,2),
+    dividend_yield_pct decimal(10,2)
 
-    foreign key (company_id)
-        references companies(id)
+    
 );
 -- =====================================================
 -- table: sectors
@@ -133,15 +132,14 @@ create table market_cap (
 
 create table sectors (
     id int primary key,
-    company_id int not null,
+    company_id VARCHAR(20) NOT NULL,
 
     broad_sector varchar(100),
     sub_sector varchar(150),
     index_weight_pct decimal(10,2),
-    market_cap_category varchar(50),
+    market_cap_category varchar(50)
 
-    foreign key (company_id)
-        references companies(id)
+   
 );
 -- =====================================================
 -- table: stock_prices
@@ -149,7 +147,7 @@ create table sectors (
 
 create table stock_prices (
     id int primary key,
-    company_id int not null,
+    company_id VARCHAR(20) NOT NULL,
     date date,
 
     open_price decimal(15,2),
@@ -157,10 +155,9 @@ create table stock_prices (
     low_price decimal(15,2),
     close_price decimal(15,2),
     volume bigint,
-    adjusted_close decimal(15,2),
+    adjusted_close decimal(15,2)
 
-    foreign key (company_id)
-        references companies(id)
+   
 );
 -- =====================================================
 -- table: documents
@@ -168,13 +165,12 @@ create table stock_prices (
 
 create table documents (
     id int primary key,
-    company_id int not null,
-    year year,
+    company_id VARCHAR(20) NOT NULL,
+   year VARCHAR(20),
 
-    annual_report text,
+    annual_report text
 
-    foreign key (company_id)
-        references companies(id)
+    
 );
 -- =====================================================
 -- table: peer_groups
@@ -183,11 +179,10 @@ create table documents (
 create table peer_groups (
     id int primary key,
     peer_group_name varchar(150) not null,
-    company_id int not null,
-    is_benchmark boolean,
+    company_id VARCHAR(20) NOT NULL,
+    is_benchmark boolean
 
-    foreign key (company_id)
-        references companies(id)
+    
 );
 -- =====================================================
 -- table: prosandcons
@@ -195,13 +190,12 @@ create table peer_groups (
 
 create table prosandcons (
     id int primary key,
-    company_id int not null,
+    company_id VARCHAR(20) NOT NULL,
 
     pros text,
-    cons text,
+    cons text
 
-    foreign key (company_id)
-        references companies(id)
+    
 );
 -- =====================================================
 -- table: analysis
@@ -209,7 +203,7 @@ create table prosandcons (
 
 create table analysis (
     id int primary key,
-    company varchar(255),
+    company_id VARCHAR(20),
 
     compounded_sales_growth decimal(10,2),
     compounded_profit_growth decimal(10,2),
