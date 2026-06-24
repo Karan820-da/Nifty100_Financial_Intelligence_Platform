@@ -9,7 +9,7 @@ print("ETL Pipeline Started...")
 # =====================================
 
 username = "root"
-password = "Kaikira820"
+password = "**********"
 host = "localhost"
 port = "3306"
 database = "nifty100_db"
