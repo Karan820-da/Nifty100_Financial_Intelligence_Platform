@@ -10,3 +10,5 @@ venv/
 
 # Windows
 Thumbs.db
+
+.env
