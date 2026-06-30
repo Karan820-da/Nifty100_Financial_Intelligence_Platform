@@ -1,0 +1,58 @@
+import unittest
+
+from src.analytics.cagr import (
+    calculate_cagr,
+    calculate_period_cagr
+)
+
+
+class TestCagr(unittest.TestCase):
+
+    def test_normal_cagr(self):
+        value, flag = calculate_cagr(100, 200, 5)
+        self.assertIsNotNone(value)
+        self.assertIsNone(flag)
+
+    def test_decline_to_loss(self):
+        value, flag = calculate_cagr(100, -50, 5)
+        self.assertEqual(flag, "DECLINE_TO_LOSS")
+
+    def test_turnaround(self):
+        value, flag = calculate_cagr(-100, 100, 5)
+        self.assertEqual(flag, "TURNAROUND")
+
+    def test_both_negative(self):
+        value, flag = calculate_cagr(-100, -50, 5)
+        self.assertEqual(flag, "BOTH_NEGATIVE")
+
+    def test_zero_base(self):
+        value, flag = calculate_cagr(0, 100, 5)
+        self.assertEqual(flag, "ZERO_BASE")
+
+    def test_invalid_period(self):
+        value, flag = calculate_cagr(100, 200, 0)
+        self.assertEqual(flag, "INVALID_PERIOD")
+
+    def test_insufficient_data(self):
+        value, flag = calculate_period_cagr(
+            [100, 120],
+            5
+        )
+
+        self.assertEqual(
+            flag,
+            "INSUFFICIENT"
+        )
+
+    def test_five_year_cagr(self):
+        value, flag = calculate_period_cagr(
+            [100, 120, 140, 160, 180, 200],
+            5
+        )
+
+        self.assertIsNotNone(value)
+        self.assertIsNone(flag)
+
+
+if __name__ == "__main__":
+    unittest.main()
