@@ -2,7 +2,7 @@ import pandas as pd
 from sqlalchemy import create_engine
 
 username = "root"
-password = "Kaikira820"
+password = "**********"
 host = "localhost"
 port = "3306"
 database = "nifty100_db"
