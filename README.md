@@ -110,6 +110,51 @@ The project loads data from multiple Excel datasets into a MySQL database, perfo
 ### Sprint Status
 Sprint 2 completed successfully.
 
+## Sprint 3 – Financial Screener & Peer Analytics
+
+### Financial Screener
+- Developed a configurable financial screener using YAML-based filters.
+- Implemented six preset screeners:
+  - Quality Compounder
+  - Value Pick
+  - Growth Accelerator
+  - Dividend Champion
+  - Debt-Free Blue Chip
+  - Turnaround Watch
+- Generated `screener_output.xlsx` with filtered company results.
+
+### CAGR Analytics
+- Calculated 5-Year Revenue CAGR
+- Calculated 5-Year PAT CAGR
+- Calculated 5-Year EPS CAGR
+- Updated CAGR values in the `financial_ratios` table.
+
+### Composite Quality Score
+- Implemented a composite quality scoring model for ranking companies.
+- Used the score to rank screener results.
+
+### Peer Analytics
+- Computed peer percentile rankings across multiple financial metrics.
+- Generated the `peer_percentiles` database table.
+
+### Peer Comparison Report
+- Created `peer_comparison.xlsx`.
+- Generated separate worksheets for each peer group.
+
+### Radar Charts
+- Generated radar charts for all companies.
+- Compared each company with its peer group.
+- Saved charts in `reports/radar_charts/`.
+
+### Testing
+- Added unit tests for:
+  - CAGR calculations
+  - Financial ratios
+  - Cash Flow KPIs
+  - ETL validation
+  - Screener engine
+
+- Total Unit Tests Passed: **35**
 ## Author
 
 Karan Taynak
