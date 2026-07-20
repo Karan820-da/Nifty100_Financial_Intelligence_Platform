@@ -8,11 +8,17 @@ The project loads data from multiple Excel datasets into a MySQL database, perfo
 
 ## Technologies Used
 
+## Technologies Used
+
 * Python
 * Pandas
+* NumPy
+* Streamlit
+* Plotly
 * MySQL
 * SQLAlchemy
 * PyMySQL
+* OpenPyXL
 * VS Code
 * Git & GitHub
 
@@ -155,6 +161,75 @@ Sprint 2 completed successfully.
   - Screener engine
 
 - Total Unit Tests Passed: **35**
+## Sprint 4 – Valuation Analytics Dashboard
+
+### Valuation Analytics Engine
+- Developed a valuation analytics engine using financial ratios and market capitalization data.
+- Integrated MySQL database with SQLAlchemy for real-time valuation analysis.
+- Implemented automated valuation calculations for all supported companies.
+
+### Valuation Metrics
+- Price-to-Earnings (PE) Ratio
+- Price-to-Book (PB) Ratio
+- Enterprise Value to EBITDA (EV/EBITDA)
+- Free Cash Flow (FCF) Yield
+- Sector Median PE
+- PE Premium / Discount vs Sector Median
+
+### Valuation Classification
+Implemented an automated valuation flagging system:
+
+| Flag | Description |
+|------|-------------|
+| Fair | Trading close to sector median valuation |
+| Discount | Trading significantly below sector median |
+| Caution | Trading significantly above sector median |
+| No Data | Insufficient valuation information |
+
+### Interactive Dashboard
+Added a dedicated **Valuation Dashboard** in Streamlit featuring:
+
+- Company-wise valuation metrics
+- Sector filtering
+- Valuation flag filtering
+- KPI summary cards
+- Sector Median PE visualization
+- Valuation flag distribution charts
+- Interactive valuation data table
+- CSV report download
+
+### Reports Generated
+- `output/valuation_summary.xlsx`
+- `output/valuation_flags.csv`
+- `reports/valuation_report.md`
+
+### Dashboard Features
+The platform now includes:
+
+- Home Dashboard
+- Company Profile
+- Financial Screener
+- Peer Comparison
+- Market Trends
+- Sector Analysis
+- Market Capitalization Dashboard
+- **Valuation Analytics Dashboard**
+- Reports & Export
+
+### Sprint 4 Deliverables
+- Valuation Analytics Engine
+- Free Cash Flow Yield Analysis
+- Sector Median PE Analysis
+- Valuation Classification Engine
+- Streamlit Valuation Dashboard
+- CSV & Excel Report Export
+- Technical Documentation
+
+### Sprint Status
+**Sprint 4 completed successfully.**
+
+
+
 ## Author
 
 Karan Taynak

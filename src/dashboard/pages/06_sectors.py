@@ -2,101 +2,93 @@ import streamlit as st
 import pandas as pd
 import plotly.express as px
 
-from utils.db import get_sector_data
-
-# -------------------------------------------------------
-# Page Configuration
-# -------------------------------------------------------
-
-st.set_page_config(
-    page_title="Sector Analysis",
-    page_icon="🏭",
-    layout="wide"
+from utils.db import (
+    get_base_data,
+    get_filter_options
 )
 
 st.title("🏭 Sector Analysis")
 
-st.markdown(
-    """
-Analyze the latest financial performance across different sectors of the Nifty 100 companies.
-    """
+st.write(
+    "Analyze financial performance across different market sectors."
 )
 
-# -------------------------------------------------------
-# Load Data
-# -------------------------------------------------------
+st.divider()
 
-df = get_sector_data()
+df = get_base_data()
+filters = get_filter_options()
 
-# -------------------------------------------------------
-# Remove Missing Sectors
-# -------------------------------------------------------
-
-df = df.dropna(subset=["broad_sector"])
-
-# -------------------------------------------------------
-# KPI Cards
-# -------------------------------------------------------
-
-total_sectors = df["broad_sector"].nunique()
-total_companies = df["company_id"].nunique()
-
-avg_roe = df["return_on_equity_pct"].mean()
-
-best_sector = (
-    df.groupby("broad_sector")["return_on_equity_pct"]
-      .mean()
-      .idxmax()
+selected_sector = st.selectbox(
+    "Select Sector",
+    ["All"] + filters["sectors"]
 )
 
-st.markdown("---")
+sector_df = df.copy()
+
+if selected_sector != "All":
+    sector_df = sector_df[
+        sector_df["broad_sector"] == selected_sector
+    ]
+
+st.subheader("📊 Sector Summary")
 
 col1, col2, col3, col4 = st.columns(4)
 
-col1.metric(
-    "Total Sectors",
-    total_sectors
-)
+with col1:
+    st.metric("Companies", sector_df["company_id"].nunique())
 
-col2.metric(
-    "Companies",
-    total_companies
-)
+with col2:
+    st.metric(
+        "Average ROE",
+        f"{sector_df['return_on_equity_pct'].mean():.2f}%"
+    )
 
-col3.metric(
-    "Best Sector",
-    best_sector
-)
+with col3:
+    st.metric(
+        "Average P/E",
+        f"{sector_df['pe_ratio'].mean():.2f}"
+    )
 
-col4.metric(
-    "Average ROE",
-    f"{avg_roe:.2f}%"
-)
+with col4:
+    st.metric(
+        "Total Market Cap",
+        f"₹{sector_df['market_cap_crore'].sum():,.0f} Cr"
+    )
 
-# -------------------------------------------------------
-# Sector Distribution
-# -------------------------------------------------------
+st.subheader("📈 Sector Comparison")
 
-st.markdown("---")
-
-st.subheader("🥧 Sector Distribution")
-
-sector_count = (
+sector_summary = (
     df.groupby("broad_sector")
-      .size()
-      .reset_index(name="Companies")
+      .agg({
+          "return_on_equity_pct":"mean",
+          "pe_ratio":"mean",
+          "market_cap_crore":"sum"
+      })
+      .reset_index()
 )
 
-fig = px.pie(
-    sector_count,
-    names="broad_sector",
-    values="Companies",
-    hole=0.5,
-    title="Companies by Sector"
+fig = px.bar(
+    sector_summary,
+    x="broad_sector",
+    y="return_on_equity_pct",
+    color="broad_sector",
+    title="Average ROE by Sector"
 )
 
-fig.update_layout(
-    height=600
+st.plotly_chart(fig, use_container_width=True)
+
+st.subheader("🏆 Top Companies")
+
+top_companies = sector_df.nlargest(
+    10,
+    "market_cap_crore"
+)
+
+fig = px.bar(
+    top_companies,
+    x="company_id",
+    y="market_cap_crore",
+    color="company_id"
 )
 
 st.plotly_chart(
@@ -104,289 +96,21 @@ st.plotly_chart(
     use_container_width=True
 )
 
-# -------------------------------------------------------
-# Sector Summary Table
-# -------------------------------------------------------
+st.subheader("📋 Companies")
 
-st.markdown("---")
-
-st.subheader("📋 Sector Summary")
-
-sector_summary = (
-    df.groupby("broad_sector")
-      .agg(
-          Companies=("company_id", "count"),
-          Average_ROE=("return_on_equity_pct", "mean"),
-          Average_PE=("pe_ratio", "mean"),
-          Average_Debt=("debt_to_equity", "mean"),
-          Average_CAGR=("revenue_cagr_5yr", "mean"),
-          Average_Quality=("composite_quality_score", "mean")
-      )
-      .reset_index()
-)
-
-sector_summary = sector_summary.rename(
-    columns={
-        "broad_sector": "Sector",
-        "Average_ROE": "Average ROE (%)",
-        "Average_PE": "Average P/E",
-        "Average_Debt": "Average Debt/Equity",
-        "Average_CAGR": "Average Revenue CAGR (%)",
-        "Average_Quality": "Average Quality Score"
-    }
-)
-# -------------------------------------------------------
-# Sector Performance Charts
-# -------------------------------------------------------
-
-st.markdown("---")
-
-st.subheader("📊 Sector Performance Dashboard")
-
-col1, col2 = st.columns(2)
-
-# -------------------------------------------------------
-# Average ROE by Sector
-# -------------------------------------------------------
-
-with col1:
-
-    roe_chart = sector_summary.sort_values(
-        "Average ROE (%)",
-        ascending=False
-    )
-
-    fig = px.bar(
-        roe_chart,
-        x="Sector",
-        y="Average ROE (%)",
-        text="Average ROE (%)",
-        title="Average ROE by Sector"
-    )
-
-    fig.update_traces(
-        texttemplate="%{text:.2f}",
-        textposition="outside"
-    )
-
-    fig.update_layout(
-        xaxis_title="Sector",
-        yaxis_title="Average ROE (%)",
-        height=500
-    )
-
-    st.plotly_chart(
-        fig,
-        use_container_width=True
-    )
-
-# -------------------------------------------------------
-# Average P/E Ratio by Sector
-# -------------------------------------------------------
-
-with col2:
-
-    pe_chart = sector_summary.sort_values(
-        "Average P/E",
-        ascending=False
-    )
-
-    fig = px.bar(
-        pe_chart,
-        x="Sector",
-        y="Average P/E",
-        text="Average P/E",
-        title="Average P/E Ratio by Sector"
-    )
-
-    fig.update_traces(
-        texttemplate="%{text:.2f}",
-        textposition="outside"
-    )
-
-    fig.update_layout(
-        xaxis_title="Sector",
-        yaxis_title="Average P/E",
-        height=500
-    )
-
-    st.plotly_chart(
-        fig,
-        use_container_width=True
-    )
-
-# -------------------------------------------------------
-# Revenue CAGR & Quality Score
-# -------------------------------------------------------
-
-col3, col4 = st.columns(2)
-
-# Revenue CAGR
-
-with col3:
-
-    cagr_chart = sector_summary.sort_values(
-        "Average Revenue CAGR (%)",
-        ascending=False
-    )
-
-    fig = px.bar(
-        cagr_chart,
-        x="Sector",
-        y="Average Revenue CAGR (%)",
-        text="Average Revenue CAGR (%)",
-        title="Average Revenue CAGR by Sector"
-    )
-
-    fig.update_traces(
-        texttemplate="%{text:.2f}",
-        textposition="outside"
-    )
-
-    fig.update_layout(
-        xaxis_title="Sector",
-        yaxis_title="Revenue CAGR (%)",
-        height=500
-    )
-
-    st.plotly_chart(
-        fig,
-        use_container_width=True
-    )
-
-# Quality Score
-
-with col4:
-
-    quality_chart = sector_summary.sort_values(
-        "Average Quality Score",
-        ascending=False
-    )
-
-    fig = px.bar(
-        quality_chart,
-        x="Sector",
-        y="Average Quality Score",
-        text="Average Quality Score",
-        title="Average Quality Score by Sector"
-    )
-
-    fig.update_traces(
-        texttemplate="%{text:.2f}",
-        textposition="outside"
-    )
-
-    fig.update_layout(
-        xaxis_title="Sector",
-        yaxis_title="Quality Score",
-        height=500
-    )
-
-    st.plotly_chart(
-        fig,
-        use_container_width=True
-    )
-
-
-st.dataframe(
-    sector_summary,
-    use_container_width=True,
-    hide_index=True
-)
-
-# -------------------------------------------------------
-# Top Company in Each Sector
-# -------------------------------------------------------
-
-st.markdown("---")
-
-st.subheader("🏆 Top Company in Each Sector")
-
-top_company = (
-    df.sort_values(
-        "composite_quality_score",
-        ascending=False
-    )
-    .groupby("broad_sector")
-    .first()
-    .reset_index()
-)
-
-top_company = top_company[
-    [
-        "broad_sector",
-        "company_id",
-        "return_on_equity_pct",
-        "pe_ratio",
-        "composite_quality_score"
-    ]
+columns = [
+    "company_id",
+    "broad_sector",
+    "sub_sector",
+    "market_cap_crore",
+    "pe_ratio",
+    "return_on_equity_pct",
+    "composite_quality_score"
 ]
 
-top_company = top_company.rename(
-    columns={
-        "broad_sector": "Sector",
-        "company_id": "Top Company",
-        "return_on_equity_pct": "ROE (%)",
-        "pe_ratio": "P/E Ratio",
-        "composite_quality_score": "Quality Score"
-    }
-)
-
 st.dataframe(
-    top_company,
+    sector_df[columns],
     use_container_width=True,
     hide_index=True
 )
 
-# -------------------------------------------------------
-# Sector Ranking
-# -------------------------------------------------------
-
-st.markdown("---")
-
-st.subheader("🥇 Sector Ranking")
-
-ranking = sector_summary.sort_values(
-    "Average Quality Score",
-    ascending=False
-).reset_index(drop=True)
-
-ranking.index = ranking.index + 1
-
-st.dataframe(
-    ranking,
-    use_container_width=True
-)
-
-# -------------------------------------------------------
-# Best Performing Sector
-# -------------------------------------------------------
-
-st.markdown("---")
-
-best_sector_row = ranking.iloc[0]
-
-st.success(
-    f"""
-🏆 Best Performing Sector: **{best_sector_row['Sector']}**
-
-• Average Quality Score: **{best_sector_row['Average Quality Score']:.2f}**
-
-• Average ROE: **{best_sector_row['Average ROE (%)']:.2f}%**
-"""
-)
-
-# -------------------------------------------------------
-# Download Report
-# -------------------------------------------------------
-
-st.markdown("---")
-
-csv = sector_summary.to_csv(index=False).encode("utf-8")
-
-st.download_button(
-    label="📥 Download Sector Report",
-    data=csv,
-    file_name="sector_analysis_report.csv",
-    mime="text/csv"
-)

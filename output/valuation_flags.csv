@@ -1,0 +1,1388 @@
+company_id,company_name,year,flag
+ABB,Abbott India Ltd,Dec 2012,No Data
+ABB,Abbott India Ltd,Mar 2014,No Data
+ABB,Abbott India Ltd,Mar 2014,No Data
+ABB,Abbott India Ltd,Mar 2015,No Data
+ABB,Abbott India Ltd,Mar 2015,No Data
+ABB,Abbott India Ltd,Mar 2016,No Data
+ABB,Abbott India Ltd,Mar 2016,No Data
+ABB,Abbott India Ltd,Mar 2017,No Data
+ABB,Abbott India Ltd,Mar 2017,No Data
+ABB,Abbott India Ltd,Mar 2018,No Data
+ABB,Abbott India Ltd,Mar 2018,No Data
+ABB,Abbott India Ltd,Mar 2019,Discount
+ABB,Abbott India Ltd,Mar 2019,Discount
+ABB,Abbott India Ltd,Mar 2020,Fair
+ABB,Abbott India Ltd,Mar 2020,Fair
+ABB,Abbott India Ltd,Mar 2021,Fair
+ABB,Abbott India Ltd,Mar 2021,Fair
+ABB,Abbott India Ltd,Mar 2022,Discount
+ABB,Abbott India Ltd,Mar 2022,Discount
+ABB,Abbott India Ltd,Mar 2023,Fair
+ABB,Abbott India Ltd,Mar 2023,Fair
+ABB,Abbott India Ltd,Mar 2024,Caution
+ABB,Abbott India Ltd,Mar 2024,Caution
+ADANIENSOL,Adani Energy Solutions Ltd,Mar 2014,No Data
+ADANIENSOL,Adani Energy Solutions Ltd,Mar 2015,No Data
+ADANIENSOL,Adani Energy Solutions Ltd,Mar 2016,No Data
+ADANIENSOL,Adani Energy Solutions Ltd,Mar 2017,No Data
+ADANIENSOL,Adani Energy Solutions Ltd,Mar 2018,No Data
+ADANIENSOL,Adani Energy Solutions Ltd,Mar 2019,Caution
+ADANIENSOL,Adani Energy Solutions Ltd,Mar 2020,Fair
+ADANIENSOL,Adani Energy Solutions Ltd,Mar 2021,Fair
+ADANIENSOL,Adani Energy Solutions Ltd,Mar 2022,Caution
+ADANIENSOL,Adani Energy Solutions Ltd,Mar 2023,Discount
+ADANIENSOL,Adani Energy Solutions Ltd,Mar 2024,Fair
+ADANIENT,Adani Enterprises Ltd,Mar 2013,No Data
+ADANIENT,Adani Enterprises Ltd,Mar 2014,No Data
+ADANIENT,Adani Enterprises Ltd,Mar 2015,No Data
+ADANIENT,Adani Enterprises Ltd,Mar 2016,No Data
+ADANIENT,Adani Enterprises Ltd,Mar 2017,No Data
+ADANIENT,Adani Enterprises Ltd,Mar 2018,No Data
+ADANIENT,Adani Enterprises Ltd,Mar 2019,Fair
+ADANIENT,Adani Enterprises Ltd,Mar 2020,Fair
+ADANIENT,Adani Enterprises Ltd,Mar 2021,Fair
+ADANIENT,Adani Enterprises Ltd,Mar 2022,Fair
+ADANIENT,Adani Enterprises Ltd,Mar 2023,Fair
+ADANIENT,Adani Enterprises Ltd,Mar 2024,Fair
+ADANIGREEN,Adani Green Energy Ltd,Mar 2017,No Data
+ADANIGREEN,Adani Green Energy Ltd,Mar 2018,No Data
+ADANIGREEN,Adani Green Energy Ltd,Mar 2019,Discount
+ADANIGREEN,Adani Green Energy Ltd,Mar 2020,Caution
+ADANIGREEN,Adani Green Energy Ltd,Mar 2021,Discount
+ADANIGREEN,Adani Green Energy Ltd,Mar 2022,Fair
+ADANIGREEN,Adani Green Energy Ltd,Mar 2023,Discount
+ADANIGREEN,Adani Green Energy Ltd,Mar 2024,Fair
+ADANIPORTS,"Adani Ports & Special Economic Zone Ltd
+",Mar 2013,No Data
+ADANIPORTS,"Adani Ports & Special Economic Zone Ltd
+",Mar 2013,No Data
+ADANIPORTS,"Adani Ports & Special Economic Zone Ltd
+",Mar 2014,No Data
+ADANIPORTS,"Adani Ports & Special Economic Zone Ltd
+",Mar 2014,No Data
+ADANIPORTS,"Adani Ports & Special Economic Zone Ltd
+",Mar 2015,No Data
+ADANIPORTS,"Adani Ports & Special Economic Zone Ltd
+",Mar 2015,No Data
+ADANIPORTS,"Adani Ports & Special Economic Zone Ltd
+",Mar 2016,No Data
+ADANIPORTS,"Adani Ports & Special Economic Zone Ltd
+",Mar 2016,No Data
+ADANIPORTS,"Adani Ports & Special Economic Zone Ltd
+",Mar 2017,No Data
+ADANIPORTS,"Adani Ports & Special Economic Zone Ltd
+",Mar 2017,No Data
+ADANIPORTS,"Adani Ports & Special Economic Zone Ltd
+",Mar 2018,No Data
+ADANIPORTS,"Adani Ports & Special Economic Zone Ltd
+",Mar 2018,No Data
+ADANIPORTS,"Adani Ports & Special Economic Zone Ltd
+",Mar 2019,Fair
+ADANIPORTS,"Adani Ports & Special Economic Zone Ltd
+",Mar 2019,Fair
+ADANIPORTS,"Adani Ports & Special Economic Zone Ltd
+",Mar 2020,Fair
+ADANIPORTS,"Adani Ports & Special Economic Zone Ltd
+",Mar 2020,Fair
+ADANIPORTS,"Adani Ports & Special Economic Zone Ltd
+",Mar 2021,Caution
+ADANIPORTS,"Adani Ports & Special Economic Zone Ltd
+",Mar 2021,Caution
+ADANIPORTS,"Adani Ports & Special Economic Zone Ltd
+",Mar 2022,Discount
+ADANIPORTS,"Adani Ports & Special Economic Zone Ltd
+",Mar 2022,Discount
+ADANIPORTS,"Adani Ports & Special Economic Zone Ltd
+",Mar 2023,Discount
+ADANIPORTS,"Adani Ports & Special Economic Zone Ltd
+",Mar 2023,Discount
+ADANIPORTS,"Adani Ports & Special Economic Zone Ltd
+",Mar 2024,Fair
+ADANIPORTS,"Adani Ports & Special Economic Zone Ltd
+",Mar 2024,Fair
+ADANIPOWER,Adani Power Ltd,Mar 2013,No Data
+ADANIPOWER,Adani Power Ltd,Mar 2014,No Data
+ADANIPOWER,Adani Power Ltd,Mar 2015,No Data
+ADANIPOWER,Adani Power Ltd,Mar 2016,No Data
+ADANIPOWER,Adani Power Ltd,Mar 2017,No Data
+ADANIPOWER,Adani Power Ltd,Mar 2018,No Data
+ADANIPOWER,Adani Power Ltd,Mar 2019,Discount
+ADANIPOWER,Adani Power Ltd,Mar 2020,Caution
+ADANIPOWER,Adani Power Ltd,Mar 2021,Caution
+ADANIPOWER,Adani Power Ltd,Mar 2022,Fair
+ADANIPOWER,Adani Power Ltd,Mar 2023,Fair
+ADANIPOWER,Adani Power Ltd,Mar 2024,Fair
+AMBUJACEM,Ambuja Cements Ltd,Dec 2012,No Data
+AMBUJACEM,Ambuja Cements Ltd,Dec 2013,No Data
+AMBUJACEM,Ambuja Cements Ltd,Dec 2014,No Data
+AMBUJACEM,Ambuja Cements Ltd,Dec 2015,No Data
+AMBUJACEM,Ambuja Cements Ltd,Dec 2016,No Data
+AMBUJACEM,Ambuja Cements Ltd,Dec 2017,No Data
+AMBUJACEM,Ambuja Cements Ltd,Dec 2018,No Data
+AMBUJACEM,Ambuja Cements Ltd,Dec 2019,Fair
+AMBUJACEM,Ambuja Cements Ltd,Dec 2020,Caution
+AMBUJACEM,Ambuja Cements Ltd,Dec 2021,Fair
+AMBUJACEM,Ambuja Cements Ltd,Mar 2024,Fair
+APOLLOHOSP,"Apollo Hospitals
+Chain of Indian private hospitals",Mar 2013,No Data
+APOLLOHOSP,"Apollo Hospitals
+Chain of Indian private hospitals",Mar 2014,No Data
+APOLLOHOSP,"Apollo Hospitals
+Chain of Indian private hospitals",Mar 2015,No Data
+APOLLOHOSP,"Apollo Hospitals
+Chain of Indian private hospitals",Mar 2016,No Data
+APOLLOHOSP,"Apollo Hospitals
+Chain of Indian private hospitals",Mar 2017,No Data
+APOLLOHOSP,"Apollo Hospitals
+Chain of Indian private hospitals",Mar 2018,No Data
+APOLLOHOSP,"Apollo Hospitals
+Chain of Indian private hospitals",Mar 2019,Fair
+APOLLOHOSP,"Apollo Hospitals
+Chain of Indian private hospitals",Mar 2020,Fair
+APOLLOHOSP,"Apollo Hospitals
+Chain of Indian private hospitals",Mar 2021,Discount
+APOLLOHOSP,"Apollo Hospitals
+Chain of Indian private hospitals",Mar 2022,Fair
+APOLLOHOSP,"Apollo Hospitals
+Chain of Indian private hospitals",Mar 2023,Discount
+APOLLOHOSP,"Apollo Hospitals
+Chain of Indian private hospitals",Mar 2024,Fair
+ASIANPAINT,"Asian Paints
+Indian Multi-National Paint and Coating Manufacturing Company",Mar 2013,No Data
+ASIANPAINT,"Asian Paints
+Indian Multi-National Paint and Coating Manufacturing Company",Mar 2013,No Data
+ASIANPAINT,"Asian Paints
+Indian Multi-National Paint and Coating Manufacturing Company",Mar 2014,No Data
+ASIANPAINT,"Asian Paints
+Indian Multi-National Paint and Coating Manufacturing Company",Mar 2014,No Data
+ASIANPAINT,"Asian Paints
+Indian Multi-National Paint and Coating Manufacturing Company",Mar 2015,No Data
+ASIANPAINT,"Asian Paints
+Indian Multi-National Paint and Coating Manufacturing Company",Mar 2015,No Data
+ASIANPAINT,"Asian Paints
+Indian Multi-National Paint and Coating Manufacturing Company",Mar 2016,No Data
+ASIANPAINT,"Asian Paints
+Indian Multi-National Paint and Coating Manufacturing Company",Mar 2016,No Data
+ASIANPAINT,"Asian Paints
+Indian Multi-National Paint and Coating Manufacturing Company",Mar 2017,No Data
+ASIANPAINT,"Asian Paints
+Indian Multi-National Paint and Coating Manufacturing Company",Mar 2017,No Data
+ASIANPAINT,"Asian Paints
+Indian Multi-National Paint and Coating Manufacturing Company",Mar 2018,No Data
+ASIANPAINT,"Asian Paints
+Indian Multi-National Paint and Coating Manufacturing Company",Mar 2018,No Data
+ASIANPAINT,"Asian Paints
+Indian Multi-National Paint and Coating Manufacturing Company",Mar 2019,Fair
+ASIANPAINT,"Asian Paints
+Indian Multi-National Paint and Coating Manufacturing Company",Mar 2019,Fair
+ASIANPAINT,"Asian Paints
+Indian Multi-National Paint and Coating Manufacturing Company",Mar 2020,Discount
+ASIANPAINT,"Asian Paints
+Indian Multi-National Paint and Coating Manufacturing Company",Mar 2020,Discount
+ASIANPAINT,"Asian Paints
+Indian Multi-National Paint and Coating Manufacturing Company",Mar 2021,Caution
+ASIANPAINT,"Asian Paints
+Indian Multi-National Paint and Coating Manufacturing Company",Mar 2021,Caution
+ASIANPAINT,"Asian Paints
+Indian Multi-National Paint and Coating Manufacturing Company",Mar 2022,Fair
+ASIANPAINT,"Asian Paints
+Indian Multi-National Paint and Coating Manufacturing Company",Mar 2022,Fair
+ASIANPAINT,"Asian Paints
+Indian Multi-National Paint and Coating Manufacturing Company",Mar 2023,Fair
+ASIANPAINT,"Asian Paints
+Indian Multi-National Paint and Coating Manufacturing Company",Mar 2023,Fair
+ASIANPAINT,"Asian Paints
+Indian Multi-National Paint and Coating Manufacturing Company",Mar 2024,Caution
+ASIANPAINT,"Asian Paints
+Indian Multi-National Paint and Coating Manufacturing Company",Mar 2024,Caution
+DMART,Avenue Supermarts Ltd,Mar 2013,No Data
+DMART,Avenue Supermarts Ltd,Mar 2014,No Data
+DMART,Avenue Supermarts Ltd,Mar 2015,No Data
+DMART,Avenue Supermarts Ltd,Mar 2016,No Data
+DMART,Avenue Supermarts Ltd,Mar 2017,No Data
+DMART,Avenue Supermarts Ltd,Mar 2018,No Data
+DMART,Avenue Supermarts Ltd,Mar 2019,Caution
+DMART,Avenue Supermarts Ltd,Mar 2020,Fair
+DMART,Avenue Supermarts Ltd,Mar 2021,Discount
+DMART,Avenue Supermarts Ltd,Mar 2022,Discount
+DMART,Avenue Supermarts Ltd,Mar 2023,Fair
+DMART,Avenue Supermarts Ltd,Mar 2024,Caution
+AXISBANK,Axis Bank Ltd,Mar 2013,No Data
+AXISBANK,Axis Bank Ltd,Mar 2014,No Data
+AXISBANK,Axis Bank Ltd,Mar 2015,No Data
+AXISBANK,Axis Bank Ltd,Mar 2016,No Data
+AXISBANK,Axis Bank Ltd,Mar 2017,No Data
+AXISBANK,Axis Bank Ltd,Mar 2018,No Data
+AXISBANK,Axis Bank Ltd,Mar 2019,Fair
+AXISBANK,Axis Bank Ltd,Mar 2020,Caution
+AXISBANK,Axis Bank Ltd,Mar 2021,Caution
+AXISBANK,Axis Bank Ltd,Mar 2022,Caution
+AXISBANK,Axis Bank Ltd,Mar 2023,Fair
+AXISBANK,Axis Bank Ltd,Mar 2024,Fair
+BAJAJ-AUTO,Bajaj Auto Ltd,Mar 2013,No Data
+BAJAJ-AUTO,Bajaj Auto Ltd,Mar 2013,No Data
+BAJAJ-AUTO,Bajaj Auto Ltd,Mar 2014,No Data
+BAJAJ-AUTO,Bajaj Auto Ltd,Mar 2014,No Data
+BAJAJ-AUTO,Bajaj Auto Ltd,Mar 2015,No Data
+BAJAJ-AUTO,Bajaj Auto Ltd,Mar 2015,No Data
+BAJAJ-AUTO,Bajaj Auto Ltd,Mar 2016,No Data
+BAJAJ-AUTO,Bajaj Auto Ltd,Mar 2016,No Data
+BAJAJ-AUTO,Bajaj Auto Ltd,Mar 2017,No Data
+BAJAJ-AUTO,Bajaj Auto Ltd,Mar 2017,No Data
+BAJAJ-AUTO,Bajaj Auto Ltd,Mar 2018,No Data
+BAJAJ-AUTO,Bajaj Auto Ltd,Mar 2018,No Data
+BAJAJ-AUTO,Bajaj Auto Ltd,Mar 2019,Fair
+BAJAJ-AUTO,Bajaj Auto Ltd,Mar 2019,Fair
+BAJAJ-AUTO,Bajaj Auto Ltd,Mar 2020,Caution
+BAJAJ-AUTO,Bajaj Auto Ltd,Mar 2020,Caution
+BAJAJ-AUTO,Bajaj Auto Ltd,Mar 2021,Fair
+BAJAJ-AUTO,Bajaj Auto Ltd,Mar 2021,Fair
+BAJAJ-AUTO,Bajaj Auto Ltd,Mar 2022,Fair
+BAJAJ-AUTO,Bajaj Auto Ltd,Mar 2022,Fair
+BAJAJ-AUTO,Bajaj Auto Ltd,Mar 2023,Caution
+BAJAJ-AUTO,Bajaj Auto Ltd,Mar 2023,Caution
+BAJAJ-AUTO,Bajaj Auto Ltd,Mar 2024,Discount
+BAJAJ-AUTO,Bajaj Auto Ltd,Mar 2024,Discount
+BAJFINANCE,Bajaj Finance Ltd,Mar 2015,No Data
+BAJFINANCE,Bajaj Finance Ltd,Mar 2016,No Data
+BAJFINANCE,Bajaj Finance Ltd,Mar 2017,No Data
+BAJFINANCE,Bajaj Finance Ltd,Mar 2018,No Data
+BAJFINANCE,Bajaj Finance Ltd,Mar 2019,Caution
+BAJFINANCE,Bajaj Finance Ltd,Mar 2020,Fair
+BAJFINANCE,Bajaj Finance Ltd,Mar 2021,Fair
+BAJFINANCE,Bajaj Finance Ltd,Mar 2022,Fair
+BAJFINANCE,Bajaj Finance Ltd,Mar 2023,Discount
+BAJFINANCE,Bajaj Finance Ltd,Mar 2024,Caution
+BAJAJFINSV,Bajaj Finserv Ltd,Mar 2013,No Data
+BAJAJFINSV,Bajaj Finserv Ltd,Mar 2014,No Data
+BAJAJFINSV,Bajaj Finserv Ltd,Mar 2015,No Data
+BAJAJFINSV,Bajaj Finserv Ltd,Mar 2016,No Data
+BAJAJFINSV,Bajaj Finserv Ltd,Mar 2017,No Data
+BAJAJFINSV,Bajaj Finserv Ltd,Mar 2018,No Data
+BAJAJFINSV,Bajaj Finserv Ltd,Mar 2019,Fair
+BAJAJFINSV,Bajaj Finserv Ltd,Mar 2020,Fair
+BAJAJFINSV,Bajaj Finserv Ltd,Mar 2021,Fair
+BAJAJFINSV,Bajaj Finserv Ltd,Mar 2022,Caution
+BAJAJFINSV,Bajaj Finserv Ltd,Mar 2023,Caution
+BAJAJFINSV,Bajaj Finserv Ltd,Mar 2024,Discount
+BAJAJHLDNG,Bajaj Holdings & Investment Ltd,Mar 2013,No Data
+BAJAJHLDNG,Bajaj Holdings & Investment Ltd,Mar 2014,No Data
+BAJAJHLDNG,Bajaj Holdings & Investment Ltd,Mar 2015,No Data
+BAJAJHLDNG,Bajaj Holdings & Investment Ltd,Mar 2016,No Data
+BAJAJHLDNG,Bajaj Holdings & Investment Ltd,Mar 2017,No Data
+BAJAJHLDNG,Bajaj Holdings & Investment Ltd,Mar 2018,No Data
+BAJAJHLDNG,Bajaj Holdings & Investment Ltd,Mar 2019,Caution
+BAJAJHLDNG,Bajaj Holdings & Investment Ltd,Mar 2020,Fair
+BAJAJHLDNG,Bajaj Holdings & Investment Ltd,Mar 2021,Fair
+BAJAJHLDNG,Bajaj Holdings & Investment Ltd,Mar 2022,Caution
+BAJAJHLDNG,Bajaj Holdings & Investment Ltd,Mar 2023,Fair
+BAJAJHLDNG,Bajaj Holdings & Investment Ltd,Mar 2024,Fair
+BANKBARODA,Bank of Baroda,Mar 2013,No Data
+BANKBARODA,Bank of Baroda,Mar 2014,No Data
+BANKBARODA,Bank of Baroda,Mar 2015,No Data
+BANKBARODA,Bank of Baroda,Mar 2016,No Data
+BANKBARODA,Bank of Baroda,Mar 2017,No Data
+BANKBARODA,Bank of Baroda,Mar 2018,No Data
+BANKBARODA,Bank of Baroda,Mar 2019,Fair
+BANKBARODA,Bank of Baroda,Mar 2020,Caution
+BANKBARODA,Bank of Baroda,Mar 2021,Caution
+BANKBARODA,Bank of Baroda,Mar 2022,Caution
+BANKBARODA,Bank of Baroda,Mar 2023,Fair
+BANKBARODA,Bank of Baroda,Mar 2024,Discount
+BEL,Bharat Electronics Ltd,Mar 2013,No Data
+BEL,Bharat Electronics Ltd,Mar 2014,No Data
+BEL,Bharat Electronics Ltd,Mar 2015,No Data
+BEL,Bharat Electronics Ltd,Mar 2016,No Data
+BEL,Bharat Electronics Ltd,Mar 2017,No Data
+BEL,Bharat Electronics Ltd,Mar 2018,No Data
+BEL,Bharat Electronics Ltd,Mar 2019,Fair
+BEL,Bharat Electronics Ltd,Mar 2020,Fair
+BEL,Bharat Electronics Ltd,Mar 2021,Fair
+BEL,Bharat Electronics Ltd,Mar 2022,Fair
+BEL,Bharat Electronics Ltd,Mar 2023,Discount
+BEL,Bharat Electronics Ltd,Mar 2024,Discount
+BHEL,"Bharat Heavy Electricals Limited
+",Mar 2013,No Data
+BHEL,"Bharat Heavy Electricals Limited
+",Mar 2014,No Data
+BHEL,"Bharat Heavy Electricals Limited
+",Mar 2015,No Data
+BHEL,"Bharat Heavy Electricals Limited
+",Mar 2016,No Data
+BHEL,"Bharat Heavy Electricals Limited
+",Mar 2017,No Data
+BHEL,"Bharat Heavy Electricals Limited
+",Mar 2018,No Data
+BHEL,"Bharat Heavy Electricals Limited
+",Mar 2019,Fair
+BHEL,"Bharat Heavy Electricals Limited
+",Mar 2020,Fair
+BHEL,"Bharat Heavy Electricals Limited
+",Mar 2021,Fair
+BHEL,"Bharat Heavy Electricals Limited
+",Mar 2022,Discount
+BHEL,"Bharat Heavy Electricals Limited
+",Mar 2023,Discount
+BHEL,"Bharat Heavy Electricals Limited
+",Mar 2024,Discount
+BPCL,Bharat Petroleum Corporation Ltd,Mar 2013,No Data
+BPCL,Bharat Petroleum Corporation Ltd,Mar 2014,No Data
+BPCL,Bharat Petroleum Corporation Ltd,Mar 2015,No Data
+BPCL,Bharat Petroleum Corporation Ltd,Mar 2016,No Data
+BPCL,Bharat Petroleum Corporation Ltd,Mar 2017,No Data
+BPCL,Bharat Petroleum Corporation Ltd,Mar 2018,No Data
+BPCL,Bharat Petroleum Corporation Ltd,Mar 2019,Discount
+BPCL,Bharat Petroleum Corporation Ltd,Mar 2020,Fair
+BPCL,Bharat Petroleum Corporation Ltd,Mar 2021,Discount
+BPCL,Bharat Petroleum Corporation Ltd,Mar 2022,Discount
+BPCL,Bharat Petroleum Corporation Ltd,Mar 2023,Fair
+BPCL,Bharat Petroleum Corporation Ltd,Mar 2024,Caution
+BHARTIARTL,Bharti Airtel Ltd,Mar 2013,No Data
+BHARTIARTL,Bharti Airtel Ltd,Mar 2014,No Data
+BHARTIARTL,Bharti Airtel Ltd,Mar 2015,No Data
+BHARTIARTL,Bharti Airtel Ltd,Mar 2016,No Data
+BHARTIARTL,Bharti Airtel Ltd,Mar 2017,No Data
+BHARTIARTL,Bharti Airtel Ltd,Mar 2018,No Data
+BHARTIARTL,Bharti Airtel Ltd,Mar 2019,Fair
+BHARTIARTL,Bharti Airtel Ltd,Mar 2020,Caution
+BHARTIARTL,Bharti Airtel Ltd,Mar 2021,Discount
+BHARTIARTL,Bharti Airtel Ltd,Mar 2022,Fair
+BHARTIARTL,Bharti Airtel Ltd,Mar 2023,Fair
+BHARTIARTL,Bharti Airtel Ltd,Mar 2024,Fair
+BOSCHLTD,Bosch Ltd,Dec 2012,No Data
+BOSCHLTD,Bosch Ltd,Dec 2013,No Data
+BOSCHLTD,Bosch Ltd,Mar 2015,No Data
+BOSCHLTD,Bosch Ltd,Mar 2016,No Data
+BOSCHLTD,Bosch Ltd,Mar 2017,No Data
+BOSCHLTD,Bosch Ltd,Mar 2018,No Data
+BOSCHLTD,Bosch Ltd,Mar 2019,Fair
+BOSCHLTD,Bosch Ltd,Mar 2020,Fair
+BOSCHLTD,Bosch Ltd,Mar 2021,Fair
+BOSCHLTD,Bosch Ltd,Mar 2022,Discount
+BOSCHLTD,Bosch Ltd,Mar 2023,Discount
+BOSCHLTD,Bosch Ltd,Mar 2024,Fair
+BRITANNIA,Britannia Industries Ltd,Mar 2013,No Data
+BRITANNIA,Britannia Industries Ltd,Mar 2014,No Data
+BRITANNIA,Britannia Industries Ltd,Mar 2015,No Data
+BRITANNIA,Britannia Industries Ltd,Mar 2016,No Data
+BRITANNIA,Britannia Industries Ltd,Mar 2017,No Data
+BRITANNIA,Britannia Industries Ltd,Mar 2018,No Data
+BRITANNIA,Britannia Industries Ltd,Mar 2019,Fair
+BRITANNIA,Britannia Industries Ltd,Mar 2020,Fair
+BRITANNIA,Britannia Industries Ltd,Mar 2021,Discount
+BRITANNIA,Britannia Industries Ltd,Mar 2022,Caution
+BRITANNIA,Britannia Industries Ltd,Mar 2023,Discount
+BRITANNIA,Britannia Industries Ltd,Mar 2024,Caution
+CANBK,Canara Bank,Mar 2013,No Data
+CANBK,Canara Bank,Mar 2014,No Data
+CANBK,Canara Bank,Mar 2015,No Data
+CANBK,Canara Bank,Mar 2016,No Data
+CANBK,Canara Bank,Mar 2017,No Data
+CANBK,Canara Bank,Mar 2018,No Data
+CANBK,Canara Bank,Mar 2019,Discount
+CANBK,Canara Bank,Mar 2020,Fair
+CANBK,Canara Bank,Mar 2021,Fair
+CANBK,Canara Bank,Mar 2022,Caution
+CANBK,Canara Bank,Mar 2023,Fair
+CANBK,Canara Bank,Mar 2024,Fair
+CHOLAFIN,Cholamandalam Investment & Finance Company Ltd,Mar 2013,No Data
+CHOLAFIN,Cholamandalam Investment & Finance Company Ltd,Mar 2014,No Data
+CHOLAFIN,Cholamandalam Investment & Finance Company Ltd,Mar 2015,No Data
+CHOLAFIN,Cholamandalam Investment & Finance Company Ltd,Mar 2016,No Data
+CHOLAFIN,Cholamandalam Investment & Finance Company Ltd,Mar 2017,No Data
+CHOLAFIN,Cholamandalam Investment & Finance Company Ltd,Mar 2018,No Data
+CHOLAFIN,Cholamandalam Investment & Finance Company Ltd,Mar 2019,Discount
+CHOLAFIN,Cholamandalam Investment & Finance Company Ltd,Mar 2020,Fair
+CHOLAFIN,Cholamandalam Investment & Finance Company Ltd,Mar 2021,Discount
+CHOLAFIN,Cholamandalam Investment & Finance Company Ltd,Mar 2022,Fair
+CHOLAFIN,Cholamandalam Investment & Finance Company Ltd,Mar 2023,Fair
+CHOLAFIN,Cholamandalam Investment & Finance Company Ltd,Mar 2024,Discount
+CIPLA,"Cipla Ltd
+",Mar 2013,No Data
+CIPLA,"Cipla Ltd
+",Mar 2014,No Data
+CIPLA,"Cipla Ltd
+",Mar 2015,No Data
+CIPLA,"Cipla Ltd
+",Mar 2016,No Data
+CIPLA,"Cipla Ltd
+",Mar 2017,No Data
+CIPLA,"Cipla Ltd
+",Mar 2018,No Data
+CIPLA,"Cipla Ltd
+",Mar 2019,Caution
+CIPLA,"Cipla Ltd
+",Mar 2020,Fair
+CIPLA,"Cipla Ltd
+",Mar 2021,Caution
+CIPLA,"Cipla Ltd
+",Mar 2022,Fair
+CIPLA,"Cipla Ltd
+",Mar 2023,Fair
+CIPLA,"Cipla Ltd
+",Mar 2024,Caution
+COALINDIA,Coal India Ltd,Mar 2013,No Data
+COALINDIA,Coal India Ltd,Mar 2014,No Data
+COALINDIA,Coal India Ltd,Mar 2015,No Data
+COALINDIA,Coal India Ltd,Mar 2016,No Data
+COALINDIA,Coal India Ltd,Mar 2017,No Data
+COALINDIA,Coal India Ltd,Mar 2018,No Data
+COALINDIA,Coal India Ltd,Mar 2019,Caution
+COALINDIA,Coal India Ltd,Mar 2020,Discount
+COALINDIA,Coal India Ltd,Mar 2021,Caution
+COALINDIA,Coal India Ltd,Mar 2022,Discount
+COALINDIA,Coal India Ltd,Mar 2023,Fair
+COALINDIA,Coal India Ltd,Mar 2024,Fair
+DABUR,Dabur India Ltd,Mar 2013,No Data
+DABUR,Dabur India Ltd,Mar 2014,No Data
+DABUR,Dabur India Ltd,Mar 2015,No Data
+DABUR,Dabur India Ltd,Mar 2016,No Data
+DABUR,Dabur India Ltd,Mar 2017,No Data
+DABUR,Dabur India Ltd,Mar 2018,No Data
+DABUR,Dabur India Ltd,Mar 2019,Discount
+DABUR,Dabur India Ltd,Mar 2020,Discount
+DABUR,Dabur India Ltd,Mar 2021,Caution
+DABUR,Dabur India Ltd,Mar 2022,Fair
+DABUR,Dabur India Ltd,Mar 2023,Caution
+DABUR,Dabur India Ltd,Mar 2024,Fair
+DIVISLAB,Divis Laboratories Ltd,Mar 2013,No Data
+DIVISLAB,Divis Laboratories Ltd,Mar 2014,No Data
+DIVISLAB,Divis Laboratories Ltd,Mar 2015,No Data
+DIVISLAB,Divis Laboratories Ltd,Mar 2016,No Data
+DIVISLAB,Divis Laboratories Ltd,Mar 2017,No Data
+DIVISLAB,Divis Laboratories Ltd,Mar 2018,No Data
+DIVISLAB,Divis Laboratories Ltd,Mar 2019,Caution
+DIVISLAB,Divis Laboratories Ltd,Mar 2020,Fair
+DIVISLAB,Divis Laboratories Ltd,Mar 2021,Discount
+DIVISLAB,Divis Laboratories Ltd,Mar 2022,Fair
+DIVISLAB,Divis Laboratories Ltd,Mar 2023,Discount
+DIVISLAB,Divis Laboratories Ltd,Mar 2024,Caution
+DLF,DLF Ltd,Mar 2013,No Data
+DLF,DLF Ltd,Mar 2014,No Data
+DLF,DLF Ltd,Mar 2015,No Data
+DLF,DLF Ltd,Mar 2016,No Data
+DLF,DLF Ltd,Mar 2017,No Data
+DLF,DLF Ltd,Mar 2018,No Data
+DLF,DLF Ltd,Mar 2019,Discount
+DLF,DLF Ltd,Mar 2020,Fair
+DLF,DLF Ltd,Mar 2021,Fair
+DLF,DLF Ltd,Mar 2022,Discount
+DLF,DLF Ltd,Mar 2023,Fair
+DLF,DLF Ltd,Mar 2024,Fair
+DRREDDY,Dr Reddys Laboratories Ltd,Mar 2013,No Data
+DRREDDY,Dr Reddys Laboratories Ltd,Mar 2014,No Data
+DRREDDY,Dr Reddys Laboratories Ltd,Mar 2015,No Data
+DRREDDY,Dr Reddys Laboratories Ltd,Mar 2016,No Data
+DRREDDY,Dr Reddys Laboratories Ltd,Mar 2017,No Data
+DRREDDY,Dr Reddys Laboratories Ltd,Mar 2018,No Data
+DRREDDY,Dr Reddys Laboratories Ltd,Mar 2019,Discount
+DRREDDY,Dr Reddys Laboratories Ltd,Mar 2020,Fair
+DRREDDY,Dr Reddys Laboratories Ltd,Mar 2021,Discount
+DRREDDY,Dr Reddys Laboratories Ltd,Mar 2022,Discount
+DRREDDY,Dr Reddys Laboratories Ltd,Mar 2023,Discount
+DRREDDY,Dr Reddys Laboratories Ltd,Mar 2024,Discount
+EICHERMOT,Eicher Motors Ltd,Dec 2012,No Data
+EICHERMOT,Eicher Motors Ltd,Dec 2013,No Data
+EICHERMOT,Eicher Motors Ltd,Dec 2014,No Data
+EICHERMOT,Eicher Motors Ltd,Mar 2016,No Data
+EICHERMOT,Eicher Motors Ltd,Mar 2017,No Data
+EICHERMOT,Eicher Motors Ltd,Mar 2018,No Data
+EICHERMOT,Eicher Motors Ltd,Mar 2019,Caution
+EICHERMOT,Eicher Motors Ltd,Mar 2020,Discount
+EICHERMOT,Eicher Motors Ltd,Mar 2021,Caution
+EICHERMOT,Eicher Motors Ltd,Mar 2022,Discount
+EICHERMOT,Eicher Motors Ltd,Mar 2023,Discount
+EICHERMOT,Eicher Motors Ltd,Mar 2024,Discount
+GAIL,GAIL (India) Ltd,Mar 2013,No Data
+GAIL,GAIL (India) Ltd,Mar 2014,No Data
+GAIL,GAIL (India) Ltd,Mar 2015,No Data
+GAIL,GAIL (India) Ltd,Mar 2016,No Data
+GAIL,GAIL (India) Ltd,Mar 2017,No Data
+GAIL,GAIL (India) Ltd,Mar 2018,No Data
+GAIL,GAIL (India) Ltd,Mar 2019,Discount
+GAIL,GAIL (India) Ltd,Mar 2020,Discount
+GAIL,GAIL (India) Ltd,Mar 2021,Fair
+GAIL,GAIL (India) Ltd,Mar 2022,Caution
+GAIL,GAIL (India) Ltd,Mar 2023,Fair
+GAIL,GAIL (India) Ltd,Mar 2024,Discount
+GODREJCP,Godrej Consumer Products Ltd,Mar 2013,No Data
+GODREJCP,Godrej Consumer Products Ltd,Mar 2014,No Data
+GODREJCP,Godrej Consumer Products Ltd,Mar 2015,No Data
+GODREJCP,Godrej Consumer Products Ltd,Mar 2016,No Data
+GODREJCP,Godrej Consumer Products Ltd,Mar 2017,No Data
+GODREJCP,Godrej Consumer Products Ltd,Mar 2018,No Data
+GODREJCP,Godrej Consumer Products Ltd,Mar 2019,Fair
+GODREJCP,Godrej Consumer Products Ltd,Mar 2020,Fair
+GODREJCP,Godrej Consumer Products Ltd,Mar 2021,Discount
+GODREJCP,Godrej Consumer Products Ltd,Mar 2022,Fair
+GODREJCP,Godrej Consumer Products Ltd,Mar 2023,Fair
+GODREJCP,Godrej Consumer Products Ltd,Mar 2024,Fair
+GRASIM,Grasim Industries Ltd,Mar 2013,No Data
+GRASIM,Grasim Industries Ltd,Mar 2014,No Data
+GRASIM,Grasim Industries Ltd,Mar 2015,No Data
+GRASIM,Grasim Industries Ltd,Mar 2016,No Data
+GRASIM,Grasim Industries Ltd,Mar 2017,No Data
+GRASIM,Grasim Industries Ltd,Mar 2018,No Data
+GRASIM,Grasim Industries Ltd,Mar 2019,Fair
+GRASIM,Grasim Industries Ltd,Mar 2020,Discount
+GRASIM,Grasim Industries Ltd,Mar 2021,Discount
+GRASIM,Grasim Industries Ltd,Mar 2022,Fair
+GRASIM,Grasim Industries Ltd,Mar 2023,Fair
+GRASIM,Grasim Industries Ltd,Mar 2024,Caution
+HAVELLS,Havells India Ltd,Mar 2013,No Data
+HAVELLS,Havells India Ltd,Mar 2014,No Data
+HAVELLS,Havells India Ltd,Mar 2015,No Data
+HAVELLS,Havells India Ltd,Mar 2016,No Data
+HAVELLS,Havells India Ltd,Mar 2017,No Data
+HAVELLS,Havells India Ltd,Mar 2018,No Data
+HAVELLS,Havells India Ltd,Mar 2019,Fair
+HAVELLS,Havells India Ltd,Mar 2020,Discount
+HAVELLS,Havells India Ltd,Mar 2021,Discount
+HAVELLS,Havells India Ltd,Mar 2022,Caution
+HAVELLS,Havells India Ltd,Mar 2023,Fair
+HAVELLS,Havells India Ltd,Mar 2024,Fair
+HCLTECH,HCL Technologies Ltd,Jun 2013,No Data
+HCLTECH,HCL Technologies Ltd,Jun 2014,No Data
+HCLTECH,HCL Technologies Ltd,Jun 2015,No Data
+HCLTECH,HCL Technologies Ltd,Mar 2017,No Data
+HCLTECH,HCL Technologies Ltd,Mar 2018,No Data
+HCLTECH,HCL Technologies Ltd,Mar 2019,Fair
+HCLTECH,HCL Technologies Ltd,Mar 2020,Fair
+HCLTECH,HCL Technologies Ltd,Mar 2021,Caution
+HCLTECH,HCL Technologies Ltd,Mar 2022,Fair
+HCLTECH,HCL Technologies Ltd,Mar 2023,Discount
+HCLTECH,HCL Technologies Ltd,Mar 2024,Fair
+HDFCBANK,HDFC Bank Ltd,Mar 2013,No Data
+HDFCBANK,HDFC Bank Ltd,Mar 2014,No Data
+HDFCBANK,HDFC Bank Ltd,Mar 2015,No Data
+HDFCBANK,HDFC Bank Ltd,Mar 2016,No Data
+HDFCBANK,HDFC Bank Ltd,Mar 2017,No Data
+HDFCBANK,HDFC Bank Ltd,Mar 2018,No Data
+HDFCBANK,HDFC Bank Ltd,Mar 2019,Caution
+HDFCBANK,HDFC Bank Ltd,Mar 2020,Fair
+HDFCBANK,HDFC Bank Ltd,Mar 2021,Discount
+HDFCBANK,HDFC Bank Ltd,Mar 2022,Discount
+HDFCBANK,HDFC Bank Ltd,Mar 2023,Fair
+HDFCBANK,HDFC Bank Ltd,Mar 2024,Fair
+HDFCLIFE,HDFC Life Insurance Company Ltd,Mar 2013,No Data
+HDFCLIFE,HDFC Life Insurance Company Ltd,Mar 2014,No Data
+HDFCLIFE,HDFC Life Insurance Company Ltd,Mar 2015,No Data
+HDFCLIFE,HDFC Life Insurance Company Ltd,Mar 2016,No Data
+HDFCLIFE,HDFC Life Insurance Company Ltd,Mar 2017,No Data
+HDFCLIFE,HDFC Life Insurance Company Ltd,Mar 2018,No Data
+HDFCLIFE,HDFC Life Insurance Company Ltd,Mar 2019,Fair
+HDFCLIFE,HDFC Life Insurance Company Ltd,Mar 2020,Caution
+HDFCLIFE,HDFC Life Insurance Company Ltd,Mar 2021,Fair
+HDFCLIFE,HDFC Life Insurance Company Ltd,Mar 2022,Caution
+HDFCLIFE,HDFC Life Insurance Company Ltd,Mar 2023,Fair
+HDFCLIFE,HDFC Life Insurance Company Ltd,Mar 2024,Fair
+HEROMOTOCO,"Hero MotoCorp Ltd
+",Mar 2014,No Data
+HEROMOTOCO,"Hero MotoCorp Ltd
+",Mar 2015,No Data
+HEROMOTOCO,"Hero MotoCorp Ltd
+",Mar 2016,No Data
+HEROMOTOCO,"Hero MotoCorp Ltd
+",Mar 2017,No Data
+HEROMOTOCO,"Hero MotoCorp Ltd
+",Mar 2018,No Data
+HEROMOTOCO,"Hero MotoCorp Ltd
+",Mar 2019,Fair
+HEROMOTOCO,"Hero MotoCorp Ltd
+",Mar 2020,Caution
+HEROMOTOCO,"Hero MotoCorp Ltd
+",Mar 2021,Fair
+HEROMOTOCO,"Hero MotoCorp Ltd
+",Mar 2022,Caution
+HEROMOTOCO,"Hero MotoCorp Ltd
+",Mar 2023,Discount
+HEROMOTOCO,"Hero MotoCorp Ltd
+",Mar 2024,Fair
+HINDALCO,Hindalco Industries Ltd,Mar 2013,No Data
+HINDALCO,Hindalco Industries Ltd,Mar 2014,No Data
+HINDALCO,Hindalco Industries Ltd,Mar 2015,No Data
+HINDALCO,Hindalco Industries Ltd,Mar 2016,No Data
+HINDALCO,Hindalco Industries Ltd,Mar 2017,No Data
+HINDALCO,Hindalco Industries Ltd,Mar 2018,No Data
+HINDALCO,Hindalco Industries Ltd,Mar 2019,Discount
+HINDALCO,Hindalco Industries Ltd,Mar 2020,Discount
+HINDALCO,Hindalco Industries Ltd,Mar 2021,Fair
+HINDALCO,Hindalco Industries Ltd,Mar 2022,Fair
+HINDALCO,Hindalco Industries Ltd,Mar 2023,Caution
+HINDALCO,Hindalco Industries Ltd,Mar 2024,Fair
+HAL,Hindustan Aeronautics Ltd,Mar 2017,No Data
+HAL,Hindustan Aeronautics Ltd,Mar 2018,No Data
+HAL,Hindustan Aeronautics Ltd,Mar 2019,Fair
+HAL,Hindustan Aeronautics Ltd,Mar 2020,Fair
+HAL,Hindustan Aeronautics Ltd,Mar 2021,Discount
+HAL,Hindustan Aeronautics Ltd,Mar 2022,Fair
+HAL,Hindustan Aeronautics Ltd,Mar 2023,Discount
+HAL,Hindustan Aeronautics Ltd,Mar 2024,Fair
+HINDUNILVR,"Hindustan Unilever Ltd
+",Mar 2013,No Data
+HINDUNILVR,"Hindustan Unilever Ltd
+",Mar 2014,No Data
+HINDUNILVR,"Hindustan Unilever Ltd
+",Mar 2015,No Data
+HINDUNILVR,"Hindustan Unilever Ltd
+",Mar 2016,No Data
+HINDUNILVR,"Hindustan Unilever Ltd
+",Mar 2017,No Data
+HINDUNILVR,"Hindustan Unilever Ltd
+",Mar 2018,No Data
+HINDUNILVR,"Hindustan Unilever Ltd
+",Mar 2019,Discount
+HINDUNILVR,"Hindustan Unilever Ltd
+",Mar 2020,Discount
+HINDUNILVR,"Hindustan Unilever Ltd
+",Mar 2021,Discount
+HINDUNILVR,"Hindustan Unilever Ltd
+",Mar 2022,Discount
+HINDUNILVR,"Hindustan Unilever Ltd
+",Mar 2023,Fair
+HINDUNILVR,"Hindustan Unilever Ltd
+",Mar 2024,Fair
+ICICIBANK,ICICI Bank Ltd,Mar 2013,No Data
+ICICIBANK,ICICI Bank Ltd,Mar 2014,No Data
+ICICIBANK,ICICI Bank Ltd,Mar 2015,No Data
+ICICIBANK,ICICI Bank Ltd,Mar 2016,No Data
+ICICIBANK,ICICI Bank Ltd,Mar 2017,No Data
+ICICIBANK,ICICI Bank Ltd,Mar 2018,No Data
+ICICIBANK,ICICI Bank Ltd,Mar 2019,Caution
+ICICIBANK,ICICI Bank Ltd,Mar 2020,Discount
+ICICIBANK,ICICI Bank Ltd,Mar 2021,Discount
+ICICIBANK,ICICI Bank Ltd,Mar 2022,Caution
+ICICIBANK,ICICI Bank Ltd,Mar 2023,Caution
+ICICIBANK,ICICI Bank Ltd,Mar 2024,Discount
+ICICIGI,ICICI Lombard General Insurance Company Ltd,Mar 2013,No Data
+ICICIGI,ICICI Lombard General Insurance Company Ltd,Mar 2014,No Data
+ICICIGI,ICICI Lombard General Insurance Company Ltd,Mar 2015,No Data
+ICICIGI,ICICI Lombard General Insurance Company Ltd,Mar 2016,No Data
+ICICIGI,ICICI Lombard General Insurance Company Ltd,Mar 2017,No Data
+ICICIGI,ICICI Lombard General Insurance Company Ltd,Mar 2018,No Data
+ICICIGI,ICICI Lombard General Insurance Company Ltd,Mar 2019,Caution
+ICICIGI,ICICI Lombard General Insurance Company Ltd,Mar 2020,Fair
+ICICIGI,ICICI Lombard General Insurance Company Ltd,Mar 2021,Fair
+ICICIGI,ICICI Lombard General Insurance Company Ltd,Mar 2022,Caution
+ICICIGI,ICICI Lombard General Insurance Company Ltd,Mar 2023,Discount
+ICICIGI,ICICI Lombard General Insurance Company Ltd,Mar 2024,Fair
+ICICIPRULI,ICICI Prudential Life Insurance Company Ltd,Mar 2013,No Data
+ICICIPRULI,ICICI Prudential Life Insurance Company Ltd,Mar 2014,No Data
+ICICIPRULI,ICICI Prudential Life Insurance Company Ltd,Mar 2015,No Data
+ICICIPRULI,ICICI Prudential Life Insurance Company Ltd,Mar 2016,No Data
+ICICIPRULI,ICICI Prudential Life Insurance Company Ltd,Mar 2017,No Data
+ICICIPRULI,ICICI Prudential Life Insurance Company Ltd,Mar 2018,No Data
+ICICIPRULI,ICICI Prudential Life Insurance Company Ltd,Mar 2019,Caution
+ICICIPRULI,ICICI Prudential Life Insurance Company Ltd,Mar 2020,Fair
+ICICIPRULI,ICICI Prudential Life Insurance Company Ltd,Mar 2021,Fair
+ICICIPRULI,ICICI Prudential Life Insurance Company Ltd,Mar 2022,Caution
+ICICIPRULI,ICICI Prudential Life Insurance Company Ltd,Mar 2023,Fair
+ICICIPRULI,ICICI Prudential Life Insurance Company Ltd,Mar 2024,Discount
+IOC,"Indian Oil Corporation
+",Mar 2013,No Data
+IOC,"Indian Oil Corporation
+",Mar 2014,No Data
+IOC,"Indian Oil Corporation
+",Mar 2015,No Data
+IOC,"Indian Oil Corporation
+",Mar 2016,No Data
+IOC,"Indian Oil Corporation
+",Mar 2017,No Data
+IOC,"Indian Oil Corporation
+",Mar 2018,No Data
+IOC,"Indian Oil Corporation
+",Mar 2019,Discount
+IOC,"Indian Oil Corporation
+",Mar 2020,Fair
+IOC,"Indian Oil Corporation
+",Mar 2021,Fair
+IOC,"Indian Oil Corporation
+",Mar 2022,Caution
+IOC,"Indian Oil Corporation
+",Mar 2023,Caution
+IOC,"Indian Oil Corporation
+",Mar 2024,Discount
+IRCTC,Indian Railway Catering & Tourism Corporation Ltd,Mar 2015,No Data
+IRCTC,Indian Railway Catering & Tourism Corporation Ltd,Mar 2016,No Data
+IRCTC,Indian Railway Catering & Tourism Corporation Ltd,Mar 2017,No Data
+IRCTC,Indian Railway Catering & Tourism Corporation Ltd,Mar 2018,No Data
+IRCTC,Indian Railway Catering & Tourism Corporation Ltd,Mar 2019,Fair
+IRCTC,Indian Railway Catering & Tourism Corporation Ltd,Mar 2020,Fair
+IRCTC,Indian Railway Catering & Tourism Corporation Ltd,Mar 2021,Fair
+IRCTC,Indian Railway Catering & Tourism Corporation Ltd,Mar 2022,Discount
+IRCTC,Indian Railway Catering & Tourism Corporation Ltd,Mar 2023,Discount
+IRCTC,Indian Railway Catering & Tourism Corporation Ltd,Mar 2024,Fair
+IRFC,Indian Railway Finance Corporation Ltd,Mar 2016,No Data
+IRFC,Indian Railway Finance Corporation Ltd,Mar 2017,No Data
+IRFC,Indian Railway Finance Corporation Ltd,Mar 2018,No Data
+IRFC,Indian Railway Finance Corporation Ltd,Mar 2019,Discount
+IRFC,Indian Railway Finance Corporation Ltd,Mar 2020,Fair
+IRFC,Indian Railway Finance Corporation Ltd,Mar 2021,Caution
+IRFC,Indian Railway Finance Corporation Ltd,Mar 2022,Fair
+IRFC,Indian Railway Finance Corporation Ltd,Mar 2023,Fair
+IRFC,Indian Railway Finance Corporation Ltd,Mar 2024,Discount
+INDUSINDBK,IndusInd Bank Ltd,Mar 2013,No Data
+INDUSINDBK,IndusInd Bank Ltd,Mar 2014,No Data
+INDUSINDBK,IndusInd Bank Ltd,Mar 2015,No Data
+INDUSINDBK,IndusInd Bank Ltd,Mar 2016,No Data
+INDUSINDBK,IndusInd Bank Ltd,Mar 2017,No Data
+INDUSINDBK,IndusInd Bank Ltd,Mar 2018,No Data
+INDUSINDBK,IndusInd Bank Ltd,Mar 2019,Caution
+INDUSINDBK,IndusInd Bank Ltd,Mar 2020,Caution
+INDUSINDBK,IndusInd Bank Ltd,Mar 2021,Fair
+INDUSINDBK,IndusInd Bank Ltd,Mar 2022,Caution
+INDUSINDBK,IndusInd Bank Ltd,Mar 2023,Fair
+INDUSINDBK,IndusInd Bank Ltd,Mar 2024,Discount
+NAUKRI,Info Edge (India) Ltd,Mar 2013,No Data
+NAUKRI,Info Edge (India) Ltd,Mar 2014,No Data
+NAUKRI,Info Edge (India) Ltd,Mar 2015,No Data
+NAUKRI,Info Edge (India) Ltd,Mar 2016,No Data
+NAUKRI,Info Edge (India) Ltd,Mar 2017,No Data
+NAUKRI,Info Edge (India) Ltd,Mar 2018,No Data
+NAUKRI,Info Edge (India) Ltd,Mar 2019,Discount
+NAUKRI,Info Edge (India) Ltd,Mar 2020,Discount
+NAUKRI,Info Edge (India) Ltd,Mar 2021,Fair
+NAUKRI,Info Edge (India) Ltd,Mar 2022,Fair
+NAUKRI,Info Edge (India) Ltd,Mar 2023,Fair
+NAUKRI,Info Edge (India) Ltd,Mar 2024,Discount
+INFY,Infosys Ltd,Mar 2013,No Data
+INFY,Infosys Ltd,Mar 2014,No Data
+INFY,Infosys Ltd,Mar 2015,No Data
+INFY,Infosys Ltd,Mar 2016,No Data
+INFY,Infosys Ltd,Mar 2017,No Data
+INFY,Infosys Ltd,Mar 2018,No Data
+INFY,Infosys Ltd,Mar 2019,Discount
+INFY,Infosys Ltd,Mar 2020,Discount
+INFY,Infosys Ltd,Mar 2021,Discount
+INFY,Infosys Ltd,Mar 2022,Fair
+INFY,Infosys Ltd,Mar 2023,Fair
+INFY,Infosys Ltd,Mar 2024,Fair
+INDIGO,Interglobe Aviation Ltd,Mar 2013,No Data
+INDIGO,Interglobe Aviation Ltd,Mar 2014,No Data
+INDIGO,Interglobe Aviation Ltd,Mar 2015,No Data
+INDIGO,Interglobe Aviation Ltd,Mar 2016,No Data
+INDIGO,Interglobe Aviation Ltd,Mar 2017,No Data
+INDIGO,Interglobe Aviation Ltd,Mar 2018,No Data
+INDIGO,Interglobe Aviation Ltd,Mar 2019,Fair
+INDIGO,Interglobe Aviation Ltd,Mar 2020,Fair
+INDIGO,Interglobe Aviation Ltd,Mar 2021,Fair
+INDIGO,Interglobe Aviation Ltd,Mar 2022,Discount
+INDIGO,Interglobe Aviation Ltd,Mar 2023,Fair
+INDIGO,Interglobe Aviation Ltd,Mar 2024,Caution
+ITC,"ITC Ltd
+",Mar 2013,No Data
+ITC,"ITC Ltd
+",Mar 2014,No Data
+ITC,"ITC Ltd
+",Mar 2015,No Data
+ITC,"ITC Ltd
+",Mar 2016,No Data
+ITC,"ITC Ltd
+",Mar 2017,No Data
+ITC,"ITC Ltd
+",Mar 2018,No Data
+ITC,"ITC Ltd
+",Mar 2019,Caution
+ITC,"ITC Ltd
+",Mar 2020,Caution
+ITC,"ITC Ltd
+",Mar 2021,Caution
+ITC,"ITC Ltd
+",Mar 2022,Fair
+ITC,"ITC Ltd
+",Mar 2023,Fair
+ITC,"ITC Ltd
+",Mar 2024,Fair
+JINDALSTEL,Jindal Steel & Power Ltd,Mar 2013,No Data
+JINDALSTEL,Jindal Steel & Power Ltd,Mar 2014,No Data
+JINDALSTEL,Jindal Steel & Power Ltd,Mar 2015,No Data
+JINDALSTEL,Jindal Steel & Power Ltd,Mar 2016,No Data
+JINDALSTEL,Jindal Steel & Power Ltd,Mar 2017,No Data
+JINDALSTEL,Jindal Steel & Power Ltd,Mar 2018,No Data
+JINDALSTEL,Jindal Steel & Power Ltd,Mar 2019,Fair
+JINDALSTEL,Jindal Steel & Power Ltd,Mar 2020,Fair
+JINDALSTEL,Jindal Steel & Power Ltd,Mar 2021,Fair
+JINDALSTEL,Jindal Steel & Power Ltd,Mar 2022,Fair
+JINDALSTEL,Jindal Steel & Power Ltd,Mar 2023,Caution
+JINDALSTEL,Jindal Steel & Power Ltd,Mar 2024,Caution
+JIOFIN,Jio Financial Services Ltd,Mar 2023,Caution
+JIOFIN,Jio Financial Services Ltd,Mar 2024,Fair
+JSWENERGY,JSW Energy Ltd,Mar 2013,No Data
+JSWENERGY,JSW Energy Ltd,Mar 2014,No Data
+JSWENERGY,JSW Energy Ltd,Mar 2015,No Data
+JSWENERGY,JSW Energy Ltd,Mar 2016,No Data
+JSWENERGY,JSW Energy Ltd,Mar 2017,No Data
+JSWENERGY,JSW Energy Ltd,Mar 2018,No Data
+JSWENERGY,JSW Energy Ltd,Mar 2019,Fair
+JSWENERGY,JSW Energy Ltd,Mar 2020,Fair
+JSWENERGY,JSW Energy Ltd,Mar 2021,Caution
+JSWENERGY,JSW Energy Ltd,Mar 2022,Fair
+JSWENERGY,JSW Energy Ltd,Mar 2023,Fair
+JSWENERGY,JSW Energy Ltd,Mar 2024,Discount
+JSWSTEEL,JSW Steel Ltd,Mar 2013,No Data
+JSWSTEEL,JSW Steel Ltd,Mar 2014,No Data
+JSWSTEEL,JSW Steel Ltd,Mar 2015,No Data
+JSWSTEEL,JSW Steel Ltd,Mar 2016,No Data
+JSWSTEEL,JSW Steel Ltd,Mar 2017,No Data
+JSWSTEEL,JSW Steel Ltd,Mar 2018,No Data
+JSWSTEEL,JSW Steel Ltd,Mar 2019,Fair
+JSWSTEEL,JSW Steel Ltd,Mar 2020,Fair
+JSWSTEEL,JSW Steel Ltd,Mar 2021,Fair
+JSWSTEEL,JSW Steel Ltd,Mar 2022,Fair
+JSWSTEEL,JSW Steel Ltd,Mar 2023,Discount
+JSWSTEEL,JSW Steel Ltd,Mar 2024,Caution
+KOTAKBANK,"Kotak Mahindra Bank Ltd
+",Mar 2013,No Data
+KOTAKBANK,"Kotak Mahindra Bank Ltd
+",Mar 2014,No Data
+KOTAKBANK,"Kotak Mahindra Bank Ltd
+",Mar 2015,No Data
+KOTAKBANK,"Kotak Mahindra Bank Ltd
+",Mar 2016,No Data
+KOTAKBANK,"Kotak Mahindra Bank Ltd
+",Mar 2017,No Data
+KOTAKBANK,"Kotak Mahindra Bank Ltd
+",Mar 2018,No Data
+KOTAKBANK,"Kotak Mahindra Bank Ltd
+",Mar 2019,Fair
+KOTAKBANK,"Kotak Mahindra Bank Ltd
+",Mar 2020,Fair
+KOTAKBANK,"Kotak Mahindra Bank Ltd
+",Mar 2021,Fair
+KOTAKBANK,"Kotak Mahindra Bank Ltd
+",Mar 2022,Caution
+KOTAKBANK,"Kotak Mahindra Bank Ltd
+",Mar 2023,Caution
+KOTAKBANK,"Kotak Mahindra Bank Ltd
+",Mar 2024,Fair
+LT,Larsen & Toubro Ltd,Mar 2013,No Data
+LT,Larsen & Toubro Ltd,Mar 2014,No Data
+LT,Larsen & Toubro Ltd,Mar 2015,No Data
+LT,Larsen & Toubro Ltd,Mar 2016,No Data
+LT,Larsen & Toubro Ltd,Mar 2017,No Data
+LT,Larsen & Toubro Ltd,Mar 2018,No Data
+LT,Larsen & Toubro Ltd,Mar 2019,Fair
+LT,Larsen & Toubro Ltd,Mar 2020,Discount
+LT,Larsen & Toubro Ltd,Mar 2021,Discount
+LT,Larsen & Toubro Ltd,Mar 2022,Discount
+LT,Larsen & Toubro Ltd,Mar 2023,Discount
+LT,Larsen & Toubro Ltd,Mar 2024,Discount
+LICI,Life Insurance Corporation of India,Mar 2019,Fair
+LICI,Life Insurance Corporation of India,Mar 2020,Discount
+LICI,Life Insurance Corporation of India,Mar 2021,Fair
+LICI,Life Insurance Corporation of India,Mar 2022,Discount
+LICI,Life Insurance Corporation of India,Mar 2023,Caution
+LICI,Life Insurance Corporation of India,Mar 2024,Fair
+LTIM,LTIMindtree Ltd,Mar 2013,No Data
+LTIM,LTIMindtree Ltd,Mar 2014,No Data
+LTIM,LTIMindtree Ltd,Mar 2015,No Data
+LTIM,LTIMindtree Ltd,Mar 2016,No Data
+LTIM,LTIMindtree Ltd,Mar 2017,No Data
+LTIM,LTIMindtree Ltd,Mar 2018,No Data
+LTIM,LTIMindtree Ltd,Mar 2019,Fair
+LTIM,LTIMindtree Ltd,Mar 2020,Fair
+LTIM,LTIMindtree Ltd,Mar 2021,Discount
+LTIM,LTIMindtree Ltd,Mar 2022,Fair
+LTIM,LTIMindtree Ltd,Mar 2023,Fair
+LTIM,LTIMindtree Ltd,Mar 2024,Fair
+LODHA,Macrotech Developers Ltd,Mar 2016,No Data
+LODHA,Macrotech Developers Ltd,Mar 2017,No Data
+LODHA,Macrotech Developers Ltd,Mar 2018,No Data
+LODHA,Macrotech Developers Ltd,Mar 2019,Fair
+LODHA,Macrotech Developers Ltd,Mar 2020,Fair
+LODHA,Macrotech Developers Ltd,Mar 2021,Fair
+LODHA,Macrotech Developers Ltd,Mar 2022,Discount
+LODHA,Macrotech Developers Ltd,Mar 2023,Fair
+LODHA,Macrotech Developers Ltd,Mar 2024,Fair
+M&M,"Mahindra & Mahindra Ltd
+",Mar 2013,No Data
+M&M,"Mahindra & Mahindra Ltd
+",Mar 2014,No Data
+M&M,"Mahindra & Mahindra Ltd
+",Mar 2015,No Data
+M&M,"Mahindra & Mahindra Ltd
+",Mar 2016,No Data
+M&M,"Mahindra & Mahindra Ltd
+",Mar 2017,No Data
+M&M,"Mahindra & Mahindra Ltd
+",Mar 2018,No Data
+M&M,"Mahindra & Mahindra Ltd
+",Mar 2019,Caution
+M&M,"Mahindra & Mahindra Ltd
+",Mar 2020,Fair
+M&M,"Mahindra & Mahindra Ltd
+",Mar 2021,Discount
+M&M,"Mahindra & Mahindra Ltd
+",Mar 2022,Fair
+M&M,"Mahindra & Mahindra Ltd
+",Mar 2023,Fair
+M&M,"Mahindra & Mahindra Ltd
+",Mar 2024,Discount
+MARUTI,Maruti Suzuki India Ltd,Mar 2013,No Data
+MARUTI,Maruti Suzuki India Ltd,Mar 2014,No Data
+MARUTI,Maruti Suzuki India Ltd,Mar 2015,No Data
+MARUTI,Maruti Suzuki India Ltd,Mar 2016,No Data
+MARUTI,Maruti Suzuki India Ltd,Mar 2017,No Data
+MARUTI,Maruti Suzuki India Ltd,Mar 2018,No Data
+MARUTI,Maruti Suzuki India Ltd,Mar 2019,Fair
+MARUTI,Maruti Suzuki India Ltd,Mar 2020,Discount
+MARUTI,Maruti Suzuki India Ltd,Mar 2021,Fair
+MARUTI,Maruti Suzuki India Ltd,Mar 2022,Fair
+MARUTI,Maruti Suzuki India Ltd,Mar 2023,Discount
+MARUTI,Maruti Suzuki India Ltd,Mar 2024,Discount
+NESTLEIND,Nestle India Ltd,Dec 2013,No Data
+NESTLEIND,Nestle India Ltd,Dec 2014,No Data
+NESTLEIND,Nestle India Ltd,Dec 2015,No Data
+NESTLEIND,Nestle India Ltd,Dec 2016,No Data
+NESTLEIND,Nestle India Ltd,Dec 2017,No Data
+NESTLEIND,Nestle India Ltd,Dec 2018,No Data
+NESTLEIND,Nestle India Ltd,Dec 2019,Caution
+NESTLEIND,Nestle India Ltd,Dec 2020,Caution
+NESTLEIND,Nestle India Ltd,Dec 2021,Discount
+NESTLEIND,Nestle India Ltd,Dec 2022,Fair
+NESTLEIND,Nestle India Ltd,Dec 2023,Discount
+NESTLEIND,Nestle India Ltd,Mar 2024,Fair
+NHPC,"NHPC Ltd
+",Mar 2013,No Data
+NHPC,"NHPC Ltd
+",Mar 2014,No Data
+NHPC,"NHPC Ltd
+",Mar 2015,No Data
+NHPC,"NHPC Ltd
+",Mar 2016,No Data
+NHPC,"NHPC Ltd
+",Mar 2017,No Data
+NHPC,"NHPC Ltd
+",Mar 2018,No Data
+NHPC,"NHPC Ltd
+",Mar 2019,Caution
+NHPC,"NHPC Ltd
+",Mar 2020,Fair
+NHPC,"NHPC Ltd
+",Mar 2021,Fair
+NHPC,"NHPC Ltd
+",Mar 2022,Fair
+NHPC,"NHPC Ltd
+",Mar 2023,Fair
+NHPC,"NHPC Ltd
+",Mar 2024,Caution
+NTPC,NTPC Ltd,Mar 2013,No Data
+NTPC,NTPC Ltd,Mar 2014,No Data
+NTPC,NTPC Ltd,Mar 2015,No Data
+NTPC,NTPC Ltd,Mar 2016,No Data
+NTPC,NTPC Ltd,Mar 2017,No Data
+NTPC,NTPC Ltd,Mar 2018,No Data
+NTPC,NTPC Ltd,Mar 2019,Fair
+NTPC,NTPC Ltd,Mar 2020,Discount
+NTPC,NTPC Ltd,Mar 2021,Fair
+NTPC,NTPC Ltd,Mar 2022,Fair
+NTPC,NTPC Ltd,Mar 2023,Caution
+NTPC,NTPC Ltd,Mar 2024,Fair
+ONGC,Oil & Natural Gas Corpn Ltd,Mar 2013,No Data
+ONGC,Oil & Natural Gas Corpn Ltd,Mar 2014,No Data
+ONGC,Oil & Natural Gas Corpn Ltd,Mar 2015,No Data
+ONGC,Oil & Natural Gas Corpn Ltd,Mar 2016,No Data
+ONGC,Oil & Natural Gas Corpn Ltd,Mar 2017,No Data
+ONGC,Oil & Natural Gas Corpn Ltd,Mar 2018,No Data
+ONGC,Oil & Natural Gas Corpn Ltd,Mar 2019,Fair
+ONGC,Oil & Natural Gas Corpn Ltd,Mar 2020,Fair
+ONGC,Oil & Natural Gas Corpn Ltd,Mar 2021,Discount
+ONGC,Oil & Natural Gas Corpn Ltd,Mar 2022,Fair
+ONGC,Oil & Natural Gas Corpn Ltd,Mar 2023,Fair
+ONGC,Oil & Natural Gas Corpn Ltd,Mar 2024,Discount
+PIDILITIND,Pidilite Industries Ltd,Mar 2013,No Data
+PIDILITIND,Pidilite Industries Ltd,Mar 2014,No Data
+PIDILITIND,Pidilite Industries Ltd,Mar 2015,No Data
+PIDILITIND,Pidilite Industries Ltd,Mar 2016,No Data
+PIDILITIND,Pidilite Industries Ltd,Mar 2017,No Data
+PIDILITIND,Pidilite Industries Ltd,Mar 2018,No Data
+PIDILITIND,Pidilite Industries Ltd,Mar 2019,Discount
+PIDILITIND,Pidilite Industries Ltd,Mar 2020,Caution
+PIDILITIND,Pidilite Industries Ltd,Mar 2021,Caution
+PIDILITIND,Pidilite Industries Ltd,Mar 2022,Fair
+PIDILITIND,Pidilite Industries Ltd,Mar 2023,Fair
+PIDILITIND,Pidilite Industries Ltd,Mar 2024,Fair
+PFC,Power Finance Corporation Ltd,Mar 2013,No Data
+PFC,Power Finance Corporation Ltd,Mar 2014,No Data
+PFC,Power Finance Corporation Ltd,Mar 2015,No Data
+PFC,Power Finance Corporation Ltd,Mar 2016,No Data
+PFC,Power Finance Corporation Ltd,Mar 2017,No Data
+PFC,Power Finance Corporation Ltd,Mar 2018,No Data
+PFC,Power Finance Corporation Ltd,Mar 2019,Fair
+PFC,Power Finance Corporation Ltd,Mar 2020,Fair
+PFC,Power Finance Corporation Ltd,Mar 2021,Caution
+PFC,Power Finance Corporation Ltd,Mar 2022,Discount
+PFC,Power Finance Corporation Ltd,Mar 2023,Fair
+PFC,Power Finance Corporation Ltd,Mar 2024,Fair
+POWERGRID,Power Grid Corporation of India Ltd,Mar 2013,No Data
+POWERGRID,Power Grid Corporation of India Ltd,Mar 2013,No Data
+POWERGRID,Power Grid Corporation of India Ltd,Mar 2014,No Data
+POWERGRID,Power Grid Corporation of India Ltd,Mar 2014,No Data
+POWERGRID,Power Grid Corporation of India Ltd,Mar 2015,No Data
+POWERGRID,Power Grid Corporation of India Ltd,Mar 2015,No Data
+POWERGRID,Power Grid Corporation of India Ltd,Mar 2016,No Data
+POWERGRID,Power Grid Corporation of India Ltd,Mar 2016,No Data
+POWERGRID,Power Grid Corporation of India Ltd,Mar 2017,No Data
+POWERGRID,Power Grid Corporation of India Ltd,Mar 2017,No Data
+POWERGRID,Power Grid Corporation of India Ltd,Mar 2018,No Data
+POWERGRID,Power Grid Corporation of India Ltd,Mar 2018,No Data
+POWERGRID,Power Grid Corporation of India Ltd,Mar 2019,Caution
+POWERGRID,Power Grid Corporation of India Ltd,Mar 2019,Caution
+POWERGRID,Power Grid Corporation of India Ltd,Mar 2020,Fair
+POWERGRID,Power Grid Corporation of India Ltd,Mar 2020,Fair
+POWERGRID,Power Grid Corporation of India Ltd,Mar 2021,Fair
+POWERGRID,Power Grid Corporation of India Ltd,Mar 2021,Fair
+POWERGRID,Power Grid Corporation of India Ltd,Mar 2022,Caution
+POWERGRID,Power Grid Corporation of India Ltd,Mar 2022,Caution
+POWERGRID,Power Grid Corporation of India Ltd,Mar 2023,Fair
+POWERGRID,Power Grid Corporation of India Ltd,Mar 2023,Fair
+POWERGRID,Power Grid Corporation of India Ltd,Mar 2024,Caution
+POWERGRID,Power Grid Corporation of India Ltd,Mar 2024,Caution
+PNB,Punjab National Bank,Mar 2013,No Data
+PNB,Punjab National Bank,Mar 2013,No Data
+PNB,Punjab National Bank,Mar 2013,No Data
+PNB,Punjab National Bank,Mar 2013,No Data
+PNB,Punjab National Bank,Mar 2013,No Data
+PNB,Punjab National Bank,Mar 2014,No Data
+PNB,Punjab National Bank,Mar 2014,No Data
+PNB,Punjab National Bank,Mar 2014,No Data
+PNB,Punjab National Bank,Mar 2014,No Data
+PNB,Punjab National Bank,Mar 2014,No Data
+PNB,Punjab National Bank,Mar 2015,No Data
+PNB,Punjab National Bank,Mar 2015,No Data
+PNB,Punjab National Bank,Mar 2015,No Data
+PNB,Punjab National Bank,Mar 2015,No Data
+PNB,Punjab National Bank,Mar 2015,No Data
+PNB,Punjab National Bank,Mar 2016,No Data
+PNB,Punjab National Bank,Mar 2016,No Data
+PNB,Punjab National Bank,Mar 2016,No Data
+PNB,Punjab National Bank,Mar 2016,No Data
+PNB,Punjab National Bank,Mar 2016,No Data
+PNB,Punjab National Bank,Mar 2017,No Data
+PNB,Punjab National Bank,Mar 2017,No Data
+PNB,Punjab National Bank,Mar 2017,No Data
+PNB,Punjab National Bank,Mar 2017,No Data
+PNB,Punjab National Bank,Mar 2017,No Data
+PNB,Punjab National Bank,Mar 2018,No Data
+PNB,Punjab National Bank,Mar 2018,No Data
+PNB,Punjab National Bank,Mar 2018,No Data
+PNB,Punjab National Bank,Mar 2018,No Data
+PNB,Punjab National Bank,Mar 2018,No Data
+PNB,Punjab National Bank,Mar 2019,Caution
+PNB,Punjab National Bank,Mar 2019,Caution
+PNB,Punjab National Bank,Mar 2019,Caution
+PNB,Punjab National Bank,Mar 2019,Caution
+PNB,Punjab National Bank,Mar 2019,Caution
+PNB,Punjab National Bank,Mar 2020,Discount
+PNB,Punjab National Bank,Mar 2020,Discount
+PNB,Punjab National Bank,Mar 2020,Discount
+PNB,Punjab National Bank,Mar 2020,Discount
+PNB,Punjab National Bank,Mar 2020,Discount
+PNB,Punjab National Bank,Mar 2021,Discount
+PNB,Punjab National Bank,Mar 2021,Discount
+PNB,Punjab National Bank,Mar 2021,Discount
+PNB,Punjab National Bank,Mar 2021,Discount
+PNB,Punjab National Bank,Mar 2021,Discount
+PNB,Punjab National Bank,Mar 2022,Discount
+PNB,Punjab National Bank,Mar 2022,Discount
+PNB,Punjab National Bank,Mar 2022,Discount
+PNB,Punjab National Bank,Mar 2022,Discount
+PNB,Punjab National Bank,Mar 2022,Discount
+PNB,Punjab National Bank,Mar 2023,Discount
+PNB,Punjab National Bank,Mar 2023,Discount
+PNB,Punjab National Bank,Mar 2023,Discount
+PNB,Punjab National Bank,Mar 2023,Discount
+PNB,Punjab National Bank,Mar 2023,Discount
+PNB,Punjab National Bank,Mar 2024,Discount
+PNB,Punjab National Bank,Mar 2024,Discount
+PNB,Punjab National Bank,Mar 2024,Discount
+PNB,Punjab National Bank,Mar 2024,Discount
+PNB,Punjab National Bank,Mar 2024,Discount
+RECLTD,REC Ltd,Mar 2013,No Data
+RECLTD,REC Ltd,Mar 2014,No Data
+RECLTD,REC Ltd,Mar 2015,No Data
+RECLTD,REC Ltd,Mar 2016,No Data
+RECLTD,REC Ltd,Mar 2017,No Data
+RECLTD,REC Ltd,Mar 2018,No Data
+RECLTD,REC Ltd,Mar 2019,Fair
+RECLTD,REC Ltd,Mar 2020,Fair
+RECLTD,REC Ltd,Mar 2021,Discount
+RECLTD,REC Ltd,Mar 2022,Caution
+RECLTD,REC Ltd,Mar 2023,Caution
+RECLTD,REC Ltd,Mar 2024,Fair
+RELIANCE,"Reliance Industries Ltd
+",Mar 2013,No Data
+RELIANCE,"Reliance Industries Ltd
+",Mar 2014,No Data
+RELIANCE,"Reliance Industries Ltd
+",Mar 2015,No Data
+RELIANCE,"Reliance Industries Ltd
+",Mar 2016,No Data
+RELIANCE,"Reliance Industries Ltd
+",Mar 2017,No Data
+RELIANCE,"Reliance Industries Ltd
+",Mar 2018,No Data
+RELIANCE,"Reliance Industries Ltd
+",Mar 2019,Fair
+RELIANCE,"Reliance Industries Ltd
+",Mar 2020,Fair
+RELIANCE,"Reliance Industries Ltd
+",Mar 2021,Discount
+RELIANCE,"Reliance Industries Ltd
+",Mar 2022,Fair
+RELIANCE,"Reliance Industries Ltd
+",Mar 2023,Caution
+RELIANCE,"Reliance Industries Ltd
+",Mar 2024,Fair
+MOTHERSON,Samvardhana Motherson International Ltd,Mar 2013,No Data
+MOTHERSON,Samvardhana Motherson International Ltd,Mar 2014,No Data
+MOTHERSON,Samvardhana Motherson International Ltd,Mar 2015,No Data
+MOTHERSON,Samvardhana Motherson International Ltd,Mar 2016,No Data
+MOTHERSON,Samvardhana Motherson International Ltd,Mar 2017,No Data
+MOTHERSON,Samvardhana Motherson International Ltd,Mar 2018,No Data
+MOTHERSON,Samvardhana Motherson International Ltd,Mar 2019,Fair
+MOTHERSON,Samvardhana Motherson International Ltd,Mar 2020,Fair
+MOTHERSON,Samvardhana Motherson International Ltd,Mar 2021,Fair
+MOTHERSON,Samvardhana Motherson International Ltd,Mar 2022,Caution
+MOTHERSON,Samvardhana Motherson International Ltd,Mar 2023,Discount
+MOTHERSON,Samvardhana Motherson International Ltd,Mar 2024,Discount
+SBILIFE,SBI Life Insurance Company Ltd,Mar 2013,No Data
+SBILIFE,SBI Life Insurance Company Ltd,Mar 2014,No Data
+SBILIFE,SBI Life Insurance Company Ltd,Mar 2015,No Data
+SBILIFE,SBI Life Insurance Company Ltd,Mar 2016,No Data
+SBILIFE,SBI Life Insurance Company Ltd,Mar 2017,No Data
+SBILIFE,SBI Life Insurance Company Ltd,Mar 2018,No Data
+SBILIFE,SBI Life Insurance Company Ltd,Mar 2019,Fair
+SBILIFE,SBI Life Insurance Company Ltd,Mar 2020,Discount
+SBILIFE,SBI Life Insurance Company Ltd,Mar 2021,Caution
+SBILIFE,SBI Life Insurance Company Ltd,Mar 2022,Fair
+SBILIFE,SBI Life Insurance Company Ltd,Mar 2023,Caution
+SBILIFE,SBI Life Insurance Company Ltd,Mar 2024,Caution
+SHREECEM,Shree Cement Ltd,Jun 2013,No Data
+SHREECEM,Shree Cement Ltd,Jun 2014,No Data
+SHREECEM,Shree Cement Ltd,Jun 2015,No Data
+SHREECEM,Shree Cement Ltd,Mar 2017,No Data
+SHREECEM,Shree Cement Ltd,Mar 2018,No Data
+SHREECEM,Shree Cement Ltd,Mar 2019,Fair
+SHREECEM,Shree Cement Ltd,Mar 2020,Caution
+SHREECEM,Shree Cement Ltd,Mar 2021,Fair
+SHREECEM,Shree Cement Ltd,Mar 2022,Discount
+SHREECEM,Shree Cement Ltd,Mar 2023,Fair
+SHREECEM,Shree Cement Ltd,Mar 2024,Discount
+SHRIRAMFIN,"Shriram Finance Ltd
+",Mar 2013,No Data
+SHRIRAMFIN,"Shriram Finance Ltd
+",Mar 2014,No Data
+SHRIRAMFIN,"Shriram Finance Ltd
+",Mar 2015,No Data
+SHRIRAMFIN,"Shriram Finance Ltd
+",Mar 2016,No Data
+SHRIRAMFIN,"Shriram Finance Ltd
+",Mar 2017,No Data
+SHRIRAMFIN,"Shriram Finance Ltd
+",Mar 2018,No Data
+SHRIRAMFIN,"Shriram Finance Ltd
+",Mar 2019,Caution
+SHRIRAMFIN,"Shriram Finance Ltd
+",Mar 2020,Discount
+SHRIRAMFIN,"Shriram Finance Ltd
+",Mar 2021,Fair
+SHRIRAMFIN,"Shriram Finance Ltd
+",Mar 2022,Fair
+SHRIRAMFIN,"Shriram Finance Ltd
+",Mar 2023,Fair
+SHRIRAMFIN,"Shriram Finance Ltd
+",Mar 2024,Caution
+SIEMENS,Siemens Ltd,Sep 2011,No Data
+SIEMENS,Siemens Ltd,Sep 2014,No Data
+SIEMENS,Siemens Ltd,Sep 2015,No Data
+SIEMENS,Siemens Ltd,Sep 2016,No Data
+SIEMENS,Siemens Ltd,Sep 2017,No Data
+SIEMENS,Siemens Ltd,Sep 2018,No Data
+SIEMENS,Siemens Ltd,Sep 2019,Discount
+SIEMENS,Siemens Ltd,Sep 2020,Fair
+SIEMENS,Siemens Ltd,Sep 2021,Discount
+SIEMENS,Siemens Ltd,Sep 2022,Caution
+SIEMENS,Siemens Ltd,Sep 2023,Fair
+SIEMENS,Siemens Ltd,Sep 2024,Discount
+SUNPHARMA,Sun Pharmaceuticals Industries Ltd,Mar 2013,No Data
+SUNPHARMA,Sun Pharmaceuticals Industries Ltd,Mar 2014,No Data
+SUNPHARMA,Sun Pharmaceuticals Industries Ltd,Mar 2015,No Data
+SUNPHARMA,Sun Pharmaceuticals Industries Ltd,Mar 2016,No Data
+SUNPHARMA,Sun Pharmaceuticals Industries Ltd,Mar 2017,No Data
+SUNPHARMA,Sun Pharmaceuticals Industries Ltd,Mar 2018,No Data
+SUNPHARMA,Sun Pharmaceuticals Industries Ltd,Mar 2019,Caution
+SUNPHARMA,Sun Pharmaceuticals Industries Ltd,Mar 2020,Fair
+SUNPHARMA,Sun Pharmaceuticals Industries Ltd,Mar 2021,Discount
+SUNPHARMA,Sun Pharmaceuticals Industries Ltd,Mar 2022,Discount
+SUNPHARMA,Sun Pharmaceuticals Industries Ltd,Mar 2023,Discount
+SUNPHARMA,Sun Pharmaceuticals Industries Ltd,Mar 2024,Fair
+TCS,Tata Consultancy Services Ltd,Mar 2013,No Data
+TCS,Tata Consultancy Services Ltd,Mar 2014,No Data
+TCS,Tata Consultancy Services Ltd,Mar 2015,No Data
+TCS,Tata Consultancy Services Ltd,Mar 2016,No Data
+TCS,Tata Consultancy Services Ltd,Mar 2017,No Data
+TCS,Tata Consultancy Services Ltd,Mar 2018,No Data
+TCS,Tata Consultancy Services Ltd,Mar 2019,Fair
+TCS,Tata Consultancy Services Ltd,Mar 2020,Fair
+TCS,Tata Consultancy Services Ltd,Mar 2021,Caution
+TCS,Tata Consultancy Services Ltd,Mar 2022,Fair
+TCS,Tata Consultancy Services Ltd,Mar 2023,Discount
+TCS,Tata Consultancy Services Ltd,Mar 2024,Caution
+TATACONSUM,Tata Consumer Products Ltd,Mar 2013,No Data
+TATACONSUM,Tata Consumer Products Ltd,Mar 2014,No Data
+TATACONSUM,Tata Consumer Products Ltd,Mar 2015,No Data
+TATACONSUM,Tata Consumer Products Ltd,Mar 2016,No Data
+TATACONSUM,Tata Consumer Products Ltd,Mar 2017,No Data
+TATACONSUM,Tata Consumer Products Ltd,Mar 2018,No Data
+TATACONSUM,Tata Consumer Products Ltd,Mar 2019,Discount
+TATACONSUM,Tata Consumer Products Ltd,Mar 2020,Discount
+TATACONSUM,Tata Consumer Products Ltd,Mar 2021,Caution
+TATACONSUM,Tata Consumer Products Ltd,Mar 2022,Discount
+TATACONSUM,Tata Consumer Products Ltd,Mar 2023,Caution
+TATACONSUM,Tata Consumer Products Ltd,Mar 2024,Fair
+TATAMOTORS,Tata Motors Ltd,Mar 2013,No Data
+TATAMOTORS,Tata Motors Ltd,Mar 2014,No Data
+TATAMOTORS,Tata Motors Ltd,Mar 2015,No Data
+TATAMOTORS,Tata Motors Ltd,Mar 2016,No Data
+TATAMOTORS,Tata Motors Ltd,Mar 2017,No Data
+TATAMOTORS,Tata Motors Ltd,Mar 2018,No Data
+TATAMOTORS,Tata Motors Ltd,Mar 2019,Discount
+TATAMOTORS,Tata Motors Ltd,Mar 2020,Discount
+TATAMOTORS,Tata Motors Ltd,Mar 2021,Discount
+TATAMOTORS,Tata Motors Ltd,Mar 2022,Fair
+TATAMOTORS,Tata Motors Ltd,Mar 2023,Fair
+TATAMOTORS,Tata Motors Ltd,Mar 2024,Caution
+TATAPOWER,"Tata Power Company Ltd
+",Mar 2013,No Data
+TATAPOWER,"Tata Power Company Ltd
+",Mar 2014,No Data
+TATAPOWER,"Tata Power Company Ltd
+",Mar 2015,No Data
+TATAPOWER,"Tata Power Company Ltd
+",Mar 2016,No Data
+TATAPOWER,"Tata Power Company Ltd
+",Mar 2017,No Data
+TATAPOWER,"Tata Power Company Ltd
+",Mar 2018,No Data
+TATAPOWER,"Tata Power Company Ltd
+",Mar 2019,Discount
+TATAPOWER,"Tata Power Company Ltd
+",Mar 2020,Discount
+TATAPOWER,"Tata Power Company Ltd
+",Mar 2021,Caution
+TATAPOWER,"Tata Power Company Ltd
+",Mar 2022,Fair
+TATAPOWER,"Tata Power Company Ltd
+",Mar 2023,Discount
+TATAPOWER,"Tata Power Company Ltd
+",Mar 2024,Discount
+TATASTEEL,"Tata Steel Ltd
+",Mar 2013,No Data
+TATASTEEL,"Tata Steel Ltd
+",Mar 2014,No Data
+TATASTEEL,"Tata Steel Ltd
+",Mar 2015,No Data
+TATASTEEL,"Tata Steel Ltd
+",Mar 2016,No Data
+TATASTEEL,"Tata Steel Ltd
+",Mar 2017,No Data
+TATASTEEL,"Tata Steel Ltd
+",Mar 2018,No Data
+TATASTEEL,"Tata Steel Ltd
+",Mar 2019,Fair
+TATASTEEL,"Tata Steel Ltd
+",Mar 2020,Caution
+TATASTEEL,"Tata Steel Ltd
+",Mar 2021,Fair
+TATASTEEL,"Tata Steel Ltd
+",Mar 2022,Fair
+TATASTEEL,"Tata Steel Ltd
+",Mar 2023,Discount
+TATASTEEL,"Tata Steel Ltd
+",Mar 2024,Fair
+TECHM,Tech Mahindra Ltd,Mar 2013,No Data
+TECHM,Tech Mahindra Ltd,Mar 2013,No Data
+TECHM,Tech Mahindra Ltd,Mar 2014,No Data
+TECHM,Tech Mahindra Ltd,Mar 2014,No Data
+TECHM,Tech Mahindra Ltd,Mar 2015,No Data
+TECHM,Tech Mahindra Ltd,Mar 2015,No Data
+TECHM,Tech Mahindra Ltd,Mar 2016,No Data
+TECHM,Tech Mahindra Ltd,Mar 2016,No Data
+TECHM,Tech Mahindra Ltd,Mar 2017,No Data
+TECHM,Tech Mahindra Ltd,Mar 2017,No Data
+TECHM,Tech Mahindra Ltd,Mar 2018,No Data
+TECHM,Tech Mahindra Ltd,Mar 2018,No Data
+TECHM,Tech Mahindra Ltd,Mar 2019,Discount
+TECHM,Tech Mahindra Ltd,Mar 2019,Discount
+TECHM,Tech Mahindra Ltd,Mar 2020,Fair
+TECHM,Tech Mahindra Ltd,Mar 2020,Fair
+TECHM,Tech Mahindra Ltd,Mar 2021,Fair
+TECHM,Tech Mahindra Ltd,Mar 2021,Fair
+TECHM,Tech Mahindra Ltd,Mar 2022,Fair
+TECHM,Tech Mahindra Ltd,Mar 2022,Fair
+TECHM,Tech Mahindra Ltd,Mar 2023,Fair
+TECHM,Tech Mahindra Ltd,Mar 2023,Fair
+TECHM,Tech Mahindra Ltd,Mar 2024,Fair
+TECHM,Tech Mahindra Ltd,Mar 2024,Fair
+TITAN,"Titan Company Ltd
+",Mar 2013,No Data
+TITAN,"Titan Company Ltd
+",Mar 2014,No Data
+TITAN,"Titan Company Ltd
+",Mar 2015,No Data
+TITAN,"Titan Company Ltd
+",Mar 2016,No Data
+TITAN,"Titan Company Ltd
+",Mar 2017,No Data
+TITAN,"Titan Company Ltd
+",Mar 2018,No Data
+TITAN,"Titan Company Ltd
+",Mar 2019,Fair
+TITAN,"Titan Company Ltd
+",Mar 2020,Discount
+TITAN,"Titan Company Ltd
+",Mar 2021,Discount
+TITAN,"Titan Company Ltd
+",Mar 2022,Caution
+TITAN,"Titan Company Ltd
+",Mar 2023,Discount
+TITAN,"Titan Company Ltd
+",Mar 2024,Discount
+TORNTPHARM,Torrent Pharmaceuticals Ltd,Mar 2013,No Data
+TORNTPHARM,Torrent Pharmaceuticals Ltd,Mar 2014,No Data
+TORNTPHARM,Torrent Pharmaceuticals Ltd,Mar 2015,No Data
+TORNTPHARM,Torrent Pharmaceuticals Ltd,Mar 2016,No Data
+TORNTPHARM,Torrent Pharmaceuticals Ltd,Mar 2017,No Data
+TORNTPHARM,Torrent Pharmaceuticals Ltd,Mar 2018,No Data
+TORNTPHARM,Torrent Pharmaceuticals Ltd,Mar 2019,Caution
+TORNTPHARM,Torrent Pharmaceuticals Ltd,Mar 2020,Caution
+TORNTPHARM,Torrent Pharmaceuticals Ltd,Mar 2021,Fair
+TORNTPHARM,Torrent Pharmaceuticals Ltd,Mar 2022,Fair
+TORNTPHARM,Torrent Pharmaceuticals Ltd,Mar 2023,Fair
+TORNTPHARM,Torrent Pharmaceuticals Ltd,Mar 2024,Fair
+TRENT,Trent Ltd,Mar 2013,No Data
+TRENT,Trent Ltd,Mar 2014,No Data
+TRENT,Trent Ltd,Mar 2015,No Data
+TRENT,Trent Ltd,Mar 2016,No Data
+TRENT,Trent Ltd,Mar 2017,No Data
+TRENT,Trent Ltd,Mar 2018,No Data
+TRENT,Trent Ltd,Mar 2019,Caution
+TRENT,Trent Ltd,Mar 2020,Fair
+TRENT,Trent Ltd,Mar 2021,Caution
+TRENT,Trent Ltd,Mar 2022,Caution
+TRENT,Trent Ltd,Mar 2023,Fair
+TRENT,Trent Ltd,Mar 2024,Discount
+TVSMOTOR,TVS Motor Company Ltd,Mar 2013,No Data
+TVSMOTOR,TVS Motor Company Ltd,Mar 2014,No Data
+TVSMOTOR,TVS Motor Company Ltd,Mar 2015,No Data
+TVSMOTOR,TVS Motor Company Ltd,Mar 2016,No Data
+TVSMOTOR,TVS Motor Company Ltd,Mar 2017,No Data
+TVSMOTOR,TVS Motor Company Ltd,Mar 2018,No Data
+TVSMOTOR,TVS Motor Company Ltd,Mar 2019,Discount
+TVSMOTOR,TVS Motor Company Ltd,Mar 2020,Discount
+TVSMOTOR,TVS Motor Company Ltd,Mar 2021,Caution
+TVSMOTOR,TVS Motor Company Ltd,Mar 2022,Discount
+TVSMOTOR,TVS Motor Company Ltd,Mar 2023,Fair
+TVSMOTOR,TVS Motor Company Ltd,Mar 2024,Fair

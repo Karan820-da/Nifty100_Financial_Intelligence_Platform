@@ -189,7 +189,6 @@ def get_home_data():
 # ==========================================================
 # Company Profile Data
 # ==========================================================
-
 @st.cache_data(ttl=600)
 def get_company_profile(company_id):
     """
@@ -199,6 +198,21 @@ def get_company_profile(company_id):
     df = get_base_data()
 
     company_df = df[df["company_id"] == company_id].copy()
+
+    # Extract numeric year
+    company_df["year_num"] = (
+        company_df["year"]
+        .str[-4:]
+        .astype(int)
+    )
+
+    # Latest year first
+    company_df = (
+        company_df
+        .sort_values("year_num", ascending=False)
+        .drop(columns="year_num")
+        .reset_index(drop=True)
+    )
 
     return company_df
 
