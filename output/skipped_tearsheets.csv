@@ -1,0 +1,5 @@
+company_id,reason
+ATGL,single positional indexer is out-of-bounds
+INDIGO,unsupported operand type(s) for *: 'NoneType' and 'int'
+SBIN,single positional indexer is out-of-bounds
+TVSMOTOR,unsupported operand type(s) for *: 'NoneType' and 'int'

@@ -1,0 +1,58 @@
+company_id,company_name,previous_year,latest_year,previous_pattern,latest_pattern
+ABB,Abbott India Ltd,Mar 2023,Mar 2024,Reinvestor,Shareholder Returns
+ADANIENSOL,Adani Energy Solutions Ltd,Mar 2023,Mar 2024,Mixed,Shareholder Returns
+ADANIENT,Adani Enterprises Ltd,Mar 2023,Mar 2024,Shareholder Returns,Mixed
+ADANIGREEN,Adani Green Energy Ltd,Mar 2023,Mar 2024,Shareholder Returns,Mixed
+AGTL,AGTL,Mar 2023,Mar 2024,Mixed,Reinvestor
+ASIANPAINT,"Asian Paints
+Indian Multi-National Paint and Coating Manufacturing Company",Mar 2023,Mar 2024,Reinvestor,Shareholder Returns
+AXISBANK,Axis Bank Ltd,Mar 2023,Mar 2024,Mixed,Growth Funded by Debt
+BAJAJ-AUTO,Bajaj Auto Ltd,Mar 2023,Mar 2024,Liquidating Assets,Reinvestor
+BANKBARODA,Bank of Baroda,Mar 2023,Mar 2024,Pre-Revenue,Growth Funded by Debt
+BEL,Bharat Electronics Ltd,Mar 2023,Mar 2024,Liquidating Assets,Shareholder Returns
+BRITANNIA,Britannia Industries Ltd,Mar 2023,Mar 2024,Shareholder Returns,Liquidating Assets
+CANBK,Canara Bank,Mar 2023,Mar 2024,Growth Funded by Debt,Reinvestor
+CIPLA,Cipla Ltd,Mar 2023,Mar 2024,Shareholder Returns,Reinvestor
+COALINDIA,Coal India Ltd,Mar 2023,Mar 2024,Shareholder Returns,Reinvestor
+DABUR,Dabur India Ltd,Mar 2023,Mar 2024,Reinvestor,Shareholder Returns
+DIVISLAB,Divis Laboratories Ltd,Mar 2023,Mar 2024,Shareholder Returns,Reinvestor
+DLF,DLF Ltd,Mar 2023,Mar 2024,Shareholder Returns,Mixed
+DRREDDY,Dr Reddys Laboratories Ltd,Mar 2023,Mar 2024,Shareholder Returns,Reinvestor
+GAIL,GAIL (India) Ltd,Mar 2023,Mar 2024,Mixed,Shareholder Returns
+GODREJCP,Godrej Consumer Products Ltd,Mar 2023,Mar 2024,Shareholder Returns,Mixed
+HAVELLS,Havells India Ltd,Mar 2023,Mar 2024,Liquidating Assets,Shareholder Returns
+HDFCBANK,HDFC Bank Ltd,Mar 2023,Mar 2024,Mixed,Liquidating Assets
+HDFCLIFE,HDFC Life Insurance Company Ltd,Mar 2023,Mar 2024,Mixed,Shareholder Returns
+HEROMOTOCO,Hero MotoCorp Ltd,Mar 2023,Mar 2024,Reinvestor,Shareholder Returns
+HINDUNILVR,Hindustan Unilever Ltd,Mar 2023,Mar 2024,Reinvestor,Shareholder Returns
+ICICIBANK,ICICI Bank Ltd,Mar 2023,Mar 2024,Growth Funded by Debt,Mixed
+ICICIPRULI,ICICI Prudential Life Insurance Company Ltd,Mar 2023,Mar 2024,Reinvestor,Unknown
+INDIGO,Interglobe Aviation Ltd,Mar 2023,Mar 2024,Reinvestor,Shareholder Returns
+INDUSINDBK,IndusInd Bank Ltd,Mar 2023,Mar 2024,Growth Funded by Debt,Pre-Revenue
+IRFC,Indian Railway Finance Corporation Ltd,Mar 2023,Mar 2024,Distress Signal,Shareholder Returns
+ITC,ITC Ltd,Mar 2023,Mar 2024,Reinvestor,Liquidating Assets
+JINDALSTEL,Jindal Steel & Power Ltd,Mar 2023,Mar 2024,Shareholder Returns,Mixed
+JIOFIN,Jio Financial Services Ltd,Mar 2023,Mar 2024,Shareholder Returns,Unknown
+KOTAKBANK,Kotak Mahindra Bank Ltd,Mar 2023,Mar 2024,Growth Funded by Debt,Mixed
+LICI,Life Insurance Corporation of India,Mar 2023,Mar 2024,Shareholder Returns,Reinvestor
+LODHA,Macrotech Developers Ltd,Mar 2023,Mar 2024,Liquidating Assets,Mixed
+LT,Larsen & Toubro Ltd,Mar 2023,Mar 2024,Shareholder Returns,Liquidating Assets
+LTIM,LTIMindtree Ltd,Mar 2023,Mar 2024,Reinvestor,Shareholder Returns
+MOTHERSON,Samvardhana Motherson International Ltd,Mar 2023,Mar 2024,Shareholder Returns,Mixed
+PNB,Punjab National Bank,Mar 2023,Mar 2024,Mixed,Growth Funded by Debt
+RELIANCE,Reliance Industries Ltd,Mar 2023,Mar 2024,Mixed,Shareholder Returns
+SBIN,State Bank of India,Mar 2023,Mar 2024,Growth Funded by Debt,Reinvestor
+SHRIRAMFIN,Shriram Finance Ltd,Mar 2023,Mar 2024,Distress Signal,Growth Funded by Debt
+SUNPHARMA,Sun Pharmaceuticals Industries Ltd,Mar 2023,Mar 2024,Mixed,Shareholder Returns
+TATACONSUM,Tata Consumer Products Ltd,Mar 2023,Mar 2024,Shareholder Returns,Mixed
+TATAPOWER,Tata Power Company Ltd,Mar 2023,Mar 2024,Mixed,Shareholder Returns
+TATASTEEL,Tata Steel Ltd,Mar 2023,Mar 2024,Shareholder Returns,Reinvestor
+TITAN,Titan Company Ltd,Mar 2023,Mar 2024,Mixed,Reinvestor
+TORNTPHARM,Torrent Pharmaceuticals Ltd,Mar 2023,Mar 2024,Mixed,Shareholder Returns
+TRENT,Trent Ltd,Mar 2023,Mar 2024,Shareholder Returns,Reinvestor
+UNIONBANK,UNIONBANK,Mar 2023,Mar 2024,Reinvestor,Shareholder Returns
+UNITDSPR,UNITDSPR,Mar 2023,Mar 2024,Reinvestor,Liquidating Assets
+VBL,VBL,Dec 2022,Dec 2023,Shareholder Returns,Mixed
+WIPRO,WIPRO,Mar 2023,Mar 2024,Shareholder Returns,Liquidating Assets
+ZOMATO,ZOMATO,Mar 2023,Mar 2024,Unknown,Shareholder Returns
+ZYDUSLIFE,ZYDUSLIFE,Mar 2023,Mar 2024,Liquidating Assets,Reinvestor

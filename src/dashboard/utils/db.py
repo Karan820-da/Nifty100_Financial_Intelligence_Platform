@@ -266,7 +266,7 @@ def get_market_summary():
         "average_pe": round(df["pe_ratio"].mean(), 2),
         "average_roe": round(df["return_on_equity_pct"].mean(), 2),
         "total_market_cap": round(df["market_cap_crore"].sum(), 2)
-    }
+    } 
 
     return summary
 

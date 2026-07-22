@@ -2,9 +2,12 @@
 
 ## Project Overview
 
-The Nifty100 Financial Intelligence Platform is a data engineering project that ingests, validates, and stores financial data for Nifty 100 companies.
+The Nifty100 Financial Intelligence Platform is an end-to-end financial analytics project built using Python, MySQL, and Streamlit.
 
-The project loads data from multiple Excel datasets into a MySQL database, performs data validation checks, and provides analytical SQL queries for financial analysis and exploration.
+The platform extracts financial data from multiple datasets, performs ETL processing, calculates financial KPIs, builds analytical dashboards, generates screening and peer comparison reports, and produces automated PDF reports for Nifty 100 companies.
+
+The project demonstrates data engineering, financial analysis, visualization, reporting, and automation using real-world financial data.
+
 
 ## Technologies Used
 
@@ -228,7 +231,82 @@ The platform now includes:
 ### Sprint Status
 **Sprint 4 completed successfully.**
 
+## Sprint 5 – Financial Reporting & Portfolio Intelligence
 
+### Reporting Engine
+
+- Developed an automated PDF reporting system using ReportLab.
+- Created reusable report components for generating financial reports.
+- Integrated MySQL data with the reporting engine.
+
+### Portfolio Summary Report
+
+Implemented a portfolio summary report for Nifty 100 companies containing:
+
+- Company Information
+- Sector Details
+- Market Capitalization
+- PE Ratio
+- Return on Equity (ROE)
+- Return on Capital Employed (ROCE)
+- Earnings Per Share (EPS)
+- Dividend Payout Ratio
+
+### Business Trend Analysis
+
+Implemented business trend analysis using historical financial data.
+
+Compared the latest two annual financial statements to determine trends for:
+
+- Revenue (Sales)
+- Net Profit
+- Earnings Per Share (EPS)
+
+Trend Indicators:
+
+| Symbol | Meaning |
+| ------ | ------- |
+| ↑ | Positive Trend |
+| → | Stable Trend |
+| ↓ | Negative Trend |
+
+### Portfolio Intelligence
+
+Added portfolio intelligence features including:
+
+- Portfolio KPI Summary
+- Business Trend Section
+- Company-wise Financial Summary
+- Professional PDF Report Layout
+
+### Batch Report Generation
+
+Implemented automated report generation for all supported companies.
+
+Features include:
+
+- Multi-company PDF generation
+- Automatic handling of incomplete company data
+- Reusable report layout
+- Portfolio summary generation
+
+### Reports Generated
+
+- `reports/portfolio/portfolio_summary.pdf`
+
+### Sprint 5 Deliverables
+
+- PDF Reporting Engine
+- Portfolio Summary Report
+- Business Trend Analysis
+- Dynamic KPI Summary
+- Automated Batch Report Generation
+- ReportLab Integration
+- Reusable Report Components
+
+### Sprint Status
+
+**Sprint 5 completed successfully.**
 
 ## Author
 
