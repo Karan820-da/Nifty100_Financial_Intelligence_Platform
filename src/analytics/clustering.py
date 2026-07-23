@@ -12,13 +12,13 @@ Author : Karan Taynak
 
 import os
 import warnings
-
+import seaborn as sns
 import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
 
 from sqlalchemy import text
-
+from scipy.stats import zscore
 from sklearn.impute import SimpleImputer
 from sklearn.preprocessing import StandardScaler
 from sklearn.cluster import KMeans
@@ -120,55 +120,63 @@ def load_data():
     """
 
     engine = get_engine()
-
     query = """
 
+SELECT
+
+    fr.company_id,
+
+    c.company_name,
+
+    s.broad_sector AS sector,
+
+    fr.return_on_equity_pct,
+
+    fr.debt_to_equity,
+
+    fr.revenue_cagr_5yr,
+
+    fr.free_cash_flow_cr,
+
+    fr.operating_profit_margin_pct,
+
+    fr.net_profit_margin_pct,
+
+    fr.interest_coverage,
+
+    fr.asset_turnover,
+
+    fr.earnings_per_share,
+
+    fr.pat_cagr_5yr
+
+FROM financial_ratios fr
+
+INNER JOIN (
+
     SELECT
+        company_id,
+        MAX(id) AS latest_id
 
-        fr.company_id,
+    FROM financial_ratios
 
-        c.company_name,
+    GROUP BY company_id
 
-        s.broad_sector AS sector,
+) latest
 
-        fr.return_on_equity_pct,
+    ON fr.id = latest.latest_id
 
-        fr.debt_to_equity,
+INNER JOIN companies c
 
-        fr.revenue_cagr_5yr,
+    ON fr.company_id = c.id
 
-        fr.free_cash_flow_cr,
+INNER JOIN sectors s
 
-        fr.operating_profit_margin_pct
+    ON fr.company_id = s.company_id
 
-    FROM financial_ratios fr
+ORDER BY fr.company_id;
 
-    INNER JOIN (
-
-        SELECT
-            company_id,
-            MAX(id) AS latest_id
-
-        FROM financial_ratios
-
-        GROUP BY company_id
-
-    ) latest
-
-        ON fr.id = latest.latest_id
-
-    INNER JOIN companies c
-
-        ON fr.company_id = c.id
-
-    INNER JOIN sectors s
-
-        ON fr.company_id = s.company_id
-
-    ORDER BY fr.company_id;
-
-    """
-
+"""
     df = pd.read_sql(text(query), engine)
 
     return df
@@ -256,10 +264,6 @@ def global_imputation(df):
 
     return df
 
-# Remove unrealistic values
-df["return_on_equity_pct"] = df["return_on_equity_pct"].clip(-100, 100)
-df["operating_profit_margin_pct"] = df["operating_profit_margin_pct"].clip(-100, 100)
-df["debt_to_equity"] = df["debt_to_equity"].clip(0, 20)
 
 
 # ----------------------------------------------------------
@@ -287,6 +291,23 @@ def scale_features(df):
     )
 
     return scaled_df, scaler
+
+# ----------------------------------------------------------
+# Features for Correlation Analysis
+# ----------------------------------------------------------
+
+CORRELATION_FEATURES = [
+    "return_on_equity_pct",
+    "net_profit_margin_pct",
+    "operating_profit_margin_pct",
+    "debt_to_equity",
+    "interest_coverage",
+    "asset_turnover",
+    "free_cash_flow_cr",
+    "earnings_per_share",
+    "revenue_cagr_5yr",
+    "pat_cagr_5yr",
+]
 
 
 # ----------------------------------------------------------
@@ -437,6 +458,258 @@ def assign_cluster_names(df):
     return df
 
 # ----------------------------------------------------------
+# Cluster Profiling
+# ----------------------------------------------------------
+
+def cluster_profile(df):
+    """
+    Generate mean and median statistics for each cluster.
+    """
+
+    mean_profile = (
+        df.groupby("cluster_id")[FEATURE_COLUMNS]
+        .mean()
+        .round(2)
+    )
+
+    median_profile = (
+        df.groupby("cluster_id")[FEATURE_COLUMNS]
+        .median()
+        .round(2)
+    )
+
+    profile = pd.concat(
+        {
+            "Mean": mean_profile,
+            "Median": median_profile
+        },
+        axis=1
+    )
+
+    os.makedirs("output", exist_ok=True)
+
+    profile.to_csv(
+        "output/cluster_profile.csv"
+    )
+
+    print("\n")
+    print("=" * 60)
+    print("CLUSTER PROFILE")
+    print("=" * 60)
+    print(profile)
+    print("=" * 60)
+
+    print("\n✓ Cluster profile exported.")
+    print("output/cluster_profile.csv")
+
+    return profile
+
+# ----------------------------------------------------------
+# Correlation Heatmap
+# ----------------------------------------------------------
+
+def correlation_heatmap(df):
+    """
+    Generate Pearson correlation heatmap for financial KPIs.
+    """
+
+    corr_df = df[CORRELATION_FEATURES].copy()
+
+    corr_df = corr_df.apply(pd.to_numeric, errors="coerce")
+
+    corr = corr_df.corr(method="pearson")
+
+    os.makedirs("reports", exist_ok=True)
+
+    plt.figure(figsize=(12, 10))
+
+    sns.heatmap(
+        corr,
+        annot=True,
+        fmt=".2f",
+        cmap="RdYlBu_r",
+        square=True,
+        linewidths=0.5,
+        cbar=True
+    )
+
+    plt.title("Financial KPI Correlation Matrix")
+
+    plt.tight_layout()
+
+    plt.savefig(
+        "reports/correlation_heatmap.png",
+        dpi=300
+    )
+
+    plt.close()
+
+    print("\n✓ Correlation heatmap saved.")
+    print("reports/correlation_heatmap.png")
+
+# ----------------------------------------------------------
+# Outlier Detection
+# ----------------------------------------------------------
+
+def detect_outliers(df):
+    """
+    Detect sector-wise outliers using Z-score.
+    Flags observations where |Z-score| > 3.
+    """
+
+    outliers = []
+
+    for sector in df["sector"].unique():
+
+        sector_df = df[df["sector"] == sector].copy()
+
+        for feature in CORRELATION_FEATURES:
+
+            if feature not in sector_df.columns:
+                continue
+
+            values = pd.to_numeric(
+                sector_df[feature],
+                errors="coerce"
+            )
+
+            if values.notna().sum() < 2:
+                continue
+
+            z_scores = zscore(
+                values,
+                nan_policy="omit"
+            )
+
+            sector_df[f"{feature}_z"] = z_scores
+
+            flagged = sector_df[
+                sector_df[f"{feature}_z"].abs() > 3
+            ]
+
+            for _, row in flagged.iterrows():
+
+                outliers.append({
+
+                    "company_id": row["company_id"],
+                    "company_name": row["company_name"],
+                    "sector": row["sector"],
+                    "metric": feature,
+                    "value": row[feature],
+                    "z_score": round(
+                        row[f"{feature}_z"],
+                        2
+                    )
+
+                })
+
+    outlier_df = pd.DataFrame(outliers)
+
+    os.makedirs("output", exist_ok=True)
+
+    outlier_df.to_csv(
+        "output/outlier_report.csv",
+        index=False
+    )
+
+    print()
+
+    print("✓ Outlier report exported.")
+
+    print("output/outlier_report.csv")
+
+    print(f"Outliers Found : {len(outlier_df)}")
+
+    return outlier_df
+
+# ----------------------------------------------------------
+# Portfolio Statistics
+# ----------------------------------------------------------
+
+def portfolio_statistics(df):
+    """
+    Generate descriptive statistics for all KPIs.
+    """
+
+    stats = []
+
+    for feature in CORRELATION_FEATURES:
+
+        values = pd.to_numeric(
+            df[feature],
+            errors="coerce"
+        )
+
+        stats.append({
+
+            "KPI": feature,
+
+            "P10": round(values.quantile(0.10), 2),
+
+            "P25": round(values.quantile(0.25), 2),
+
+            "P50": round(values.quantile(0.50), 2),
+
+            "P75": round(values.quantile(0.75), 2),
+
+            "P90": round(values.quantile(0.90), 2),
+
+            "Mean": round(values.mean(), 2),
+
+            "Std": round(values.std(), 2)
+
+        })
+
+    stats_df = pd.DataFrame(stats)
+
+    os.makedirs("output", exist_ok=True)
+
+    stats_df.to_csv(
+        "output/portfolio_stats.csv",
+        index=False
+    )
+
+    print()
+
+    print("✓ Portfolio statistics exported.")
+
+    print("output/portfolio_stats.csv")
+
+    return stats_df
+
+# ----------------------------------------------------------
+# Cluster Members
+# ----------------------------------------------------------
+
+def export_cluster_members(df):
+    """
+    Export companies belonging to each cluster.
+    """
+
+    members = df[
+        [
+            "cluster_id",
+            "cluster_name",
+            "company_id",
+            "company_name",
+            "sector"
+        ]
+    ].sort_values(
+        ["cluster_id", "company_name"]
+    )
+
+    members.to_csv(
+        "output/cluster_members.csv",
+        index=False
+    )
+
+    print("\n✓ Cluster members exported.")
+    print("output/cluster_members.csv")
+
+    return members
+
+
+# ----------------------------------------------------------
 # Export Results
 # ----------------------------------------------------------
 
@@ -518,6 +791,11 @@ if __name__ == "__main__":
     print(df["cluster_id"].value_counts().sort_index())
 
     df = assign_cluster_names(df)
+    profile = cluster_profile(df)
+    correlation_heatmap(df)
+    outlier_df = detect_outliers(df)
+    stats_df = portfolio_statistics(df)
+    members = export_cluster_members(df)
 
     export_results(df)
 
@@ -542,3 +820,13 @@ if __name__ == "__main__":
     print("reports/elbow_plot.png")
 
     print("output/cluster_labels.csv")
+
+    print("reports/correlation_heatmap.png")
+
+    print("output/cluster_profile.csv")
+
+    print("output/cluster_members.csv")
+
+    print("output/outlier_report.csv")
+
+    print("output/portfolio_stats.csv") 

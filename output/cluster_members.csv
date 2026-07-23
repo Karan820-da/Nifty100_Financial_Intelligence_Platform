@@ -1,0 +1,108 @@
+cluster_id,cluster_name,company_id,company_name,sector
+0,Growth Leaders,ADANIENSOL,Adani Energy Solutions Ltd,Energy
+0,Growth Leaders,ADANIENT,Adani Enterprises Ltd,Industrials
+0,Growth Leaders,ADANIPOWER,Adani Power Ltd,Energy
+0,Growth Leaders,APOLLOHOSP,"Apollo Hospitals
+Chain of Indian private hospitals",Healthcare
+0,Growth Leaders,DMART,Avenue Supermarts Ltd,Consumer Discretionary
+0,Growth Leaders,BAJAJHLDNG,Bajaj Holdings & Investment Ltd,Financials
+0,Growth Leaders,GRASIM,Grasim Industries Ltd,Industrials
+0,Growth Leaders,HDFCLIFE,HDFC Life Insurance Company Ltd,Financials
+0,Growth Leaders,ICICIBANK,ICICI Bank Ltd,Financials
+0,Growth Leaders,ICICIPRULI,ICICI Prudential Life Insurance Company Ltd,Financials
+0,Growth Leaders,IRCTC,Indian Railway Catering & Tourism Corporation Ltd,Consumer Discretionary
+0,Growth Leaders,NAUKRI,Info Edge (India) Ltd,Communication Services
+0,Growth Leaders,INDIGO,Interglobe Aviation Ltd,Consumer Discretionary
+0,Growth Leaders,JSWSTEEL,JSW Steel Ltd,Materials
+0,Growth Leaders,JIOFIN,Jio Financial Services Ltd,Financials
+0,Growth Leaders,KOTAKBANK,"Kotak Mahindra Bank Ltd
+",Financials
+0,Growth Leaders,LTIM,LTIMindtree Ltd,Information Technology
+0,Growth Leaders,NESTLEIND,Nestle India Ltd,Consumer Staples
+0,Growth Leaders,SBILIFE,SBI Life Insurance Company Ltd,Financials
+0,Growth Leaders,TVSMOTOR,TVS Motor Company Ltd,Consumer Discretionary
+0,Growth Leaders,TATACONSUM,Tata Consumer Products Ltd,Consumer Staples
+0,Growth Leaders,TATAPOWER,"Tata Power Company Ltd
+",Energy
+0,Growth Leaders,TITAN,"Titan Company Ltd
+",Consumer Discretionary
+0,Growth Leaders,TRENT,Trent Ltd,Consumer Discretionary
+1,High Leverage,BEL,Bharat Electronics Ltd,Industrials
+1,High Leverage,HAL,Hindustan Aeronautics Ltd,Industrials
+2,Outlier,HDFCBANK,HDFC Bank Ltd,Financials
+3,Steady Performers,ADANIGREEN,Adani Green Energy Ltd,Energy
+3,Steady Performers,AXISBANK,Axis Bank Ltd,Financials
+3,Steady Performers,BAJFINANCE,Bajaj Finance Ltd,Financials
+3,Steady Performers,BAJAJFINSV,Bajaj Finserv Ltd,Financials
+3,Steady Performers,BANKBARODA,Bank of Baroda,Financials
+3,Steady Performers,CANBK,Canara Bank,Financials
+3,Steady Performers,CHOLAFIN,Cholamandalam Investment & Finance Company Ltd,Financials
+3,Steady Performers,IRFC,Indian Railway Finance Corporation Ltd,Financials
+3,Steady Performers,INDUSINDBK,IndusInd Bank Ltd,Financials
+3,Steady Performers,PFC,Power Finance Corporation Ltd,Financials
+3,Steady Performers,PNB,Punjab National Bank,Financials
+3,Steady Performers,RECLTD,REC Ltd,Financials
+3,Steady Performers,SHRIRAMFIN,"Shriram Finance Ltd
+",Financials
+4,Stable Companies,ABB,Abbott India Ltd,Industrials
+4,Stable Companies,ADANIPORTS,"Adani Ports & Special Economic Zone Ltd
+",Industrials
+4,Stable Companies,AMBUJACEM,Ambuja Cements Ltd,Materials
+4,Stable Companies,ASIANPAINT,"Asian Paints
+Indian Multi-National Paint and Coating Manufacturing Company",Materials
+4,Stable Companies,BAJAJ-AUTO,Bajaj Auto Ltd,Consumer Discretionary
+4,Stable Companies,BHEL,"Bharat Heavy Electricals Limited
+",Industrials
+4,Stable Companies,BPCL,Bharat Petroleum Corporation Ltd,Energy
+4,Stable Companies,BHARTIARTL,Bharti Airtel Ltd,Communication Services
+4,Stable Companies,BOSCHLTD,Bosch Ltd,Consumer Discretionary
+4,Stable Companies,BRITANNIA,Britannia Industries Ltd,Consumer Staples
+4,Stable Companies,CIPLA,"Cipla Ltd
+",Healthcare
+4,Stable Companies,COALINDIA,Coal India Ltd,Materials
+4,Stable Companies,DLF,DLF Ltd,Real Estate
+4,Stable Companies,DABUR,Dabur India Ltd,Consumer Staples
+4,Stable Companies,DIVISLAB,Divis Laboratories Ltd,Healthcare
+4,Stable Companies,DRREDDY,Dr Reddys Laboratories Ltd,Healthcare
+4,Stable Companies,EICHERMOT,Eicher Motors Ltd,Consumer Discretionary
+4,Stable Companies,GAIL,GAIL (India) Ltd,Energy
+4,Stable Companies,GODREJCP,Godrej Consumer Products Ltd,Consumer Staples
+4,Stable Companies,HCLTECH,HCL Technologies Ltd,Information Technology
+4,Stable Companies,HAVELLS,Havells India Ltd,Industrials
+4,Stable Companies,HEROMOTOCO,"Hero MotoCorp Ltd
+",Consumer Discretionary
+4,Stable Companies,HINDALCO,Hindalco Industries Ltd,Materials
+4,Stable Companies,HINDUNILVR,"Hindustan Unilever Ltd
+",Consumer Staples
+4,Stable Companies,ICICIGI,ICICI Lombard General Insurance Company Ltd,Financials
+4,Stable Companies,ITC,"ITC Ltd
+",Consumer Staples
+4,Stable Companies,IOC,"Indian Oil Corporation
+",Energy
+4,Stable Companies,INFY,Infosys Ltd,Information Technology
+4,Stable Companies,JSWENERGY,JSW Energy Ltd,Energy
+4,Stable Companies,JINDALSTEL,Jindal Steel & Power Ltd,Materials
+4,Stable Companies,LT,Larsen & Toubro Ltd,Industrials
+4,Stable Companies,LICI,Life Insurance Corporation of India,Financials
+4,Stable Companies,LODHA,Macrotech Developers Ltd,Real Estate
+4,Stable Companies,M&M,"Mahindra & Mahindra Ltd
+",Consumer Discretionary
+4,Stable Companies,MARUTI,Maruti Suzuki India Ltd,Consumer Discretionary
+4,Stable Companies,NHPC,"NHPC Ltd
+",Energy
+4,Stable Companies,NTPC,NTPC Ltd,Energy
+4,Stable Companies,ONGC,Oil & Natural Gas Corpn Ltd,Energy
+4,Stable Companies,PIDILITIND,Pidilite Industries Ltd,Materials
+4,Stable Companies,POWERGRID,Power Grid Corporation of India Ltd,Energy
+4,Stable Companies,RELIANCE,"Reliance Industries Ltd
+",Energy
+4,Stable Companies,MOTHERSON,Samvardhana Motherson International Ltd,Consumer Discretionary
+4,Stable Companies,SHREECEM,Shree Cement Ltd,Materials
+4,Stable Companies,SIEMENS,Siemens Ltd,Industrials
+4,Stable Companies,SUNPHARMA,Sun Pharmaceuticals Industries Ltd,Healthcare
+4,Stable Companies,TCS,Tata Consultancy Services Ltd,Information Technology
+4,Stable Companies,TATAMOTORS,Tata Motors Ltd,Consumer Discretionary
+4,Stable Companies,TATASTEEL,"Tata Steel Ltd
+",Materials
+4,Stable Companies,TECHM,Tech Mahindra Ltd,Information Technology
+4,Stable Companies,TORNTPHARM,Torrent Pharmaceuticals Ltd,Healthcare

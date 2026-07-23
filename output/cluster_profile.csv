@@ -1,0 +1,8 @@
+,Mean,Mean,Mean,Mean,Mean,Median,Median,Median,Median,Median
+,return_on_equity_pct,debt_to_equity,revenue_cagr_5yr,free_cash_flow_cr,operating_profit_margin_pct,return_on_equity_pct,debt_to_equity,revenue_cagr_5yr,free_cash_flow_cr,operating_profit_margin_pct
+cluster_id,,,,,,,,,,
+0,57.67,1.15,19.13,404.46,-500.54,13.52,0.32,17.37,715.0,16.5
+1,4280.32,0.56,9.73,274.5,28.5,4280.32,0.56,9.73,274.5,28.5
+2,14.34,6.81,21.95,35669.0,-44685.0,14.34,6.81,21.95,35669.0,-44685.0
+3,21.04,7.32,18.93,-34724.46,2791.46,16.72,6.86,18.18,-29445.0,100.0
+4,20.47,0.41,8.19,9386.92,2032.86,17.38,0.11,8.95,3100.5,22.0
