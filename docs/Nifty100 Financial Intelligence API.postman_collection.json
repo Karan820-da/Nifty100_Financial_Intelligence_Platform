@@ -1,0 +1,1805 @@
+{
+  "info": {
+    "_postman_id": "4c03769c-3f94-47cb-88e1-f2ba975ea4a9",
+    "name": "Nifty100 Financial Intelligence API",
+    "description": "REST API for the Nifty100 Financial Intelligence Platform",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "56883545",
+    "_collection_link": "https://go.postman.co/collection/56883545-4c03769c-3f94-47cb-88e1-f2ba975ea4a9?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "/",
+      "item": [
+        {
+          "name": "Root",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "{{baseUrl}}/",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                ""
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "Successful Response",
+              "originalRequest": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "url": {
+                  "raw": "{{baseUrl}}/",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    ""
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "cookie": [],
+              "body": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "api",
+      "item": [
+        {
+          "name": "v1",
+          "item": [
+            {
+              "name": "health",
+              "item": [
+                {
+                  "name": "Health",
+                  "request": {
+                    "method": "GET",
+                    "header": [
+                      {
+                        "key": "Accept",
+                        "value": "application/json"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{baseUrl}}/api/v1/health",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "api",
+                        "v1",
+                        "health"
+                      ]
+                    }
+                  },
+                  "response": [
+                    {
+                      "name": "Successful Response",
+                      "originalRequest": {
+                        "method": "GET",
+                        "header": [
+                          {
+                            "key": "Accept",
+                            "value": "application/json"
+                          }
+                        ],
+                        "url": {
+                          "raw": "{{baseUrl}}/api/v1/health",
+                          "host": [
+                            "{{baseUrl}}"
+                          ],
+                          "path": [
+                            "api",
+                            "v1",
+                            "health"
+                          ]
+                        }
+                      },
+                      "status": "OK",
+                      "code": 200,
+                      "_postman_previewlanguage": "json",
+                      "header": [
+                        {
+                          "key": "Content-Type",
+                          "value": "application/json"
+                        }
+                      ],
+                      "cookie": [],
+                      "body": ""
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "companies",
+              "item": [
+                {
+                  "name": "{ticker}",
+                  "item": [
+                    {
+                      "name": "pl",
+                      "item": [
+                        {
+                          "name": "Company Profit Loss",
+                          "request": {
+                            "method": "GET",
+                            "header": [
+                              {
+                                "key": "Accept",
+                                "value": "application/json"
+                              }
+                            ],
+                            "url": {
+                              "raw": "{{baseUrl}}/api/v1/companies/:ticker/pl",
+                              "host": [
+                                "{{baseUrl}}"
+                              ],
+                              "path": [
+                                "api",
+                                "v1",
+                                "companies",
+                                ":ticker",
+                                "pl"
+                              ],
+                              "variable": [
+                                {
+                                  "key": "ticker",
+                                  "value": "string"
+                                }
+                              ]
+                            }
+                          },
+                          "response": [
+                            {
+                              "name": "Successful Response",
+                              "originalRequest": {
+                                "method": "GET",
+                                "header": [
+                                  {
+                                    "key": "Accept",
+                                    "value": "application/json"
+                                  }
+                                ],
+                                "url": {
+                                  "raw": "{{baseUrl}}/api/v1/companies/:ticker/pl",
+                                  "host": [
+                                    "{{baseUrl}}"
+                                  ],
+                                  "path": [
+                                    "api",
+                                    "v1",
+                                    "companies",
+                                    ":ticker",
+                                    "pl"
+                                  ],
+                                  "variable": [
+                                    {
+                                      "key": "ticker",
+                                      "value": "string"
+                                    }
+                                  ]
+                                }
+                              },
+                              "status": "OK",
+                              "code": 200,
+                              "_postman_previewlanguage": "json",
+                              "header": [
+                                {
+                                  "key": "Content-Type",
+                                  "value": "application/json"
+                                }
+                              ],
+                              "cookie": [],
+                              "body": "[\n  {\n    \"year\": \"string\",\n    \"sales\": 8864.722312218228,\n    \"expenses\": 3042.6169264763093,\n    \"operating_profit\": 5740.073581486529,\n    \"opm_percentage\": 7436.179668066938,\n    \"other_income\": 6023.610767469947,\n    \"interest\": 3553.0701405763643,\n    \"depreciation\": 7087.905093250133,\n    \"profit_before_tax\": 8014.226707519232,\n    \"tax_percentage\": 8177.429860382867,\n    \"net_profit\": 2559.0925421648426,\n    \"eps\": 6337.607520274327,\n    \"dividend_payout\": 957.8075892533877\n  },\n  {\n    \"year\": \"string\",\n    \"sales\": 2543.754120089707,\n    \"expenses\": 3481.822979482627,\n    \"operating_profit\": 9582.525130590531,\n    \"opm_percentage\": 5036.606338956888,\n    \"other_income\": 7652.81702407659,\n    \"interest\": 9936.760652723016,\n    \"depreciation\": 4515.9497689391,\n    \"profit_before_tax\": 9926.356032261256,\n    \"tax_percentage\": 9175.92008838546,\n    \"net_profit\": 4451.315804983844,\n    \"eps\": 5350.001113702731,\n    \"dividend_payout\": 7879.485638194455\n  }\n]"
+                            },
+                            {
+                              "name": "Validation Error",
+                              "originalRequest": {
+                                "method": "GET",
+                                "header": [
+                                  {
+                                    "key": "Accept",
+                                    "value": "application/json"
+                                  }
+                                ],
+                                "url": {
+                                  "raw": "{{baseUrl}}/api/v1/companies/:ticker/pl",
+                                  "host": [
+                                    "{{baseUrl}}"
+                                  ],
+                                  "path": [
+                                    "api",
+                                    "v1",
+                                    "companies",
+                                    ":ticker",
+                                    "pl"
+                                  ],
+                                  "variable": [
+                                    {
+                                      "key": "ticker",
+                                      "value": "string"
+                                    }
+                                  ]
+                                }
+                              },
+                              "status": "Unprocessable Entity (WebDAV) (RFC 4918)",
+                              "code": 422,
+                              "_postman_previewlanguage": "json",
+                              "header": [
+                                {
+                                  "key": "Content-Type",
+                                  "value": "application/json"
+                                }
+                              ],
+                              "cookie": [],
+                              "body": "{\n  \"detail\": [\n    {\n      \"loc\": [\n        8309,\n        9352\n      ],\n      \"msg\": \"string\",\n      \"type\": \"string\",\n      \"input\": \"\",\n      \"ctx\": {}\n    },\n    {\n      \"loc\": [\n        \"string\",\n        1725\n      ],\n      \"msg\": \"string\",\n      \"type\": \"string\",\n      \"input\": \"\",\n      \"ctx\": {}\n    }\n  ]\n}"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "name": "bs",
+                      "item": [
+                        {
+                          "name": "Company Balance Sheet",
+                          "request": {
+                            "method": "GET",
+                            "header": [
+                              {
+                                "key": "Accept",
+                                "value": "application/json"
+                              }
+                            ],
+                            "url": {
+                              "raw": "{{baseUrl}}/api/v1/companies/:ticker/bs",
+                              "host": [
+                                "{{baseUrl}}"
+                              ],
+                              "path": [
+                                "api",
+                                "v1",
+                                "companies",
+                                ":ticker",
+                                "bs"
+                              ],
+                              "variable": [
+                                {
+                                  "key": "ticker",
+                                  "value": "string"
+                                }
+                              ]
+                            }
+                          },
+                          "response": [
+                            {
+                              "name": "Successful Response",
+                              "originalRequest": {
+                                "method": "GET",
+                                "header": [
+                                  {
+                                    "key": "Accept",
+                                    "value": "application/json"
+                                  }
+                                ],
+                                "url": {
+                                  "raw": "{{baseUrl}}/api/v1/companies/:ticker/bs",
+                                  "host": [
+                                    "{{baseUrl}}"
+                                  ],
+                                  "path": [
+                                    "api",
+                                    "v1",
+                                    "companies",
+                                    ":ticker",
+                                    "bs"
+                                  ],
+                                  "variable": [
+                                    {
+                                      "key": "ticker",
+                                      "value": "string"
+                                    }
+                                  ]
+                                }
+                              },
+                              "status": "OK",
+                              "code": 200,
+                              "_postman_previewlanguage": "json",
+                              "header": [
+                                {
+                                  "key": "Content-Type",
+                                  "value": "application/json"
+                                }
+                              ],
+                              "cookie": [],
+                              "body": "[\n  {\n    \"year\": \"string\",\n    \"equity_capital\": 226.11328221919135,\n    \"reserves\": 3864.313349534978,\n    \"borrowings\": 2075.7472682700427,\n    \"other_liabilities\": 5038.482437410296,\n    \"total_liabilities\": 8896.868426020634,\n    \"fixed_assets\": 4188.745425835865,\n    \"cwip\": 631.2026620727052,\n    \"investments\": 1637.153804974294,\n    \"other_asset\": 3824.528109821346,\n    \"total_assets\": 6062.073524661316\n  },\n  {\n    \"year\": \"string\",\n    \"equity_capital\": 2925.670626447736,\n    \"reserves\": 6554.754075331508,\n    \"borrowings\": 6798.661508550288,\n    \"other_liabilities\": 105.73868873778203,\n    \"total_liabilities\": 5451.5283640101115,\n    \"fixed_assets\": 4829.654728451494,\n    \"cwip\": 258.33695028198986,\n    \"investments\": 3178.5964029084225,\n    \"other_asset\": 5645.460495497412,\n    \"total_assets\": 6503.430714001032\n  }\n]"
+                            },
+                            {
+                              "name": "Validation Error",
+                              "originalRequest": {
+                                "method": "GET",
+                                "header": [
+                                  {
+                                    "key": "Accept",
+                                    "value": "application/json"
+                                  }
+                                ],
+                                "url": {
+                                  "raw": "{{baseUrl}}/api/v1/companies/:ticker/bs",
+                                  "host": [
+                                    "{{baseUrl}}"
+                                  ],
+                                  "path": [
+                                    "api",
+                                    "v1",
+                                    "companies",
+                                    ":ticker",
+                                    "bs"
+                                  ],
+                                  "variable": [
+                                    {
+                                      "key": "ticker",
+                                      "value": "string"
+                                    }
+                                  ]
+                                }
+                              },
+                              "status": "Unprocessable Entity (WebDAV) (RFC 4918)",
+                              "code": 422,
+                              "_postman_previewlanguage": "json",
+                              "header": [
+                                {
+                                  "key": "Content-Type",
+                                  "value": "application/json"
+                                }
+                              ],
+                              "cookie": [],
+                              "body": "{\n  \"detail\": [\n    {\n      \"loc\": [\n        8309,\n        9352\n      ],\n      \"msg\": \"string\",\n      \"type\": \"string\",\n      \"input\": \"\",\n      \"ctx\": {}\n    },\n    {\n      \"loc\": [\n        \"string\",\n        1725\n      ],\n      \"msg\": \"string\",\n      \"type\": \"string\",\n      \"input\": \"\",\n      \"ctx\": {}\n    }\n  ]\n}"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "name": "cashflow",
+                      "item": [
+                        {
+                          "name": "Company Cashflow",
+                          "request": {
+                            "method": "GET",
+                            "header": [
+                              {
+                                "key": "Accept",
+                                "value": "application/json"
+                              }
+                            ],
+                            "url": {
+                              "raw": "{{baseUrl}}/api/v1/companies/:ticker/cashflow",
+                              "host": [
+                                "{{baseUrl}}"
+                              ],
+                              "path": [
+                                "api",
+                                "v1",
+                                "companies",
+                                ":ticker",
+                                "cashflow"
+                              ],
+                              "variable": [
+                                {
+                                  "key": "ticker",
+                                  "value": "string"
+                                }
+                              ]
+                            }
+                          },
+                          "response": [
+                            {
+                              "name": "Successful Response",
+                              "originalRequest": {
+                                "method": "GET",
+                                "header": [
+                                  {
+                                    "key": "Accept",
+                                    "value": "application/json"
+                                  }
+                                ],
+                                "url": {
+                                  "raw": "{{baseUrl}}/api/v1/companies/:ticker/cashflow",
+                                  "host": [
+                                    "{{baseUrl}}"
+                                  ],
+                                  "path": [
+                                    "api",
+                                    "v1",
+                                    "companies",
+                                    ":ticker",
+                                    "cashflow"
+                                  ],
+                                  "variable": [
+                                    {
+                                      "key": "ticker",
+                                      "value": "string"
+                                    }
+                                  ]
+                                }
+                              },
+                              "status": "OK",
+                              "code": 200,
+                              "_postman_previewlanguage": "json",
+                              "header": [
+                                {
+                                  "key": "Content-Type",
+                                  "value": "application/json"
+                                }
+                              ],
+                              "cookie": [],
+                              "body": "[\n  {\n    \"year\": \"string\",\n    \"operating_activity\": 9698.202258415844,\n    \"investing_activity\": 2058.887043850597,\n    \"financing_activity\": 1185.1347582715155,\n    \"net_cash_flow\": 6373.8513339505025\n  },\n  {\n    \"year\": \"string\",\n    \"operating_activity\": 5748.24916880263,\n    \"investing_activity\": 1356.1697243832893,\n    \"financing_activity\": 8238.07893458079,\n    \"net_cash_flow\": 9859.410388900571\n  }\n]"
+                            },
+                            {
+                              "name": "Validation Error",
+                              "originalRequest": {
+                                "method": "GET",
+                                "header": [
+                                  {
+                                    "key": "Accept",
+                                    "value": "application/json"
+                                  }
+                                ],
+                                "url": {
+                                  "raw": "{{baseUrl}}/api/v1/companies/:ticker/cashflow",
+                                  "host": [
+                                    "{{baseUrl}}"
+                                  ],
+                                  "path": [
+                                    "api",
+                                    "v1",
+                                    "companies",
+                                    ":ticker",
+                                    "cashflow"
+                                  ],
+                                  "variable": [
+                                    {
+                                      "key": "ticker",
+                                      "value": "string"
+                                    }
+                                  ]
+                                }
+                              },
+                              "status": "Unprocessable Entity (WebDAV) (RFC 4918)",
+                              "code": 422,
+                              "_postman_previewlanguage": "json",
+                              "header": [
+                                {
+                                  "key": "Content-Type",
+                                  "value": "application/json"
+                                }
+                              ],
+                              "cookie": [],
+                              "body": "{\n  \"detail\": [\n    {\n      \"loc\": [\n        8309,\n        9352\n      ],\n      \"msg\": \"string\",\n      \"type\": \"string\",\n      \"input\": \"\",\n      \"ctx\": {}\n    },\n    {\n      \"loc\": [\n        \"string\",\n        1725\n      ],\n      \"msg\": \"string\",\n      \"type\": \"string\",\n      \"input\": \"\",\n      \"ctx\": {}\n    }\n  ]\n}"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "name": "ratios",
+                      "item": [
+                        {
+                          "name": "Company Ratios",
+                          "request": {
+                            "method": "GET",
+                            "header": [
+                              {
+                                "key": "Accept",
+                                "value": "application/json"
+                              }
+                            ],
+                            "url": {
+                              "raw": "{{baseUrl}}/api/v1/companies/:ticker/ratios",
+                              "host": [
+                                "{{baseUrl}}"
+                              ],
+                              "path": [
+                                "api",
+                                "v1",
+                                "companies",
+                                ":ticker",
+                                "ratios"
+                              ],
+                              "variable": [
+                                {
+                                  "key": "ticker",
+                                  "value": "string"
+                                }
+                              ]
+                            }
+                          },
+                          "response": [
+                            {
+                              "name": "Successful Response",
+                              "originalRequest": {
+                                "method": "GET",
+                                "header": [
+                                  {
+                                    "key": "Accept",
+                                    "value": "application/json"
+                                  }
+                                ],
+                                "url": {
+                                  "raw": "{{baseUrl}}/api/v1/companies/:ticker/ratios",
+                                  "host": [
+                                    "{{baseUrl}}"
+                                  ],
+                                  "path": [
+                                    "api",
+                                    "v1",
+                                    "companies",
+                                    ":ticker",
+                                    "ratios"
+                                  ],
+                                  "variable": [
+                                    {
+                                      "key": "ticker",
+                                      "value": "string"
+                                    }
+                                  ]
+                                }
+                              },
+                              "status": "OK",
+                              "code": 200,
+                              "_postman_previewlanguage": "json",
+                              "header": [
+                                {
+                                  "key": "Content-Type",
+                                  "value": "application/json"
+                                }
+                              ],
+                              "cookie": [],
+                              "body": "[\n  {\n    \"year\": \"string\",\n    \"net_profit_margin_pct\": 6674.234576864886,\n    \"operating_profit_margin_pct\": 4010.2483710093616,\n    \"return_on_equity_pct\": 5586.643512444786,\n    \"debt_to_equity\": 4363.910200128001,\n    \"interest_coverage\": 1849.9219179242775,\n    \"asset_turnover\": 6609.796055526407,\n    \"free_cash_flow_cr\": 1947.4140305165743,\n    \"capex_cr\": 334.42558762681426,\n    \"earnings_per_share\": 5033.486846111521,\n    \"book_value_per_share\": 4120.009123869324,\n    \"dividend_payout_ratio_pct\": 4266.876121671244,\n    \"total_debt_cr\": 131.6008238877453,\n    \"cash_from_operations_cr\": 8449.617901371674,\n    \"revenue_cagr_5yr\": 1672.6682291145066,\n    \"pat_cagr_5yr\": 8169.909734290351,\n    \"eps_cagr_5yr\": 3753.2398511741394,\n    \"composite_quality_score\": 8537.831332766647\n  },\n  {\n    \"year\": \"string\",\n    \"net_profit_margin_pct\": 7212.254429914667,\n    \"operating_profit_margin_pct\": 6063.417229258456,\n    \"return_on_equity_pct\": 9628.67321571313,\n    \"debt_to_equity\": 5589.241439998294,\n    \"interest_coverage\": 6080.344072022075,\n    \"asset_turnover\": 9848.502419448036,\n    \"free_cash_flow_cr\": 8075.4755989283785,\n    \"capex_cr\": 3103.47044362119,\n    \"earnings_per_share\": 49.829426911887076,\n    \"book_value_per_share\": 9161.284379972312,\n    \"dividend_payout_ratio_pct\": 2644.5392747036144,\n    \"total_debt_cr\": 4067.945578817034,\n    \"cash_from_operations_cr\": 4673.306115273182,\n    \"revenue_cagr_5yr\": 4930.466270047835,\n    \"pat_cagr_5yr\": 4661.208780728043,\n    \"eps_cagr_5yr\": 942.805036490868,\n    \"composite_quality_score\": 7389.7247778430965\n  }\n]"
+                            },
+                            {
+                              "name": "Validation Error",
+                              "originalRequest": {
+                                "method": "GET",
+                                "header": [
+                                  {
+                                    "key": "Accept",
+                                    "value": "application/json"
+                                  }
+                                ],
+                                "url": {
+                                  "raw": "{{baseUrl}}/api/v1/companies/:ticker/ratios",
+                                  "host": [
+                                    "{{baseUrl}}"
+                                  ],
+                                  "path": [
+                                    "api",
+                                    "v1",
+                                    "companies",
+                                    ":ticker",
+                                    "ratios"
+                                  ],
+                                  "variable": [
+                                    {
+                                      "key": "ticker",
+                                      "value": "string"
+                                    }
+                                  ]
+                                }
+                              },
+                              "status": "Unprocessable Entity (WebDAV) (RFC 4918)",
+                              "code": 422,
+                              "_postman_previewlanguage": "json",
+                              "header": [
+                                {
+                                  "key": "Content-Type",
+                                  "value": "application/json"
+                                }
+                              ],
+                              "cookie": [],
+                              "body": "{\n  \"detail\": [\n    {\n      \"loc\": [\n        8309,\n        9352\n      ],\n      \"msg\": \"string\",\n      \"type\": \"string\",\n      \"input\": \"\",\n      \"ctx\": {}\n    },\n    {\n      \"loc\": [\n        \"string\",\n        1725\n      ],\n      \"msg\": \"string\",\n      \"type\": \"string\",\n      \"input\": \"\",\n      \"ctx\": {}\n    }\n  ]\n}"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "name": "tearsheet",
+                      "item": [
+                        {
+                          "name": "Company Tearsheet",
+                          "request": {
+                            "method": "GET",
+                            "header": [
+                              {
+                                "key": "Accept",
+                                "value": "application/json"
+                              }
+                            ],
+                            "url": {
+                              "raw": "{{baseUrl}}/api/v1/companies/:ticker/tearsheet",
+                              "host": [
+                                "{{baseUrl}}"
+                              ],
+                              "path": [
+                                "api",
+                                "v1",
+                                "companies",
+                                ":ticker",
+                                "tearsheet"
+                              ],
+                              "variable": [
+                                {
+                                  "key": "ticker",
+                                  "value": "string"
+                                }
+                              ]
+                            }
+                          },
+                          "response": [
+                            {
+                              "name": "Successful Response",
+                              "originalRequest": {
+                                "method": "GET",
+                                "header": [
+                                  {
+                                    "key": "Accept",
+                                    "value": "application/json"
+                                  }
+                                ],
+                                "url": {
+                                  "raw": "{{baseUrl}}/api/v1/companies/:ticker/tearsheet",
+                                  "host": [
+                                    "{{baseUrl}}"
+                                  ],
+                                  "path": [
+                                    "api",
+                                    "v1",
+                                    "companies",
+                                    ":ticker",
+                                    "tearsheet"
+                                  ],
+                                  "variable": [
+                                    {
+                                      "key": "ticker",
+                                      "value": "string"
+                                    }
+                                  ]
+                                }
+                              },
+                              "status": "OK",
+                              "code": 200,
+                              "_postman_previewlanguage": "json",
+                              "header": [
+                                {
+                                  "key": "Content-Type",
+                                  "value": "application/json"
+                                }
+                              ],
+                              "cookie": [],
+                              "body": ""
+                            },
+                            {
+                              "name": "Validation Error",
+                              "originalRequest": {
+                                "method": "GET",
+                                "header": [
+                                  {
+                                    "key": "Accept",
+                                    "value": "application/json"
+                                  }
+                                ],
+                                "url": {
+                                  "raw": "{{baseUrl}}/api/v1/companies/:ticker/tearsheet",
+                                  "host": [
+                                    "{{baseUrl}}"
+                                  ],
+                                  "path": [
+                                    "api",
+                                    "v1",
+                                    "companies",
+                                    ":ticker",
+                                    "tearsheet"
+                                  ],
+                                  "variable": [
+                                    {
+                                      "key": "ticker",
+                                      "value": "string"
+                                    }
+                                  ]
+                                }
+                              },
+                              "status": "Unprocessable Entity (WebDAV) (RFC 4918)",
+                              "code": 422,
+                              "_postman_previewlanguage": "json",
+                              "header": [
+                                {
+                                  "key": "Content-Type",
+                                  "value": "application/json"
+                                }
+                              ],
+                              "cookie": [],
+                              "body": "{\n  \"detail\": [\n    {\n      \"loc\": [\n        8309,\n        9352\n      ],\n      \"msg\": \"string\",\n      \"type\": \"string\",\n      \"input\": \"\",\n      \"ctx\": {}\n    },\n    {\n      \"loc\": [\n        \"string\",\n        1725\n      ],\n      \"msg\": \"string\",\n      \"type\": \"string\",\n      \"input\": \"\",\n      \"ctx\": {}\n    }\n  ]\n}"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "name": "documents",
+                      "item": [
+                        {
+                          "name": "Company Documents",
+                          "request": {
+                            "method": "GET",
+                            "header": [
+                              {
+                                "key": "Accept",
+                                "value": "application/json"
+                              }
+                            ],
+                            "url": {
+                              "raw": "{{baseUrl}}/api/v1/companies/:ticker/documents",
+                              "host": [
+                                "{{baseUrl}}"
+                              ],
+                              "path": [
+                                "api",
+                                "v1",
+                                "companies",
+                                ":ticker",
+                                "documents"
+                              ],
+                              "variable": [
+                                {
+                                  "key": "ticker",
+                                  "value": "string"
+                                }
+                              ]
+                            }
+                          },
+                          "response": [
+                            {
+                              "name": "Successful Response",
+                              "originalRequest": {
+                                "method": "GET",
+                                "header": [
+                                  {
+                                    "key": "Accept",
+                                    "value": "application/json"
+                                  }
+                                ],
+                                "url": {
+                                  "raw": "{{baseUrl}}/api/v1/companies/:ticker/documents",
+                                  "host": [
+                                    "{{baseUrl}}"
+                                  ],
+                                  "path": [
+                                    "api",
+                                    "v1",
+                                    "companies",
+                                    ":ticker",
+                                    "documents"
+                                  ],
+                                  "variable": [
+                                    {
+                                      "key": "ticker",
+                                      "value": "string"
+                                    }
+                                  ]
+                                }
+                              },
+                              "status": "OK",
+                              "code": 200,
+                              "_postman_previewlanguage": "json",
+                              "header": [
+                                {
+                                  "key": "Content-Type",
+                                  "value": "application/json"
+                                }
+                              ],
+                              "cookie": [],
+                              "body": "[\n  {\n    \"year\": \"string\",\n    \"annual_report\": \"string\"\n  },\n  {\n    \"year\": \"string\",\n    \"annual_report\": \"string\"\n  }\n]"
+                            },
+                            {
+                              "name": "Validation Error",
+                              "originalRequest": {
+                                "method": "GET",
+                                "header": [
+                                  {
+                                    "key": "Accept",
+                                    "value": "application/json"
+                                  }
+                                ],
+                                "url": {
+                                  "raw": "{{baseUrl}}/api/v1/companies/:ticker/documents",
+                                  "host": [
+                                    "{{baseUrl}}"
+                                  ],
+                                  "path": [
+                                    "api",
+                                    "v1",
+                                    "companies",
+                                    ":ticker",
+                                    "documents"
+                                  ],
+                                  "variable": [
+                                    {
+                                      "key": "ticker",
+                                      "value": "string"
+                                    }
+                                  ]
+                                }
+                              },
+                              "status": "Unprocessable Entity (WebDAV) (RFC 4918)",
+                              "code": 422,
+                              "_postman_previewlanguage": "json",
+                              "header": [
+                                {
+                                  "key": "Content-Type",
+                                  "value": "application/json"
+                                }
+                              ],
+                              "cookie": [],
+                              "body": "{\n  \"detail\": [\n    {\n      \"loc\": [\n        8309,\n        9352\n      ],\n      \"msg\": \"string\",\n      \"type\": \"string\",\n      \"input\": \"\",\n      \"ctx\": {}\n    },\n    {\n      \"loc\": [\n        \"string\",\n        1725\n      ],\n      \"msg\": \"string\",\n      \"type\": \"string\",\n      \"input\": \"\",\n      \"ctx\": {}\n    }\n  ]\n}"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "name": "Company Profile",
+                      "request": {
+                        "method": "GET",
+                        "header": [
+                          {
+                            "key": "Accept",
+                            "value": "application/json"
+                          }
+                        ],
+                        "url": {
+                          "raw": "{{baseUrl}}/api/v1/companies/:ticker",
+                          "host": [
+                            "{{baseUrl}}"
+                          ],
+                          "path": [
+                            "api",
+                            "v1",
+                            "companies",
+                            ":ticker"
+                          ],
+                          "variable": [
+                            {
+                              "key": "ticker",
+                              "value": "string"
+                            }
+                          ]
+                        }
+                      },
+                      "response": [
+                        {
+                          "name": "Successful Response",
+                          "originalRequest": {
+                            "method": "GET",
+                            "header": [
+                              {
+                                "key": "Accept",
+                                "value": "application/json"
+                              }
+                            ],
+                            "url": {
+                              "raw": "{{baseUrl}}/api/v1/companies/:ticker",
+                              "host": [
+                                "{{baseUrl}}"
+                              ],
+                              "path": [
+                                "api",
+                                "v1",
+                                "companies",
+                                ":ticker"
+                              ],
+                              "variable": [
+                                {
+                                  "key": "ticker",
+                                  "value": "string"
+                                }
+                              ]
+                            }
+                          },
+                          "status": "OK",
+                          "code": 200,
+                          "_postman_previewlanguage": "json",
+                          "header": [
+                            {
+                              "key": "Content-Type",
+                              "value": "application/json"
+                            }
+                          ],
+                          "cookie": [],
+                          "body": "{\n  \"id\": \"string\",\n  \"company_name\": \"string\",\n  \"company_logo\": null,\n  \"about_company\": \"string\",\n  \"website\": \"string\",\n  \"nse_profile\": null,\n  \"bse_profile\": null,\n  \"face_value\": null,\n  \"book_value\": 973.4514553757201,\n  \"roe_percentage\": null,\n  \"roce_percentage\": 6399.654290729913,\n  \"broad_sector\": null,\n  \"sub_sector\": null,\n  \"market_cap_category\": null,\n  \"latest_ratios\": null\n}"
+                        },
+                        {
+                          "name": "Validation Error",
+                          "originalRequest": {
+                            "method": "GET",
+                            "header": [
+                              {
+                                "key": "Accept",
+                                "value": "application/json"
+                              }
+                            ],
+                            "url": {
+                              "raw": "{{baseUrl}}/api/v1/companies/:ticker",
+                              "host": [
+                                "{{baseUrl}}"
+                              ],
+                              "path": [
+                                "api",
+                                "v1",
+                                "companies",
+                                ":ticker"
+                              ],
+                              "variable": [
+                                {
+                                  "key": "ticker",
+                                  "value": "string"
+                                }
+                              ]
+                            }
+                          },
+                          "status": "Unprocessable Entity (WebDAV) (RFC 4918)",
+                          "code": 422,
+                          "_postman_previewlanguage": "json",
+                          "header": [
+                            {
+                              "key": "Content-Type",
+                              "value": "application/json"
+                            }
+                          ],
+                          "cookie": [],
+                          "body": "{\n  \"detail\": [\n    {\n      \"loc\": [\n        8309,\n        9352\n      ],\n      \"msg\": \"string\",\n      \"type\": \"string\",\n      \"input\": \"\",\n      \"ctx\": {}\n    },\n    {\n      \"loc\": [\n        \"string\",\n        1725\n      ],\n      \"msg\": \"string\",\n      \"type\": \"string\",\n      \"input\": \"\",\n      \"ctx\": {}\n    }\n  ]\n}"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "name": "List Companies",
+                  "request": {
+                    "method": "GET",
+                    "header": [
+                      {
+                        "key": "Accept",
+                        "value": "application/json"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{baseUrl}}/api/v1/companies?sector=string&market_cap_category=string&search=string",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "api",
+                        "v1",
+                        "companies"
+                      ],
+                      "query": [
+                        {
+                          "key": "sector",
+                          "value": "string"
+                        },
+                        {
+                          "key": "market_cap_category",
+                          "value": "string"
+                        },
+                        {
+                          "key": "search",
+                          "value": "string"
+                        }
+                      ]
+                    }
+                  },
+                  "response": [
+                    {
+                      "name": "Successful Response",
+                      "originalRequest": {
+                        "method": "GET",
+                        "header": [
+                          {
+                            "key": "Accept",
+                            "value": "application/json"
+                          }
+                        ],
+                        "url": {
+                          "raw": "{{baseUrl}}/api/v1/companies?sector=string&market_cap_category=string&search=string",
+                          "host": [
+                            "{{baseUrl}}"
+                          ],
+                          "path": [
+                            "api",
+                            "v1",
+                            "companies"
+                          ],
+                          "query": [
+                            {
+                              "key": "sector",
+                              "value": "string"
+                            },
+                            {
+                              "key": "market_cap_category",
+                              "value": "string"
+                            },
+                            {
+                              "key": "search",
+                              "value": "string"
+                            }
+                          ]
+                        }
+                      },
+                      "status": "OK",
+                      "code": 200,
+                      "_postman_previewlanguage": "json",
+                      "header": [
+                        {
+                          "key": "Content-Type",
+                          "value": "application/json"
+                        }
+                      ],
+                      "cookie": [],
+                      "body": "[\n  {\n    \"id\": \"string\",\n    \"company_name\": \"string\",\n    \"broad_sector\": \"string\",\n    \"sub_sector\": \"string\",\n    \"market_cap_category\": \"string\",\n    \"roe_percentage\": 7278.163707353604,\n    \"roce_percentage\": 7097.713909978811\n  },\n  {\n    \"id\": \"string\",\n    \"company_name\": \"string\",\n    \"broad_sector\": \"string\",\n    \"sub_sector\": \"string\",\n    \"market_cap_category\": \"string\",\n    \"roe_percentage\": 9045.194519224251,\n    \"roce_percentage\": 9982.521903313702\n  }\n]"
+                    },
+                    {
+                      "name": "Validation Error",
+                      "originalRequest": {
+                        "method": "GET",
+                        "header": [
+                          {
+                            "key": "Accept",
+                            "value": "application/json"
+                          }
+                        ],
+                        "url": {
+                          "raw": "{{baseUrl}}/api/v1/companies?sector=string&market_cap_category=string&search=string",
+                          "host": [
+                            "{{baseUrl}}"
+                          ],
+                          "path": [
+                            "api",
+                            "v1",
+                            "companies"
+                          ],
+                          "query": [
+                            {
+                              "key": "sector",
+                              "value": "string"
+                            },
+                            {
+                              "key": "market_cap_category",
+                              "value": "string"
+                            },
+                            {
+                              "key": "search",
+                              "value": "string"
+                            }
+                          ]
+                        }
+                      },
+                      "status": "Unprocessable Entity (WebDAV) (RFC 4918)",
+                      "code": 422,
+                      "_postman_previewlanguage": "json",
+                      "header": [
+                        {
+                          "key": "Content-Type",
+                          "value": "application/json"
+                        }
+                      ],
+                      "cookie": [],
+                      "body": "{\n  \"detail\": [\n    {\n      \"loc\": [\n        8309,\n        9352\n      ],\n      \"msg\": \"string\",\n      \"type\": \"string\",\n      \"input\": \"\",\n      \"ctx\": {}\n    },\n    {\n      \"loc\": [\n        \"string\",\n        1725\n      ],\n      \"msg\": \"string\",\n      \"type\": \"string\",\n      \"input\": \"\",\n      \"ctx\": {}\n    }\n  ]\n}"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "screener",
+              "item": [
+                {
+                  "name": "Screener",
+                  "request": {
+                    "method": "GET",
+                    "header": [
+                      {
+                        "key": "Accept",
+                        "value": "application/json"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{baseUrl}}/api/v1/screener?min_roe=15&max_de=1&max_pe=30&min_market_cap=1000",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "api",
+                        "v1",
+                        "screener"
+                      ],
+                      "query": [
+                        {
+                          "key": "min_roe",
+                          "value": "15"
+                        },
+                        {
+                          "key": "max_de",
+                          "value": "1"
+                        },
+                        {
+                          "key": "max_pe",
+                          "value": "30"
+                        },
+                        {
+                          "key": "min_market_cap",
+                          "value": "1000"
+                        }
+                      ]
+                    }
+                  },
+                  "response": [
+                    {
+                      "name": "Successful Response",
+                      "originalRequest": {
+                        "method": "GET",
+                        "header": [
+                          {
+                            "key": "Accept",
+                            "value": "application/json"
+                          }
+                        ],
+                        "url": {
+                          "raw": "{{baseUrl}}/api/v1/screener?min_roe=15&max_de=1&max_pe=30&min_market_cap=1000",
+                          "host": [
+                            "{{baseUrl}}"
+                          ],
+                          "path": [
+                            "api",
+                            "v1",
+                            "screener"
+                          ],
+                          "query": [
+                            {
+                              "key": "min_roe",
+                              "value": "15"
+                            },
+                            {
+                              "key": "max_de",
+                              "value": "1"
+                            },
+                            {
+                              "key": "max_pe",
+                              "value": "30"
+                            },
+                            {
+                              "key": "min_market_cap",
+                              "value": "1000"
+                            }
+                          ]
+                        }
+                      },
+                      "status": "OK",
+                      "code": 200,
+                      "_postman_previewlanguage": "json",
+                      "header": [
+                        {
+                          "key": "Content-Type",
+                          "value": "application/json"
+                        }
+                      ],
+                      "cookie": [],
+                      "body": "[\n  {\n    \"company_id\": \"string\",\n    \"company_name\": \"string\",\n    \"broad_sector\": \"string\",\n    \"return_on_equity_pct\": 65.61400267329098,\n    \"debt_to_equity\": 954.5313145750622,\n    \"pe_ratio\": 5519.2615236310985,\n    \"market_cap_crore\": 5596.3250618835245\n  },\n  {\n    \"company_id\": \"string\",\n    \"company_name\": \"string\",\n    \"broad_sector\": \"string\",\n    \"return_on_equity_pct\": 8840.257103915883,\n    \"debt_to_equity\": 3677.5006679374633,\n    \"pe_ratio\": 2575.861458856612,\n    \"market_cap_crore\": 947.2885659392771\n  }\n]"
+                    },
+                    {
+                      "name": "Validation Error",
+                      "originalRequest": {
+                        "method": "GET",
+                        "header": [
+                          {
+                            "key": "Accept",
+                            "value": "application/json"
+                          }
+                        ],
+                        "url": {
+                          "raw": "{{baseUrl}}/api/v1/screener?min_roe=15&max_de=1&max_pe=30&min_market_cap=1000",
+                          "host": [
+                            "{{baseUrl}}"
+                          ],
+                          "path": [
+                            "api",
+                            "v1",
+                            "screener"
+                          ],
+                          "query": [
+                            {
+                              "key": "min_roe",
+                              "value": "15"
+                            },
+                            {
+                              "key": "max_de",
+                              "value": "1"
+                            },
+                            {
+                              "key": "max_pe",
+                              "value": "30"
+                            },
+                            {
+                              "key": "min_market_cap",
+                              "value": "1000"
+                            }
+                          ]
+                        }
+                      },
+                      "status": "Unprocessable Entity (WebDAV) (RFC 4918)",
+                      "code": 422,
+                      "_postman_previewlanguage": "json",
+                      "header": [
+                        {
+                          "key": "Content-Type",
+                          "value": "application/json"
+                        }
+                      ],
+                      "cookie": [],
+                      "body": "{\n  \"detail\": [\n    {\n      \"loc\": [\n        8309,\n        9352\n      ],\n      \"msg\": \"string\",\n      \"type\": \"string\",\n      \"input\": \"\",\n      \"ctx\": {}\n    },\n    {\n      \"loc\": [\n        \"string\",\n        1725\n      ],\n      \"msg\": \"string\",\n      \"type\": \"string\",\n      \"input\": \"\",\n      \"ctx\": {}\n    }\n  ]\n}"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "sectors",
+              "item": [
+                {
+                  "name": "{sector}",
+                  "item": [
+                    {
+                      "name": "companies",
+                      "item": [
+                        {
+                          "name": "Sector Companies",
+                          "request": {
+                            "method": "GET",
+                            "header": [
+                              {
+                                "key": "Accept",
+                                "value": "application/json"
+                              }
+                            ],
+                            "url": {
+                              "raw": "{{baseUrl}}/api/v1/sectors/:sector/companies",
+                              "host": [
+                                "{{baseUrl}}"
+                              ],
+                              "path": [
+                                "api",
+                                "v1",
+                                "sectors",
+                                ":sector",
+                                "companies"
+                              ],
+                              "variable": [
+                                {
+                                  "key": "sector",
+                                  "value": "string"
+                                }
+                              ]
+                            }
+                          },
+                          "response": [
+                            {
+                              "name": "Successful Response",
+                              "originalRequest": {
+                                "method": "GET",
+                                "header": [
+                                  {
+                                    "key": "Accept",
+                                    "value": "application/json"
+                                  }
+                                ],
+                                "url": {
+                                  "raw": "{{baseUrl}}/api/v1/sectors/:sector/companies",
+                                  "host": [
+                                    "{{baseUrl}}"
+                                  ],
+                                  "path": [
+                                    "api",
+                                    "v1",
+                                    "sectors",
+                                    ":sector",
+                                    "companies"
+                                  ],
+                                  "variable": [
+                                    {
+                                      "key": "sector",
+                                      "value": "string"
+                                    }
+                                  ]
+                                }
+                              },
+                              "status": "OK",
+                              "code": 200,
+                              "_postman_previewlanguage": "json",
+                              "header": [
+                                {
+                                  "key": "Content-Type",
+                                  "value": "application/json"
+                                }
+                              ],
+                              "cookie": [],
+                              "body": "[\n  {\n    \"id\": \"string\",\n    \"company_name\": \"string\",\n    \"company_logo\": \"string\",\n    \"website\": \"string\",\n    \"roce_percentage\": 4840.526699477748,\n    \"roe_percentage\": 5029.926006351946\n  },\n  {\n    \"id\": \"string\",\n    \"company_name\": \"string\",\n    \"company_logo\": \"string\",\n    \"website\": \"string\",\n    \"roce_percentage\": 1691.5410685357756,\n    \"roe_percentage\": 6009.505785435507\n  }\n]"
+                            },
+                            {
+                              "name": "Validation Error",
+                              "originalRequest": {
+                                "method": "GET",
+                                "header": [
+                                  {
+                                    "key": "Accept",
+                                    "value": "application/json"
+                                  }
+                                ],
+                                "url": {
+                                  "raw": "{{baseUrl}}/api/v1/sectors/:sector/companies",
+                                  "host": [
+                                    "{{baseUrl}}"
+                                  ],
+                                  "path": [
+                                    "api",
+                                    "v1",
+                                    "sectors",
+                                    ":sector",
+                                    "companies"
+                                  ],
+                                  "variable": [
+                                    {
+                                      "key": "sector",
+                                      "value": "string"
+                                    }
+                                  ]
+                                }
+                              },
+                              "status": "Unprocessable Entity (WebDAV) (RFC 4918)",
+                              "code": 422,
+                              "_postman_previewlanguage": "json",
+                              "header": [
+                                {
+                                  "key": "Content-Type",
+                                  "value": "application/json"
+                                }
+                              ],
+                              "cookie": [],
+                              "body": "{\n  \"detail\": [\n    {\n      \"loc\": [\n        8309,\n        9352\n      ],\n      \"msg\": \"string\",\n      \"type\": \"string\",\n      \"input\": \"\",\n      \"ctx\": {}\n    },\n    {\n      \"loc\": [\n        \"string\",\n        1725\n      ],\n      \"msg\": \"string\",\n      \"type\": \"string\",\n      \"input\": \"\",\n      \"ctx\": {}\n    }\n  ]\n}"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "name": "List Sectors",
+                  "request": {
+                    "method": "GET",
+                    "header": [
+                      {
+                        "key": "Accept",
+                        "value": "application/json"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{baseUrl}}/api/v1/sectors",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "api",
+                        "v1",
+                        "sectors"
+                      ]
+                    }
+                  },
+                  "response": [
+                    {
+                      "name": "Successful Response",
+                      "originalRequest": {
+                        "method": "GET",
+                        "header": [
+                          {
+                            "key": "Accept",
+                            "value": "application/json"
+                          }
+                        ],
+                        "url": {
+                          "raw": "{{baseUrl}}/api/v1/sectors",
+                          "host": [
+                            "{{baseUrl}}"
+                          ],
+                          "path": [
+                            "api",
+                            "v1",
+                            "sectors"
+                          ]
+                        }
+                      },
+                      "status": "OK",
+                      "code": 200,
+                      "_postman_previewlanguage": "json",
+                      "header": [
+                        {
+                          "key": "Content-Type",
+                          "value": "application/json"
+                        }
+                      ],
+                      "cookie": [],
+                      "body": "[\n  {\n    \"sector\": \"string\",\n    \"company_count\": 1758,\n    \"median_roe\": 4734.678612410908,\n    \"median_pe\": 578.535745735369,\n    \"median_de\": 7616.628889633969\n  },\n  {\n    \"sector\": \"string\",\n    \"company_count\": 5021,\n    \"median_roe\": 4940.107552929345,\n    \"median_pe\": 1050.9331288683632,\n    \"median_de\": 6962.712264841444\n  }\n]"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "peers",
+              "item": [
+                {
+                  "name": "{group_name}",
+                  "item": [
+                    {
+                      "name": "Peer Group",
+                      "request": {
+                        "method": "GET",
+                        "header": [
+                          {
+                            "key": "Accept",
+                            "value": "application/json"
+                          }
+                        ],
+                        "url": {
+                          "raw": "{{baseUrl}}/api/v1/peers/:group_name",
+                          "host": [
+                            "{{baseUrl}}"
+                          ],
+                          "path": [
+                            "api",
+                            "v1",
+                            "peers",
+                            ":group_name"
+                          ],
+                          "variable": [
+                            {
+                              "key": "group_name",
+                              "value": "string"
+                            }
+                          ]
+                        }
+                      },
+                      "response": [
+                        {
+                          "name": "Successful Response",
+                          "originalRequest": {
+                            "method": "GET",
+                            "header": [
+                              {
+                                "key": "Accept",
+                                "value": "application/json"
+                              }
+                            ],
+                            "url": {
+                              "raw": "{{baseUrl}}/api/v1/peers/:group_name",
+                              "host": [
+                                "{{baseUrl}}"
+                              ],
+                              "path": [
+                                "api",
+                                "v1",
+                                "peers",
+                                ":group_name"
+                              ],
+                              "variable": [
+                                {
+                                  "key": "group_name",
+                                  "value": "string"
+                                }
+                              ]
+                            }
+                          },
+                          "status": "OK",
+                          "code": 200,
+                          "_postman_previewlanguage": "json",
+                          "header": [
+                            {
+                              "key": "Content-Type",
+                              "value": "application/json"
+                            }
+                          ],
+                          "cookie": [],
+                          "body": "[\n  {\n    \"company_id\": \"string\",\n    \"company_name\": \"string\",\n    \"peer_group_name\": \"string\",\n    \"is_benchmark\": false,\n    \"company_logo\": \"string\"\n  },\n  {\n    \"company_id\": \"string\",\n    \"company_name\": \"string\",\n    \"peer_group_name\": \"string\",\n    \"is_benchmark\": true,\n    \"company_logo\": \"string\"\n  }\n]"
+                        },
+                        {
+                          "name": "Validation Error",
+                          "originalRequest": {
+                            "method": "GET",
+                            "header": [
+                              {
+                                "key": "Accept",
+                                "value": "application/json"
+                              }
+                            ],
+                            "url": {
+                              "raw": "{{baseUrl}}/api/v1/peers/:group_name",
+                              "host": [
+                                "{{baseUrl}}"
+                              ],
+                              "path": [
+                                "api",
+                                "v1",
+                                "peers",
+                                ":group_name"
+                              ],
+                              "variable": [
+                                {
+                                  "key": "group_name",
+                                  "value": "string"
+                                }
+                              ]
+                            }
+                          },
+                          "status": "Unprocessable Entity (WebDAV) (RFC 4918)",
+                          "code": 422,
+                          "_postman_previewlanguage": "json",
+                          "header": [
+                            {
+                              "key": "Content-Type",
+                              "value": "application/json"
+                            }
+                          ],
+                          "cookie": [],
+                          "body": "{\n  \"detail\": [\n    {\n      \"loc\": [\n        8309,\n        9352\n      ],\n      \"msg\": \"string\",\n      \"type\": \"string\",\n      \"input\": \"\",\n      \"ctx\": {}\n    },\n    {\n      \"loc\": [\n        \"string\",\n        1725\n      ],\n      \"msg\": \"string\",\n      \"type\": \"string\",\n      \"input\": \"\",\n      \"ctx\": {}\n    }\n  ]\n}"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "market-cap",
+              "item": [
+                {
+                  "name": "{ticker}",
+                  "item": [
+                    {
+                      "name": "Market Cap History",
+                      "request": {
+                        "method": "GET",
+                        "header": [
+                          {
+                            "key": "Accept",
+                            "value": "application/json"
+                          }
+                        ],
+                        "url": {
+                          "raw": "{{baseUrl}}/api/v1/market-cap/:ticker",
+                          "host": [
+                            "{{baseUrl}}"
+                          ],
+                          "path": [
+                            "api",
+                            "v1",
+                            "market-cap",
+                            ":ticker"
+                          ],
+                          "variable": [
+                            {
+                              "key": "ticker",
+                              "value": "string"
+                            }
+                          ]
+                        }
+                      },
+                      "response": [
+                        {
+                          "name": "Successful Response",
+                          "originalRequest": {
+                            "method": "GET",
+                            "header": [
+                              {
+                                "key": "Accept",
+                                "value": "application/json"
+                              }
+                            ],
+                            "url": {
+                              "raw": "{{baseUrl}}/api/v1/market-cap/:ticker",
+                              "host": [
+                                "{{baseUrl}}"
+                              ],
+                              "path": [
+                                "api",
+                                "v1",
+                                "market-cap",
+                                ":ticker"
+                              ],
+                              "variable": [
+                                {
+                                  "key": "ticker",
+                                  "value": "string"
+                                }
+                              ]
+                            }
+                          },
+                          "status": "OK",
+                          "code": 200,
+                          "_postman_previewlanguage": "json",
+                          "header": [
+                            {
+                              "key": "Content-Type",
+                              "value": "application/json"
+                            }
+                          ],
+                          "cookie": [],
+                          "body": "[\n  {\n    \"year\": \"string\",\n    \"market_cap_crore\": 8971.055606341644,\n    \"enterprise_value_crore\": 910.9861733540847,\n    \"pe_ratio\": 1728.849309555045,\n    \"pb_ratio\": 3690.6596219566713,\n    \"ev_ebitda\": 8427.661812122986,\n    \"dividend_yield_pct\": 3147.528501500334\n  },\n  {\n    \"year\": \"string\",\n    \"market_cap_crore\": 5796.408097705726,\n    \"enterprise_value_crore\": 4630.790401682643,\n    \"pe_ratio\": 7496.959829425227,\n    \"pb_ratio\": 3278.4949024563593,\n    \"ev_ebitda\": 4201.131460119103,\n    \"dividend_yield_pct\": 9549.893768318665\n  }\n]"
+                        },
+                        {
+                          "name": "Validation Error",
+                          "originalRequest": {
+                            "method": "GET",
+                            "header": [
+                              {
+                                "key": "Accept",
+                                "value": "application/json"
+                              }
+                            ],
+                            "url": {
+                              "raw": "{{baseUrl}}/api/v1/market-cap/:ticker",
+                              "host": [
+                                "{{baseUrl}}"
+                              ],
+                              "path": [
+                                "api",
+                                "v1",
+                                "market-cap",
+                                ":ticker"
+                              ],
+                              "variable": [
+                                {
+                                  "key": "ticker",
+                                  "value": "string"
+                                }
+                              ]
+                            }
+                          },
+                          "status": "Unprocessable Entity (WebDAV) (RFC 4918)",
+                          "code": 422,
+                          "_postman_previewlanguage": "json",
+                          "header": [
+                            {
+                              "key": "Content-Type",
+                              "value": "application/json"
+                            }
+                          ],
+                          "cookie": [],
+                          "body": "{\n  \"detail\": [\n    {\n      \"loc\": [\n        8309,\n        9352\n      ],\n      \"msg\": \"string\",\n      \"type\": \"string\",\n      \"input\": \"\",\n      \"ctx\": {}\n    },\n    {\n      \"loc\": [\n        \"string\",\n        1725\n      ],\n      \"msg\": \"string\",\n      \"type\": \"string\",\n      \"input\": \"\",\n      \"ctx\": {}\n    }\n  ]\n}"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "portfolio",
+              "item": [
+                {
+                  "name": "stats",
+                  "item": [
+                    {
+                      "name": "Portfolio Stats",
+                      "request": {
+                        "method": "GET",
+                        "header": [
+                          {
+                            "key": "Accept",
+                            "value": "application/json"
+                          }
+                        ],
+                        "url": {
+                          "raw": "{{baseUrl}}/api/v1/portfolio/stats",
+                          "host": [
+                            "{{baseUrl}}"
+                          ],
+                          "path": [
+                            "api",
+                            "v1",
+                            "portfolio",
+                            "stats"
+                          ]
+                        }
+                      },
+                      "response": [
+                        {
+                          "name": "Successful Response",
+                          "originalRequest": {
+                            "method": "GET",
+                            "header": [
+                              {
+                                "key": "Accept",
+                                "value": "application/json"
+                              }
+                            ],
+                            "url": {
+                              "raw": "{{baseUrl}}/api/v1/portfolio/stats",
+                              "host": [
+                                "{{baseUrl}}"
+                              ],
+                              "path": [
+                                "api",
+                                "v1",
+                                "portfolio",
+                                "stats"
+                              ]
+                            }
+                          },
+                          "status": "OK",
+                          "code": 200,
+                          "_postman_previewlanguage": "json",
+                          "header": [
+                            {
+                              "key": "Content-Type",
+                              "value": "application/json"
+                            }
+                          ],
+                          "cookie": [],
+                          "body": "[\n  {\n    \"kpi\": \"string\",\n    \"p10\": 4814.833218428218,\n    \"p25\": 9513.587627001727,\n    \"p50\": 9703.125561333445,\n    \"p75\": 8060.56499226494,\n    \"p90\": 5235.031796556675,\n    \"mean\": 7188.507987266632,\n    \"std\": 5827.497026866928\n  },\n  {\n    \"kpi\": \"string\",\n    \"p10\": 5275.300872037794,\n    \"p25\": 6471.218346243332,\n    \"p50\": 3721.700772886607,\n    \"p75\": 8598.265705878262,\n    \"p90\": 280.364803787394,\n    \"mean\": 7681.56832175964,\n    \"std\": 6751.938936674859\n  }\n]"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "variable": [
+    {
+      "key": "baseUrl",
+      "value": "/"
+    }
+  ]
+}

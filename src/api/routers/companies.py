@@ -147,3 +147,4 @@ def company_tearsheet(ticker: str):
         media_type="application/pdf",
         filename=f"{ticker}.pdf"
     )
+

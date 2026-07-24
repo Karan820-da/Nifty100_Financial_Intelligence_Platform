@@ -12,3 +12,6 @@ venv/
 Thumbs.db
 
 .env
+
+__pycache__/
+*.py[cod]
