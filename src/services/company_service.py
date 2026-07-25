@@ -106,7 +106,7 @@ def get_company_by_ticker(ticker: str):
 
     LEFT JOIN (
 
-        SELECT *
+        SELECT fr.*
 
         FROM financial_ratios fr
 
