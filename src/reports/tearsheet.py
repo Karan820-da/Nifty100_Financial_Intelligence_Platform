@@ -1,16 +1,16 @@
-from src.reports.data_loader import (
-    load_company,
-    load_profit_loss,
-    load_ratios,
-    load_balance_sheet,
-    load_market_cap,
-)
-
 import os
 
 from reportlab.lib import colors
 from reportlab.lib.pagesizes import A4
 from reportlab.pdfgen import canvas
+
+from src.reports.data_loader import (
+    load_balance_sheet,
+    load_company,
+    load_market_cap,
+    load_profit_loss,
+    load_ratios,
+)
 
 PAGE_WIDTH, PAGE_HEIGHT = A4
 
@@ -135,9 +135,6 @@ def create_tearsheet(company_id):
 
     os.makedirs("reports/tearsheets", exist_ok=True)
 
-   
-
-
     pdf_path = os.path.join(
         "reports",
         "tearsheets",
@@ -154,9 +151,9 @@ def create_tearsheet(company_id):
     # ----------------------------------------
 
     draw_header(
-    c,
-    company_name,
-    ticker,
+        c,
+        company_name,
+        ticker,
     )
 
     # ----------------------------------------
@@ -172,13 +169,13 @@ def create_tearsheet(company_id):
     gap = 15
 
     kpis = [
-    ("Market Cap", market_cap_value),
-    ("PE Ratio", pe_ratio),
-    ("ROE", roe),
-    ("ROCE", roce),
-    ("EPS", eps),
-    ("Dividend", dividend),
-]
+        ("Market Cap", market_cap_value),
+        ("PE Ratio", pe_ratio),
+        ("ROE", roe),
+        ("ROCE", roce),
+        ("EPS", eps),
+        ("Dividend", dividend),
+    ]
 
     for i, (title, value) in enumerate(kpis):
 
@@ -247,4 +244,3 @@ def create_tearsheet(company_id):
 
 if __name__ == "__main__":
     create_tearsheet("TCS")
-

@@ -18,9 +18,7 @@ def test_screener_default():
 
 def test_screener_min_roe():
 
-    response = client.get(
-        "/api/v1/screener?min_roe=15"
-    )
+    response = client.get("/api/v1/screener?min_roe=15")
 
     assert response.status_code == 200
 
@@ -33,9 +31,7 @@ def test_screener_min_roe():
 
 def test_screener_max_de():
 
-    response = client.get(
-        "/api/v1/screener?max_de=1"
-    )
+    response = client.get("/api/v1/screener?max_de=1")
 
     assert response.status_code == 200
 
@@ -48,9 +44,7 @@ def test_screener_max_de():
 
 def test_screener_max_pe():
 
-    response = client.get(
-        "/api/v1/screener?max_pe=30"
-    )
+    response = client.get("/api/v1/screener?max_pe=30")
 
     assert response.status_code == 200
 
@@ -63,9 +57,7 @@ def test_screener_max_pe():
 
 def test_screener_market_cap():
 
-    response = client.get(
-        "/api/v1/screener?min_market_cap=1000"
-    )
+    response = client.get("/api/v1/screener?min_market_cap=1000")
 
     assert response.status_code == 200
 
@@ -78,8 +70,6 @@ def test_screener_market_cap():
 
 def test_invalid_parameter():
 
-    response = client.get(
-        "/api/v1/screener?min_roe=abc"
-    )
+    response = client.get("/api/v1/screener?min_roe=abc")
 
     assert response.status_code == 422

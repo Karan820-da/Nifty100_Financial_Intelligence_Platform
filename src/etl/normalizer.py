@@ -1,12 +1,12 @@
 def normalize_year(year):
     try:
         return str(year).strip()
-    except:
+        except Exception:
         return None
 
 
 def normalize_ticker(ticker):
     try:
         return str(ticker).strip().upper()
-    except:
+        except Exception:
         return None

@@ -1,15 +1,15 @@
+
 from pydantic import BaseModel
-from typing import Optional
 
 
 class ScreenerResult(BaseModel):
     company_id: str
     company_name: str
-    broad_sector: Optional[str] = None
-    return_on_equity_pct: Optional[float] = None
-    debt_to_equity: Optional[float] = None
-    pe_ratio: Optional[float] = None
-    market_cap_crore: Optional[float] = None
+    broad_sector: str | None = None
+    return_on_equity_pct: float | None = None
+    debt_to_equity: float | None = None
+    pe_ratio: float | None = None
+    market_cap_crore: float | None = None
 
     class Config:
         from_attributes = True

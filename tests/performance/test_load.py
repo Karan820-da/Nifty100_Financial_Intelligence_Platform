@@ -1,6 +1,7 @@
 import threading
-import requests
 import time
+
+import requests
 
 URL = "http://127.0.0.1:8000/api/v1/screener"
 
@@ -48,4 +49,4 @@ print(f"Fastest: {min(times):.2f} sec")
 
 print(f"Slowest: {max(times):.2f} sec")
 
-assert overall_end-overall_start < 10
+assert overall_end - overall_start < 10

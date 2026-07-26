@@ -4,6 +4,7 @@
 # ==========================================================
 
 import os
+
 import pandas as pd
 import streamlit as st
 from dotenv import load_dotenv
@@ -30,6 +31,7 @@ MYSQL_DATABASE = os.getenv("mysql_database")
 # Database Engine
 # ----------------------------------------------------------
 
+
 @st.cache_resource
 def get_engine():
     """
@@ -45,9 +47,11 @@ def get_engine():
 
     return engine
 
+
 # ==========================================================
 # Base Data
 # ==========================================================
+
 
 @st.cache_data(ttl=600)
 def get_base_data():
@@ -138,7 +142,7 @@ def get_base_data():
         "revenue_cagr_5yr",
         "pat_cagr_5yr",
         "eps_cagr_5yr",
-        "composite_quality_score"
+        "composite_quality_score",
     ]
 
     for column in numeric_columns:
@@ -153,7 +157,7 @@ def get_base_data():
         "year",
         "broad_sector",
         "sub_sector",
-        "market_cap_category"
+        "market_cap_category",
     ]
 
     for column in text_columns:
@@ -163,18 +167,15 @@ def get_base_data():
     # Sort Data
     # ----------------------------------------------------------
 
-    df = (
-        df.sort_values(
-            by=["company_id", "year"]
-        )
-        .reset_index(drop=True)
-    )
+    df = df.sort_values(by=["company_id", "year"]).reset_index(drop=True)
 
     return df
+
 
 # ==========================================================
 # Home Page Data
 # ==========================================================
+
 
 @st.cache_data(ttl=600)
 def get_home_data():
@@ -185,6 +186,7 @@ def get_home_data():
     df = get_base_data()
 
     return df
+
 
 # ==========================================================
 # Company Profile Data
@@ -200,25 +202,22 @@ def get_company_profile(company_id):
     company_df = df[df["company_id"] == company_id].copy()
 
     # Extract numeric year
-    company_df["year_num"] = (
-        company_df["year"]
-        .str[-4:]
-        .astype(int)
-    )
+    company_df["year_num"] = company_df["year"].str[-4:].astype(int)
 
     # Latest year first
     company_df = (
-        company_df
-        .sort_values("year_num", ascending=False)
+        company_df.sort_values("year_num", ascending=False)
         .drop(columns="year_num")
         .reset_index(drop=True)
     )
 
     return company_df
 
+
 # ==========================================================
 # Company List
 # ==========================================================
+
 
 @st.cache_data(ttl=600)
 def get_company_list():
@@ -232,9 +231,11 @@ def get_company_list():
 
     return companies
 
+
 # ==========================================================
 # Sector Data
 # ==========================================================
+
 
 @st.cache_data(ttl=600)
 def get_sector_data(sector):
@@ -248,9 +249,11 @@ def get_sector_data(sector):
 
     return sector_df
 
+
 # ==========================================================
 # Market Summary
 # ==========================================================
+
 
 @st.cache_data(ttl=600)
 def get_market_summary():
@@ -265,14 +268,16 @@ def get_market_summary():
         "total_sectors": df["broad_sector"].nunique(),
         "average_pe": round(df["pe_ratio"].mean(), 2),
         "average_roe": round(df["return_on_equity_pct"].mean(), 2),
-        "total_market_cap": round(df["market_cap_crore"].sum(), 2)
-    } 
+        "total_market_cap": round(df["market_cap_crore"].sum(), 2),
+    }
 
     return summary
+
 
 # ==========================================================
 # Top Companies
 # ==========================================================
+
 
 @st.cache_data(ttl=600)
 def get_top_companies(metric, top_n=10):
@@ -282,17 +287,15 @@ def get_top_companies(metric, top_n=10):
 
     df = get_base_data()
 
-    top_companies = (
-        df.sort_values(by=metric, ascending=False)
-          .head(top_n)
-          .copy()
-    )
+    top_companies = df.sort_values(by=metric, ascending=False).head(top_n).copy()
 
     return top_companies
+
 
 # ==========================================================
 # Year List
 # ==========================================================
+
 
 @st.cache_data(ttl=600)
 def get_year_list():
@@ -302,20 +305,17 @@ def get_year_list():
 
     df = get_base_data()
 
-    years = (
-        df["year"]
-        .dropna()
-        .unique()
-        .tolist()
-    )
+    years = df["year"].dropna().unique().tolist()
 
     years.sort()
 
     return years
 
+
 # ==========================================================
 # Sector List
 # ==========================================================
+
 
 @st.cache_data(ttl=600)
 def get_sector_list():
@@ -325,20 +325,17 @@ def get_sector_list():
 
     df = get_base_data()
 
-    sectors = (
-        df["broad_sector"]
-        .dropna()
-        .unique()
-        .tolist()
-    )
+    sectors = df["broad_sector"].dropna().unique().tolist()
 
     sectors.sort()
 
     return sectors
 
+
 # ==========================================================
 # Filter Options
 # ==========================================================
+
 
 @st.cache_data(ttl=600)
 def get_filter_options():
@@ -349,14 +346,16 @@ def get_filter_options():
     filters = {
         "companies": get_company_list(),
         "years": get_year_list(),
-        "sectors": get_sector_list()
+        "sectors": get_sector_list(),
     }
 
     return filters
 
+
 # ==========================================================
 # Refresh Cached Data
 # ==========================================================
+
 
 def refresh_data():
     """

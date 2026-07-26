@@ -1,7 +1,7 @@
 import sys
 from pathlib import Path
+
 import pandas as pd
-import numpy as np
 
 # ---------------------------------------------------
 # Add src folder to Python path
@@ -72,7 +72,7 @@ numeric_cols = [
     "pe_ratio",
     "pb_ratio",
     "ev_ebitda",
-    "free_cash_flow_cr"
+    "free_cash_flow_cr",
 ]
 
 for col in numeric_cols:
@@ -81,36 +81,22 @@ for col in numeric_cols:
 # ---------------------------------------------------
 # FCF Yield
 # ---------------------------------------------------
-df["fcf_yield_pct"] = (
-    df["free_cash_flow_cr"] /
-    df["market_cap_crore"]
-) * 100
+df["fcf_yield_pct"] = (df["free_cash_flow_cr"] / df["market_cap_crore"]) * 100
 
 # ---------------------------------------------------
 # Sector Median PE
 # ---------------------------------------------------
-sector_pe = (
-    df.groupby("broad_sector")["pe_ratio"]
-      .median()
-      .rename("sector_median_pe")
-)
+sector_pe = df.groupby("broad_sector")["pe_ratio"].median().rename("sector_median_pe")
 
-df = df.merge(
-    sector_pe,
-    on="broad_sector",
-    how="left"
-)
+df = df.merge(sector_pe, on="broad_sector", how="left")
 
 # ---------------------------------------------------
 # PE vs Sector Median
 # ---------------------------------------------------
 df["pe_vs_sector_median_pct"] = (
-    (
-        df["pe_ratio"] -
-        df["sector_median_pe"]
-    ) /
-    df["sector_median_pe"]
+    (df["pe_ratio"] - df["sector_median_pe"]) / df["sector_median_pe"]
 ) * 100
+
 
 # ---------------------------------------------------
 # Valuation Flag
@@ -132,6 +118,7 @@ def valuation_flag(row):
     else:
         return "Fair"
 
+
 df["flag"] = df.apply(valuation_flag, axis=1)
 
 # ---------------------------------------------------
@@ -152,7 +139,7 @@ valuation_summary = df[
         "fcf_yield_pct",
         "sector_median_pe",
         "pe_vs_sector_median_pct",
-        "flag"
+        "flag",
     ]
 ]
 
@@ -167,14 +154,9 @@ csv_path = output_dir / "valuation_flags.csv"
 
 valuation_summary.to_excel(excel_path, index=False)
 
-valuation_summary[
-    [
-        "company_id",
-        "company_name",
-        "year",
-        "flag"
-    ]
-].to_csv(csv_path, index=False)
+valuation_summary[["company_id", "company_name", "year", "flag"]].to_csv(
+    csv_path, index=False
+)
 
 # ---------------------------------------------------
 # Summary

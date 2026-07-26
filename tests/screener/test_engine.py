@@ -9,15 +9,9 @@ class TestEngine(unittest.TestCase):
 
         config = load_config()
 
-        self.assertIn(
-            "quality_compounder",
-            config
-        )
+        self.assertIn("quality_compounder", config)
 
-        self.assertIn(
-            "value_pick",
-            config
-        )
+        self.assertIn("value_pick", config)
 
 
 if __name__ == "__main__":

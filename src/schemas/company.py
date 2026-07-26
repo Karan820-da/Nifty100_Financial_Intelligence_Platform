@@ -1,4 +1,3 @@
-from typing import Optional
 
 from pydantic import BaseModel
 
@@ -6,32 +5,32 @@ from pydantic import BaseModel
 class CompanySummary(BaseModel):
     id: str
     company_name: str
-    broad_sector: Optional[str]
-    sub_sector: Optional[str]
-    market_cap_category: Optional[str]
-    roe_percentage: Optional[float]
-    roce_percentage: Optional[float]
+    broad_sector: str | None
+    sub_sector: str | None
+    market_cap_category: str | None
+    roe_percentage: float | None
+    roce_percentage: float | None
 
     class Config:
         from_attributes = True
 
 
 class LatestRatios(BaseModel):
-    year: Optional[str]
+    year: str | None
 
-    net_profit_margin_pct: Optional[float]
-    operating_profit_margin_pct: Optional[float]
-    return_on_equity_pct: Optional[float]
+    net_profit_margin_pct: float | None
+    operating_profit_margin_pct: float | None
+    return_on_equity_pct: float | None
 
-    debt_to_equity: Optional[float]
-    interest_coverage: Optional[float]
-    asset_turnover: Optional[float]
+    debt_to_equity: float | None
+    interest_coverage: float | None
+    asset_turnover: float | None
 
-    free_cash_flow_cr: Optional[float]
-    earnings_per_share: Optional[float]
+    free_cash_flow_cr: float | None
+    earnings_per_share: float | None
 
-    revenue_cagr_5yr: Optional[float]
-    pat_cagr_5yr: Optional[float]
+    revenue_cagr_5yr: float | None
+    pat_cagr_5yr: float | None
 
     class Config:
         from_attributes = True
@@ -40,25 +39,25 @@ class LatestRatios(BaseModel):
 class CompanyDetail(BaseModel):
     id: str
 
-    company_name: Optional[str]
-    company_logo: Optional[str]
-    about_company: Optional[str]
+    company_name: str | None
+    company_logo: str | None
+    about_company: str | None
 
-    website: Optional[str]
-    nse_profile: Optional[str]
-    bse_profile: Optional[str]
+    website: str | None
+    nse_profile: str | None
+    bse_profile: str | None
 
-    face_value: Optional[float]
-    book_value: Optional[float]
+    face_value: float | None
+    book_value: float | None
 
-    roe_percentage: Optional[float]
-    roce_percentage: Optional[float]
+    roe_percentage: float | None
+    roce_percentage: float | None
 
-    broad_sector: Optional[str]
-    sub_sector: Optional[str]
-    market_cap_category: Optional[str]
+    broad_sector: str | None
+    sub_sector: str | None
+    market_cap_category: str | None
 
-    latest_ratios: Optional[LatestRatios]
+    latest_ratios: LatestRatios | None
 
     class Config:
         from_attributes = True

@@ -1,15 +1,15 @@
-from typing import Optional
+
 from pydantic import BaseModel
 
 
 class CashFlowRecord(BaseModel):
 
-    year: Optional[str]
+    year: str | None
 
-    operating_activity: Optional[float]
-    investing_activity: Optional[float]
-    financing_activity: Optional[float]
-    net_cash_flow: Optional[float]
+    operating_activity: float | None
+    investing_activity: float | None
+    financing_activity: float | None
+    net_cash_flow: float | None
 
     class Config:
         from_attributes = True

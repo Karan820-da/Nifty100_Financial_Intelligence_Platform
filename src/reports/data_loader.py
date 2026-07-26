@@ -87,19 +87,6 @@ def load_cash_flow(company_id):
     return pd.read_sql(query, engine)
 
 
-def load_market_cap(company_id):
-    """
-    Load Market Cap information.
-    """
-
-    query = f"""
-    SELECT *
-    FROM market_cap
-    WHERE company_id = '{company_id}'
-    """
-
-    return pd.read_sql(query, engine)
-
 
 def load_analysis(company_id):
     """
@@ -113,6 +100,7 @@ def load_analysis(company_id):
     """
 
     return pd.read_sql(query, engine)
+
 
 def load_market_cap(company_id):
     """

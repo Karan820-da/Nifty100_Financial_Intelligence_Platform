@@ -1,4 +1,4 @@
-from typing import Optional
+
 from pydantic import BaseModel
 
 
@@ -8,7 +8,7 @@ class PeerCompany(BaseModel):
 
     company_name: str
 
-    company_logo: Optional[str] = None
+    company_logo: str | None = None
 
     peer_group_name: str
 

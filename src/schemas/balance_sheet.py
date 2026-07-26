@@ -1,22 +1,22 @@
-from typing import Optional
+
 from pydantic import BaseModel
 
 
 class BalanceSheetRecord(BaseModel):
 
-    year: Optional[str]
+    year: str | None
 
-    equity_capital: Optional[float]
-    reserves: Optional[float]
-    borrowings: Optional[float]
-    other_liabilities: Optional[float]
-    total_liabilities: Optional[float]
+    equity_capital: float | None
+    reserves: float | None
+    borrowings: float | None
+    other_liabilities: float | None
+    total_liabilities: float | None
 
-    fixed_assets: Optional[float]
-    cwip: Optional[float]
-    investments: Optional[float]
-    other_asset: Optional[float]
-    total_assets: Optional[float]
+    fixed_assets: float | None
+    cwip: float | None
+    investments: float | None
+    other_asset: float | None
+    total_assets: float | None
 
     class Config:
         from_attributes = True

@@ -4,15 +4,11 @@ Cash Flow KPI Engine
 """
 
 
-def free_cash_flow(
-        operating_activity,
-        investing_activity):
+def free_cash_flow(operating_activity, investing_activity):
     return operating_activity + investing_activity
 
 
-def cfo_quality_score(
-        cfo,
-        pat):
+def cfo_quality_score(cfo, pat):
     """
     CFO/PAT Ratio
     """
@@ -31,9 +27,7 @@ def cfo_quality_score(
     return "Accrual Risk"
 
 
-def capex_intensity(
-        investing_activity,
-        sales):
+def capex_intensity(investing_activity, sales):
     """
     abs(CFI) / Sales
     """
@@ -41,9 +35,7 @@ def capex_intensity(
     if sales == 0:
         return None
 
-    value = (
-        abs(investing_activity) / sales
-    ) * 100
+    value = (abs(investing_activity) / sales) * 100
 
     if value < 3:
         return "Asset Light"
@@ -54,24 +46,14 @@ def capex_intensity(
     return "Capital Intensive"
 
 
-def fcf_conversion_rate(
-        free_cash_flow,
-        operating_profit):
+def fcf_conversion_rate(free_cash_flow, operating_profit):
     if operating_profit == 0:
         return None
 
-    return round(
-        (free_cash_flow / operating_profit)
-        * 100,
-        2
-    )
+    return round((free_cash_flow / operating_profit) * 100, 2)
 
 
-def capital_allocation_pattern(
-        cfo,
-        cfi,
-        cff,
-        quality=None):
+def capital_allocation_pattern(cfo, cfi, cff, quality=None):
     """
     8-pattern classifier
     """
@@ -79,7 +61,7 @@ def capital_allocation_pattern(
     signs = (
         "+" if cfo >= 0 else "-",
         "+" if cfi >= 0 else "-",
-        "+" if cff >= 0 else "-"
+        "+" if cff >= 0 else "-",
     )
 
     pattern = "".join(signs)
@@ -91,16 +73,10 @@ def capital_allocation_pattern(
         "--+": "Growth Funded by Debt",
         "+++": "Cash Accumulator",
         "---": "Pre-Revenue",
-        "+-+": "Mixed"
+        "+-+": "Mixed",
     }
 
-    if (
-        pattern == "+--"
-        and quality == "High Quality"
-    ):
+    if pattern == "+--" and quality == "High Quality":
         return "Shareholder Returns"
 
-    return mapping.get(
-        pattern,
-        "Unknown"
-    )
+    return mapping.get(pattern, "Unknown")

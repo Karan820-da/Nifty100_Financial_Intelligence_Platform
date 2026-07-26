@@ -1,6 +1,7 @@
+import time
+
 from fastapi import APIRouter
 from sqlalchemy import text
-import time
 
 from src.dashboard.utils.db import get_engine
 
@@ -29,7 +30,7 @@ def health():
         "profitandloss",
         "prosandcons",
         "sectors",
-        "stock_prices"
+        "stock_prices",
     ]
 
     row_counts = {}
@@ -42,39 +43,21 @@ def health():
 
                 try:
 
-                    result = conn.execute(
-                        text(f"SELECT COUNT(*) FROM {table}")
-                    )
+                    result = conn.execute(text(f"SELECT COUNT(*) FROM {table}"))
 
                     row_counts[table] = result.scalar()
 
                 except Exception as e:
 
-                    row_counts[table] = f"Error: {str(e)}"
+                    row_counts[table] = f"Error: {e!s}"
 
         return {
-
             "status": "ok",
-
             "version": API_VERSION,
-
-            "uptime_seconds": round(
-                time.time() - START_TIME,
-                2
-            ),
-
-            "db_row_counts": row_counts
-
+            "uptime_seconds": round(time.time() - START_TIME, 2),
+            "db_row_counts": row_counts,
         }
 
     except Exception as e:
 
-        return {
-
-            "status": "error",
-
-            "version": API_VERSION,
-
-            "message": str(e)
-
-        }
+        return {"status": "error", "version": API_VERSION, "message": str(e)}

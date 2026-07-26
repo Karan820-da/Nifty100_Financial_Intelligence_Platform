@@ -1,8 +1,8 @@
 import os
-import pandas as pd
 
-from sqlalchemy import create_engine
+import pandas as pd
 from dotenv import load_dotenv
+from sqlalchemy import create_engine
 
 load_dotenv()
 
@@ -47,7 +47,6 @@ left join companies c
 df = pd.read_sql(query, engine)
 
 metrics = [
-
     "return_on_equity_pct",
     "roce_percentage",
     "net_profit_margin_pct",
@@ -57,8 +56,7 @@ metrics = [
     "pat_cagr_5yr",
     "eps_cagr_5yr",
     "interest_coverage",
-    "asset_turnover"
-
+    "asset_turnover",
 ]
 
 records = []
@@ -75,50 +73,26 @@ for peer_name, peer_df in df.groupby("peer_group_name"):
         if metric not in peer_df.columns:
             continue
 
-        temp = peer_df[
-            [
-                "company_id",
-                "year",
-                "peer_group_name",
-                metric
-            ]
-        ].copy()
+        temp = peer_df[["company_id", "year", "peer_group_name", metric]].copy()
 
         temp = temp.dropna(subset=[metric])
 
         if len(temp) == 0:
             continue
 
-        temp["percentile_rank"] = (
-            temp[metric]
-            .rank(
-                pct=True,
-                method="average"
-            )
-            * 100
-        )
+        temp["percentile_rank"] = temp[metric].rank(pct=True, method="average") * 100
 
         if metric == "debt_to_equity":
 
-            temp["percentile_rank"] = (
-                100 - temp["percentile_rank"]
-            )
+            temp["percentile_rank"] = 100 - temp["percentile_rank"]
 
-        temp.rename(
-            columns={
-                metric: "metric_value"
-            },
-            inplace=True
-        )
+        temp.rename(columns={metric: "metric_value"}, inplace=True)
 
         temp["metric"] = metric
 
         records.append(temp)
 
-result = pd.concat(
-    records,
-    ignore_index=True
-)
+result = pd.concat(records, ignore_index=True)
 
 result = result[
     [
@@ -127,21 +101,11 @@ result = result[
         "metric",
         "metric_value",
         "percentile_rank",
-        "year"
+        "year",
     ]
 ]
 
-result.to_sql(
-
-    "peer_percentiles",
-
-    engine,
-
-    if_exists="replace",
-
-    index=False
-
-)
+result.to_sql("peer_percentiles", engine, if_exists="replace", index=False)
 
 print()
 

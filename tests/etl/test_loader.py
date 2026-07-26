@@ -1,13 +1,10 @@
-import pandas as pd
 from unittest.mock import patch
+
+import pandas as pd
 
 from src.etl.loader import load_excel
 
-
-sample_df = pd.DataFrame({
-    "A": [1, 2],
-    "B": [3, 4]
-})
+sample_df = pd.DataFrame({"A": [1, 2], "B": [3, 4]})
 
 
 @patch("src.etl.loader.pd.read_excel")
@@ -80,6 +77,7 @@ def test_file_path(mock_read):
     load_excel("financials.xlsx", "Sheet1")
 
     assert mock_read.call_args.args[0] == "financials.xlsx"
+
 
 @patch("src.etl.loader.pd.read_excel")
 def test_sheet_parameter(mock_read):

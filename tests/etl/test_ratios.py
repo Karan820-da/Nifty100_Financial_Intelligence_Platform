@@ -1,4 +1,3 @@
-import pytest
 
 from src.analytics.ratios import *
 
@@ -80,10 +79,4 @@ def test_asset_turnover_zero_assets():
 
 
 def test_roce():
-    assert return_on_capital_employed(
-        100,
-        20,
-        100,
-        100,
-        100
-    ) == 40.0
+    assert return_on_capital_employed(100, 20, 100, 100, 100) == 40.0

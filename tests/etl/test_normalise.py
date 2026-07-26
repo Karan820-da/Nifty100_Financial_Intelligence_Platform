@@ -1,11 +1,10 @@
-import pytest
 
 from src.etl.normalizer import normalize_year
-
 
 # -------------------------
 # Normal Cases
 # -------------------------
+
 
 def test_year_string():
     assert normalize_year("2024") == "2024"
@@ -43,6 +42,7 @@ def test_single_digit():
 # Empty / Missing
 # -------------------------
 
+
 def test_empty_string():
     assert normalize_year("") == ""
 
@@ -58,6 +58,7 @@ def test_none():
 # -------------------------
 # Different Types
 # -------------------------
+
 
 def test_boolean_true():
     assert normalize_year(True) == "True"
@@ -82,6 +83,7 @@ def test_dictionary():
 # -------------------------
 # Edge Cases
 # -------------------------
+
 
 def test_negative_year():
     assert normalize_year(-1) == "-1"

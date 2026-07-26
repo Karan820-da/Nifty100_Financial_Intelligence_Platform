@@ -17,9 +17,7 @@ def calculate_cagr(start_value, end_value, years):
         return None, "ZERO_BASE"
 
     if start_value > 0 and end_value > 0:
-        cagr = (
-            (end_value / start_value) ** (1 / years) - 1
-        ) * 100
+        cagr = ((end_value / start_value) ** (1 / years) - 1) * 100
 
         return round(cagr, 2), None
 
@@ -34,6 +32,7 @@ def calculate_cagr(start_value, end_value, years):
 
     return None, "INSUFFICIENT"
 
+
 def calculate_period_cagr(values, years):
     """
     values = ordered list of historical values
@@ -47,11 +46,4 @@ def calculate_period_cagr(values, years):
     start_value = values[-(years + 1)]
     end_value = values[-1]
 
-    return calculate_cagr(
-        start_value,
-        end_value,
-        years
-    )
-
-
- 
+    return calculate_cagr(start_value, end_value, years)

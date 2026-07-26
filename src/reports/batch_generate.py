@@ -1,4 +1,5 @@
 import os
+
 import pandas as pd
 
 from src.dashboard.utils.db import get_engine
@@ -40,17 +41,11 @@ def generate_all_tearsheets():
         except Exception as e:
             print(f"Skipping {company_id}: {e}")
 
-            skipped.append({
-                "company_id": company_id,
-                "reason": str(e)
-            })
+            skipped.append({"company_id": company_id, "reason": str(e)})
 
     os.makedirs("output", exist_ok=True)
 
-    pd.DataFrame(skipped).to_csv(
-        "output/skipped_tearsheets.csv",
-        index=False
-    )
+    pd.DataFrame(skipped).to_csv("output/skipped_tearsheets.csv", index=False)
 
     print("=" * 50)
     print(f"Generated {generated} tearsheets")

@@ -1,8 +1,8 @@
-import pandas as pd
-from sqlalchemy import create_engine
-
 import os
+
+import pandas as pd
 from dotenv import load_dotenv
+from sqlalchemy import create_engine
 
 load_dotenv()
 
@@ -27,7 +27,7 @@ df = pd.read_sql(
         debt_to_equity
     from financial_ratios
     """,
-    engine
+    engine,
 )
 
 edge_cases = []
@@ -52,17 +52,9 @@ for _, row in df.iterrows():
         )
 
 
-with open(
-        "output/ratio_edge_cases.log",
-        "w",
-        encoding="utf-8"
-) as file:
+with open("output/ratio_edge_cases.log", "w", encoding="utf-8") as file:
 
-    for item in edge_cases:
-        file.write(item + "\n")
+    file.writelines(item + "\n" for item in edge_cases)
 
 
-print(
-    f"{len(edge_cases)} anomalies written "
-    "to output/ratio_edge_cases.log"
-)
+print(f"{len(edge_cases)} anomalies written " "to output/ratio_edge_cases.log")

@@ -1,13 +1,13 @@
 import os
-import pandas as pd
 
+import pandas as pd
 from reportlab.lib import colors
 from reportlab.lib.pagesizes import A4
 from reportlab.lib.styles import getSampleStyleSheet
 from reportlab.lib.units import inch
 from reportlab.platypus import (
-    SimpleDocTemplate,
     Paragraph,
+    SimpleDocTemplate,
     Spacer,
     Table,
     TableStyle,
@@ -23,6 +23,7 @@ styles = getSampleStyleSheet()
 # Get all sectors
 # ============================================================
 
+
 def get_all_sectors():
 
     query = """
@@ -37,6 +38,7 @@ def get_all_sectors():
 # ============================================================
 # Load companies in a sector
 # ============================================================
+
 
 def load_sector_companies(sector):
 
@@ -82,6 +84,7 @@ def load_sector_companies(sector):
 # ============================================================
 # Create Sector Report PDF
 # ============================================================
+
 
 def create_sector_report(sector):
 
@@ -140,12 +143,18 @@ def create_sector_report(sector):
     summary_data = [
         ["Metric", "Value"],
         ["Total Companies", len(df)],
-        ["Median Market Cap", "-" if pd.isna(median_market_cap) else f"{median_market_cap:,.2f}"],
+        [
+            "Median Market Cap",
+            "-" if pd.isna(median_market_cap) else f"{median_market_cap:,.2f}",
+        ],
         ["Median PE", "-" if pd.isna(median_pe) else f"{median_pe:.2f}"],
         ["Median ROE", "-" if pd.isna(median_roe) else f"{median_roe:.2f}%"],
         ["Median ROCE", "-" if pd.isna(median_roce) else f"{median_roce:.2f}%"],
         ["Median EPS", "-" if pd.isna(median_eps) else f"{median_eps:.2f}"],
-        ["Median Dividend", "-" if pd.isna(median_dividend) else f"{median_dividend:.2f}%"],
+        [
+            "Median Dividend",
+            "-" if pd.isna(median_dividend) else f"{median_dividend:.2f}%",
+        ],
     ]
 
     summary_table = Table(summary_data, colWidths=[3.5 * inch, 2 * inch])
@@ -179,14 +188,7 @@ def create_sector_report(sector):
         )
     )
 
-    table_data = [[
-        "Company",
-        "PE",
-        "ROE",
-        "ROCE",
-        "EPS",
-        "Dividend"
-    ]]
+    table_data = [["Company", "PE", "ROE", "ROCE", "EPS", "Dividend"]]
 
     for _, row in df.iterrows():
 
@@ -194,18 +196,30 @@ def create_sector_report(sector):
 
         pe = "-" if pd.isna(row["pe_ratio"]) else f"{row['pe_ratio']:.2f}"
         roe = "-" if pd.isna(row["roe_percentage"]) else f"{row['roe_percentage']:.2f}"
-        roce = "-" if pd.isna(row["roce_percentage"]) else f"{row['roce_percentage']:.2f}"
-        eps = "-" if pd.isna(row["earnings_per_share"]) else f"{row['earnings_per_share']:.2f}"
-        dividend = "-" if pd.isna(row["dividend_payout_ratio_pct"]) else f"{row['dividend_payout_ratio_pct']:.2f}"
+        roce = (
+            "-" if pd.isna(row["roce_percentage"]) else f"{row['roce_percentage']:.2f}"
+        )
+        eps = (
+            "-"
+            if pd.isna(row["earnings_per_share"])
+            else f"{row['earnings_per_share']:.2f}"
+        )
+        dividend = (
+            "-"
+            if pd.isna(row["dividend_payout_ratio_pct"])
+            else f"{row['dividend_payout_ratio_pct']:.2f}"
+        )
 
-        table_data.append([
-            company,
-            pe,
-            roe,
-            roce,
-            eps,
-            dividend,
-        ])
+        table_data.append(
+            [
+                company,
+                pe,
+                roe,
+                roce,
+                eps,
+                dividend,
+            ]
+        )
 
     company_table = Table(
         table_data,
@@ -238,7 +252,7 @@ def create_sector_report(sector):
     doc.build(story)
 
     print("=" * 60)
-    print(f"Sector Report Created Successfully")
+    print("Sector Report Created Successfully")
     print(pdf_path)
     print("=" * 60)
 
@@ -271,10 +285,7 @@ if __name__ == "__main__":
 
             print(f"Skipping {sector}: {e}")
 
-            skipped.append({
-                "sector": sector,
-                "reason": str(e)
-            })
+            skipped.append({"sector": sector, "reason": str(e)})
 
     print("\n" + "=" * 60)
     print(f"Generated : {generated}")
@@ -287,4 +298,3 @@ if __name__ == "__main__":
             print(f"- {item['sector']} : {item['reason']}")
 
     print("=" * 60)
-

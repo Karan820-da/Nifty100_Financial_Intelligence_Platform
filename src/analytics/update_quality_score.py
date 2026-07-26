@@ -22,17 +22,11 @@ from financial_ratios
 
 df = pd.read_sql(query, engine)
 
-df["return_on_equity_pct"] = df[
-    "return_on_equity_pct"
-].fillna(0)
+df["return_on_equity_pct"] = df["return_on_equity_pct"].fillna(0)
 
-df["net_profit_margin_pct"] = df[
-    "net_profit_margin_pct"
-].fillna(0)
+df["net_profit_margin_pct"] = df["net_profit_margin_pct"].fillna(0)
 
-df["asset_turnover"] = df[
-    "asset_turnover"
-].fillna(0)
+df["asset_turnover"] = df["asset_turnover"].fillna(0)
 
 df["composite_quality_score"] = (
     0.4 * df["return_on_equity_pct"]
@@ -42,13 +36,11 @@ df["composite_quality_score"] = (
 
 with engine.begin() as conn:
     for _, row in df.iterrows():
-        conn.execute(
-            f"""
+        conn.execute(f"""
             update financial_ratios
             set composite_quality_score =
             {row['composite_quality_score']}
             where id = {row['id']}
-            """
-        )
+            """)
 
 print("Composite quality scores updated successfully.")

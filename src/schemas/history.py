@@ -1,33 +1,32 @@
-from typing import Optional
+
 from pydantic import BaseModel
 
 
 class ProfitLossRecord(BaseModel):
 
-    year: Optional[str]
+    year: str | None
 
-    sales: Optional[float]
-    expenses: Optional[float]
+    sales: float | None
+    expenses: float | None
 
-    operating_profit: Optional[float]
-    opm_percentage: Optional[float]
+    operating_profit: float | None
+    opm_percentage: float | None
 
-    other_income: Optional[float]
+    other_income: float | None
 
-    interest: Optional[float]
+    interest: float | None
 
-    depreciation: Optional[float]
+    depreciation: float | None
 
-    profit_before_tax: Optional[float]
+    profit_before_tax: float | None
 
-    tax_percentage: Optional[float]
+    tax_percentage: float | None
 
-    net_profit: Optional[float]
+    net_profit: float | None
 
-    eps: Optional[float]
+    eps: float | None
 
-    dividend_payout: Optional[float]
+    dividend_payout: float | None
 
     class Config:
         from_attributes = True
-        

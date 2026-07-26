@@ -36,9 +36,7 @@ def test_it_sector_companies():
 
 def test_unknown_sector():
 
-    response = client.get(
-        "/api/v1/sectors/INVALID_SECTOR/companies"
-    )
+    response = client.get("/api/v1/sectors/INVALID_SECTOR/companies")
 
     # Your implementation may return either:
     # 200 + []

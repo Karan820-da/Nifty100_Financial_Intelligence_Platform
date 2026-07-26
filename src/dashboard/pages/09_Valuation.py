@@ -1,7 +1,6 @@
-import streamlit as st
 import pandas as pd
 import plotly.express as px
-
+import streamlit as st
 from utils.db import get_engine
 
 st.title("💰 Valuation Analysis")
@@ -55,7 +54,7 @@ numeric_cols = [
     "pe_ratio",
     "pb_ratio",
     "ev_ebitda",
-    "free_cash_flow_cr"
+    "free_cash_flow_cr",
 ]
 
 for col in numeric_cols:
@@ -65,26 +64,14 @@ for col in numeric_cols:
 # Calculations
 # -----------------------------
 
-df["fcf_yield_pct"] = (
-    df["free_cash_flow_cr"] /
-    df["market_cap_crore"]
-) * 100
+df["fcf_yield_pct"] = (df["free_cash_flow_cr"] / df["market_cap_crore"]) * 100
 
-sector_pe = (
-    df.groupby("broad_sector")["pe_ratio"]
-      .median()
-      .rename("sector_median_pe")
-)
+sector_pe = df.groupby("broad_sector")["pe_ratio"].median().rename("sector_median_pe")
 
-df = df.merge(
-    sector_pe,
-    on="broad_sector",
-    how="left"
-)
+df = df.merge(sector_pe, on="broad_sector", how="left")
 
 df["pe_vs_sector"] = (
-    (df["pe_ratio"] - df["sector_median_pe"])
-    / df["sector_median_pe"]
+    (df["pe_ratio"] - df["sector_median_pe"]) / df["sector_median_pe"]
 ) * 100
 
 
@@ -111,13 +98,11 @@ df["flag"] = df.apply(valuation_flag, axis=1)
 st.sidebar.header("Filters")
 
 sector = st.sidebar.selectbox(
-    "Sector",
-    ["All"] + sorted(df["broad_sector"].dropna().unique().tolist())
+    "Sector", ["All"] + sorted(df["broad_sector"].dropna().unique().tolist())
 )
 
 flag = st.sidebar.selectbox(
-    "Valuation Flag",
-    ["All", "Fair", "Discount", "Caution", "No Data"]
+    "Valuation Flag", ["All", "Fair", "Discount", "Caution", "No Data"]
 )
 
 if sector != "All":
@@ -138,22 +123,13 @@ with c1:
     st.metric("Companies", df["company_id"].nunique())
 
 with c2:
-    st.metric(
-        "Average PE",
-        round(df["pe_ratio"].mean(skipna=True), 2)
-    )
+    st.metric("Average PE", round(df["pe_ratio"].mean(skipna=True), 2))
 
 with c3:
-    st.metric(
-        "Average PB",
-        round(df["pb_ratio"].mean(skipna=True), 2)
-    )
+    st.metric("Average PB", round(df["pb_ratio"].mean(skipna=True), 2))
 
 with c4:
-    st.metric(
-        "Average FCF Yield %",
-        round(df["fcf_yield_pct"].mean(skipna=True), 2)
-    )
+    st.metric("Average FCF Yield %", round(df["fcf_yield_pct"].mean(skipna=True), 2))
 
 st.divider()
 
@@ -163,27 +139,16 @@ st.divider()
 
 st.subheader("📈 Valuation Flag Distribution")
 
-flag_chart = px.pie(
-    df,
-    names="flag",
-    title="Valuation Flags"
-)
+flag_chart = px.pie(df, names="flag", title="Valuation Flags")
 
 st.plotly_chart(flag_chart, use_container_width=True)
 
 st.subheader("🏭 Sector Median PE")
 
-sector_chart = (
-    df.groupby("broad_sector")["sector_median_pe"]
-      .first()
-      .reset_index()
-)
+sector_chart = df.groupby("broad_sector")["sector_median_pe"].first().reset_index()
 
 fig = px.bar(
-    sector_chart,
-    x="broad_sector",
-    y="sector_median_pe",
-    title="Sector Median PE"
+    sector_chart, x="broad_sector", y="sector_median_pe", title="Sector Median PE"
 )
 
 st.plotly_chart(fig, use_container_width=True)
@@ -205,11 +170,11 @@ st.dataframe(
             "ev_ebitda",
             "fcf_yield_pct",
             "sector_median_pe",
-            "flag"
+            "flag",
         ]
     ],
     use_container_width=True,
-    hide_index=True
+    hide_index=True,
 )
 
 # -----------------------------
@@ -221,14 +186,9 @@ st.subheader("⬇ Export")
 csv = df.to_csv(index=False)
 
 st.download_button(
-    "📥 Download Valuation Report (CSV)",
-    csv,
-    "valuation_report.csv",
-    "text/csv"
+    "📥 Download Valuation Report (CSV)", csv, "valuation_report.csv", "text/csv"
 )
 
 st.divider()
 
-st.caption(
-    "Sprint 4 • Valuation Analytics | Nifty100 Financial Intelligence Platform"
-)
+st.caption("Sprint 4 • Valuation Analytics | Nifty100 Financial Intelligence Platform")

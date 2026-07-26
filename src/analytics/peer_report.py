@@ -1,8 +1,8 @@
 import os
-import pandas as pd
 
-from sqlalchemy import create_engine
+import pandas as pd
 from dotenv import load_dotenv
+from sqlalchemy import create_engine
 
 # Load environment variables
 load_dotenv()
@@ -46,39 +46,19 @@ left join companies c
 left join peer_groups pg
     on fr.company_id = pg.company_id
 """
-df = pd.read_sql(
-    query,
-    engine
-)
+df = pd.read_sql(query, engine)
 
 # Remove non-standard periods
-df = df[
-    ~df["year"].isin(
-        [
-            "TTM",
-            "Mar 2016 9m",
-            "Mar 2023 15"
-        ]
-    )
-].copy()
+df = df[~df["year"].isin(["TTM", "Mar 2016 9m", "Mar 2023 15"])].copy()
 
 # Convert year to datetime
-df["year_dt"] = pd.to_datetime(
-    df["year"],
-    format="%b %Y",
-    errors="coerce"
-)
+df["year_dt"] = pd.to_datetime(df["year"], format="%b %Y", errors="coerce")
 
 # Remove invalid dates
 df = df.dropna(subset=["year_dt"])
 
 # Keep latest record for each company
-df = (
-    df.sort_values("year_dt")
-      .groupby("company_id")
-      .tail(1)
-      .reset_index(drop=True)
-)
+df = df.sort_values("year_dt").groupby("company_id").tail(1).reset_index(drop=True)
 
 print("\nLatest Company Records")
 print("=" * 50)
@@ -91,23 +71,13 @@ print("Total Companies :", len(df))
 
 import os
 
-os.makedirs(
-    "output",
-    exist_ok=True
-)
+os.makedirs("output", exist_ok=True)
 
 output_file = "output/peer_comparison.xlsx"
 
-with pd.ExcelWriter(
-    output_file,
-    engine="openpyxl"
-) as writer:
+with pd.ExcelWriter(output_file, engine="openpyxl") as writer:
 
-    peer_groups = sorted(
-        df["peer_group_name"]
-        .dropna()
-        .unique()
-    )
+    peer_groups = sorted(df["peer_group_name"].dropna().unique())
 
     print()
 
@@ -115,27 +85,15 @@ with pd.ExcelWriter(
 
     for group in peer_groups:
 
-        group_df = (
-            df[
-                df["peer_group_name"] == group
-            ]
-            .sort_values(
-                "composite_quality_score",
-                ascending=False
-            )
+        group_df = df[df["peer_group_name"] == group].sort_values(
+            "composite_quality_score", ascending=False
         )
 
         sheet_name = group[:31]
 
-        group_df.to_excel(
-            writer,
-            sheet_name=sheet_name,
-            index=False
-        )
+        group_df.to_excel(writer, sheet_name=sheet_name, index=False)
 
-        print(
-            f"{group} : {len(group_df)} companies exported."
-        )
+        print(f"{group} : {len(group_df)} companies exported.")
 
 print()
 

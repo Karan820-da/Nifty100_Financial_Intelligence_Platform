@@ -7,11 +7,7 @@ import pandas as pd
 # Add src folder
 # ---------------------------------------
 
-sys.path.append(
-    os.path.abspath(
-        os.path.join(os.path.dirname(__file__), "..")
-    )
-)
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
 
 from dashboard.utils.db import get_engine
 
@@ -22,14 +18,10 @@ engine = get_engine()
 # ---------------------------------------
 
 financial = pd.read_sql(
-    "SELECT * FROM financial_ratios ORDER BY company_id, year",
-    engine
+    "SELECT * FROM financial_ratios ORDER BY company_id, year", engine
 )
 
-profit = pd.read_sql(
-    "SELECT * FROM profitandloss ORDER BY company_id, year",
-    engine
-)
+profit = pd.read_sql("SELECT * FROM profitandloss ORDER BY company_id, year", engine)
 
 companies = pd.read_sql(
     """
@@ -38,7 +30,7 @@ companies = pd.read_sql(
         company_name
     FROM companies
     """,
-    engine
+    engine,
 )
 print("Financial Ratios :", financial.shape)
 print("Profit & Loss    :", profit.shape)
@@ -49,13 +41,8 @@ pros_cons = []
 # Helper Function
 # ---------------------------------------
 
-def add_signal(
-    company,
-    signal_type,
-    rule_id,
-    text,
-    confidence
-):
+
+def add_signal(company, signal_type, rule_id, text, confidence):
     """
     Add a pro/con signal if confidence >= 60
     """
@@ -68,9 +55,11 @@ def add_signal(
                 "type": signal_type,
                 "rule_id": rule_id,
                 "text": text,
-                "confidence_pct": confidence
+                "confidence_pct": confidence,
             }
         )
+
+
 # ---------------------------------------
 # Generate Pro Rules 1–6
 # ---------------------------------------
@@ -116,10 +105,7 @@ for company in companies["company_id"]:
     # ICR > 10 OR Debt Free
     # -----------------------------------
 
-    if (
-        latest_fr["interest_coverage"] > 10
-        or latest_fr["debt_to_equity"] == 0
-    ):
+    if latest_fr["interest_coverage"] > 10 or latest_fr["debt_to_equity"] == 0:
 
         add_signal(
             company,
@@ -435,10 +421,7 @@ pros_df = pd.DataFrame(pros_cons)
 
 for company in companies["company_id"]:
 
-    has_pro = (
-        (pros_df["company_id"] == company) &
-        (pros_df["type"] == "pro")
-    ).any()
+    has_pro = ((pros_df["company_id"] == company) & (pros_df["type"] == "pro")).any()
 
     if not has_pro:
 
@@ -462,10 +445,7 @@ pros_df = pd.DataFrame(pros_cons)
 
 for company in companies["company_id"]:
 
-    has_con = (
-        (pros_df["company_id"] == company) &
-        (pros_df["type"] == "con")
-    ).any()
+    has_con = ((pros_df["company_id"] == company) & (pros_df["type"] == "con")).any()
 
     if not has_con:
 
@@ -493,10 +473,7 @@ print(pros_df.head(20))
 
 os.makedirs("output", exist_ok=True)
 
-pros_df.to_csv(
-    "output/pros_cons_generated.csv",
-    index=False
-)
+pros_df.to_csv("output/pros_cons_generated.csv", index=False)
 
 print("\nOutput Saved Successfully!")
 print("Saved to: output/pros_cons_generated.csv")
@@ -519,13 +496,11 @@ print(f"Companies with Pros : {pro_companies}")
 print(f"Companies with Cons : {con_companies}")
 
 missing_pro = sorted(
-    set(companies["company_id"]) -
-    set(pros_df[pros_df["type"] == "pro"]["company_id"])
+    set(companies["company_id"]) - set(pros_df[pros_df["type"] == "pro"]["company_id"])
 )
 
 missing_con = sorted(
-    set(companies["company_id"]) -
-    set(pros_df[pros_df["type"] == "con"]["company_id"])
+    set(companies["company_id"]) - set(pros_df[pros_df["type"] == "con"]["company_id"])
 )
 
 print("\nMissing Pro Signals :", len(missing_pro))
@@ -533,4 +508,3 @@ print(missing_pro)
 
 print("\nMissing Con Signals :", len(missing_con))
 print(missing_con)
-

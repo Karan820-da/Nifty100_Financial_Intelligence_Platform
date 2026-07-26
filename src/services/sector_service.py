@@ -1,4 +1,5 @@
 from sqlalchemy import text
+
 from src.dashboard.utils.db import get_engine
 
 
@@ -41,6 +42,7 @@ def get_sector_summary():
         rows = result.mappings().all()
 
     return [dict(row) for row in rows]
+
 
 def get_companies_by_sector(sector: str):
 

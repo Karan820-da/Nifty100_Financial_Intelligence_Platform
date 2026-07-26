@@ -1,16 +1,17 @@
-from fastapi import FastAPI, Request
-from fastapi.middleware.cors import CORSMiddleware
 import time
 
+from fastapi import FastAPI, Request
+from fastapi.middleware.cors import CORSMiddleware
+
 from src.api.routers import (
-    health,
     companies,
+    documents,
+    health,
+    peers,
+    portfolio,
     screener,
     sectors,
-    peers,
     valuation,
-    portfolio,
-    documents,
 )
 
 API_VERSION = "1.0.0"
@@ -18,7 +19,7 @@ API_VERSION = "1.0.0"
 app = FastAPI(
     title="Nifty100 Financial Intelligence API",
     version=API_VERSION,
-    description="REST API for the Nifty100 Financial Intelligence Platform"
+    description="REST API for the Nifty100 Financial Intelligence Platform",
 )
 
 # ---------------------------------------------------------
@@ -36,6 +37,7 @@ app.add_middleware(
 # ---------------------------------------------------------
 # Request Logging Middleware
 # ---------------------------------------------------------
+
 
 @app.middleware("http")
 async def log_requests(request: Request, call_next):
@@ -60,61 +62,28 @@ async def log_requests(request: Request, call_next):
 # Root Endpoint
 # ---------------------------------------------------------
 
+
 @app.get("/")
 def root():
-    return {
-        "message": "Nifty100 Financial Intelligence API is running."
-    }
+    return {"message": "Nifty100 Financial Intelligence API is running."}
 
 
 # ---------------------------------------------------------
 # API Routers
 # ---------------------------------------------------------
 
-app.include_router(
-    health.router,
-    prefix="/api/v1",
-    tags=["Health"]
-)
+app.include_router(health.router, prefix="/api/v1", tags=["Health"])
 
-app.include_router(
-    companies.router,
-    prefix="/api/v1",
-    tags=["Companies"]
-)
+app.include_router(companies.router, prefix="/api/v1", tags=["Companies"])
 
-app.include_router(
-    screener.router,
-    prefix="/api/v1",
-    tags=["Screener"]
-)
+app.include_router(screener.router, prefix="/api/v1", tags=["Screener"])
 
-app.include_router(
-    sectors.router,
-    prefix="/api/v1",
-    tags=["Sectors"]
-)
+app.include_router(sectors.router, prefix="/api/v1", tags=["Sectors"])
 
-app.include_router(
-    peers.router,
-    prefix="/api/v1",
-    tags=["Peers"]
-)
+app.include_router(peers.router, prefix="/api/v1", tags=["Peers"])
 
-app.include_router(
-    valuation.router,
-    prefix="/api/v1",
-    tags=["Valuation"]
-)
+app.include_router(valuation.router, prefix="/api/v1", tags=["Valuation"])
 
-app.include_router(
-    portfolio.router,
-    prefix="/api/v1",
-    tags=["Portfolio"]
-)
+app.include_router(portfolio.router, prefix="/api/v1", tags=["Portfolio"])
 
-app.include_router(
-    documents.router,
-    prefix="/api/v1",
-    tags=["Documents"]
-)
+app.include_router(documents.router, prefix="/api/v1", tags=["Documents"])

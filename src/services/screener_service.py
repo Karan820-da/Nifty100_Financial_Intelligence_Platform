@@ -7,7 +7,7 @@ def screen_companies(
     min_roe: float = 15,
     max_de: float = 1,
     max_pe: float = 30,
-    min_market_cap: float = 1000
+    min_market_cap: float = 1000,
 ):
     engine = get_engine()
 
@@ -42,14 +42,18 @@ def screen_companies(
     """)
 
     with engine.connect() as conn:
-        rows = conn.execute(
-            query,
-            {
-                "min_roe": min_roe,
-                "max_de": max_de,
-                "max_pe": max_pe,
-                "min_market_cap": min_market_cap,
-            },
-        ).mappings().all()
+        rows = (
+            conn.execute(
+                query,
+                {
+                    "min_roe": min_roe,
+                    "max_de": max_de,
+                    "max_pe": max_pe,
+                    "min_market_cap": min_market_cap,
+                },
+            )
+            .mappings()
+            .all()
+        )
 
     return [dict(row) for row in rows]

@@ -3,7 +3,6 @@ Profitability Ratio Engine
 
 """
 
-import math
 
 
 def net_profit_margin(net_profit, sales):
@@ -53,11 +52,7 @@ def return_on_equity(net_profit, equity_capital, reserves):
 
 
 def return_on_capital_employed(
-    operating_profit,
-    interest,
-    equity_capital,
-    reserves,
-    borrowings
+    operating_profit, interest, equity_capital, reserves, borrowings
 ):
     """
     ROCE = EBIT / Capital Employed
@@ -84,6 +79,7 @@ def return_on_assets(net_profit, total_assets):
 
     return round((net_profit / total_assets) * 100, 2)
 
+
 def debt_to_equity(borrowings, equity_capital, reserves):
     equity = equity_capital + reserves
 
@@ -103,18 +99,12 @@ def high_leverage_flag(de_ratio, sector):
     return de_ratio > 5 and sector != "Financials"
 
 
-def interest_coverage_ratio(
-        operating_profit,
-        other_income,
-        interest):
+def interest_coverage_ratio(operating_profit, other_income, interest):
 
     if interest == 0:
         return None
 
-    return round(
-        (operating_profit + other_income) / interest,
-        2
-    )
+    return round((operating_profit + other_income) / interest, 2)
 
 
 def icr_label(interest):

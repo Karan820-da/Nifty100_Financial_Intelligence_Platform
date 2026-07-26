@@ -32,7 +32,6 @@ def test_health_contains_all_tables():
     tables = response.json()["db_row_counts"]
 
     expected_tables = [
-
         "analysis",
         "balancesheet",
         "cashflow",
@@ -45,8 +44,7 @@ def test_health_contains_all_tables():
         "profitandloss",
         "prosandcons",
         "sectors",
-        "stock_prices"
-
+        "stock_prices",
     ]
 
     for table in expected_tables:

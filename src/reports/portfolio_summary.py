@@ -1,18 +1,17 @@
-from src.reports.data_loader import (
-    load_company,
-    load_profit_loss,
-    load_ratios,
-    load_market_cap,
-)
-
-from src.dashboard.utils.db import get_engine
-
 import os
-import pandas as pd
 
+import pandas as pd
 from reportlab.lib import colors
 from reportlab.lib.pagesizes import A4
 from reportlab.pdfgen import canvas
+
+from src.dashboard.utils.db import get_engine
+from src.reports.data_loader import (
+    load_company,
+    load_market_cap,
+    load_profit_loss,
+    load_ratios,
+)
 
 PAGE_WIDTH, PAGE_HEIGHT = A4
 
@@ -21,6 +20,7 @@ engine = get_engine()
 # --------------------------------------------------
 # Load Sector
 # --------------------------------------------------
+
 
 def load_sector(company_id):
 
@@ -33,9 +33,11 @@ def load_sector(company_id):
 
     return pd.read_sql(query, engine)
 
+
 # --------------------------------------------------
 # Load All Companies
 # --------------------------------------------------
+
 
 def get_all_companies():
 
@@ -54,6 +56,7 @@ def get_all_companies():
 # Display Company Data
 # --------------------------------------------------
 
+
 def display_company_summary(company_id):
 
     company = load_company(company_id)
@@ -64,9 +67,11 @@ def display_company_summary(company_id):
     latest_ratio = ratios.iloc[-1]
     latest_market = market.iloc[0]
 
+
 # --------------------------------------------------
 # Header
 # --------------------------------------------------
+
 
 def draw_header(c):
 
@@ -101,9 +106,11 @@ def draw_header(c):
         "Portfolio Summary",
     )
 
+
 # --------------------------------------------------
 # Company Information
 # --------------------------------------------------
+
 
 def draw_company_info(c, company_name, ticker, sector):
 
@@ -128,9 +135,11 @@ def draw_company_info(c, company_name, ticker, sector):
         f"Sector : {sector}",
     )
 
+
 # --------------------------------------------------
 # KPI Table
 # --------------------------------------------------
+
 
 def draw_kpi_table(c, kpis):
 
@@ -171,9 +180,11 @@ def draw_kpi_table(c, kpis):
 
         y -= row_height
 
+
 # --------------------------------------------------
 # Trend Arrow
 # --------------------------------------------------
+
 
 def get_trend_arrow(previous, current):
 
@@ -190,9 +201,11 @@ def get_trend_arrow(previous, current):
 
     return "→"
 
+
 # --------------------------------------------------
 # Trend Section
 # --------------------------------------------------
+
 
 def draw_trend_section(c, revenue_arrow, profit_arrow, eps_arrow):
 
@@ -205,13 +218,9 @@ def draw_trend_section(c, revenue_arrow, profit_arrow, eps_arrow):
     c.line(x, y - 8, 555, y - 8)
 
     rows = [
-
         ("Revenue", revenue_arrow),
-
         ("Net Profit", profit_arrow),
-
         ("EPS", eps_arrow),
-
     ]
 
     y -= 40
@@ -291,6 +300,7 @@ def create_portfolio_summary(company_id):
     print(pdf_path)
     print("=" * 50)
 
+
 def create_portfolio_summary_all():
 
     companies = get_all_companies()
@@ -333,9 +343,7 @@ def create_portfolio_summary_all():
             # Trend Calculation
             # ----------------------------
 
-            annual_profit = profit[
-                profit["year"] != "TTM"
-            ].copy()
+            annual_profit = profit[profit["year"] != "TTM"].copy()
 
             if len(annual_profit) >= 2:
 
@@ -431,6 +439,8 @@ def create_portfolio_summary_all():
     print(f"Companies Added : {total_companies}")
     print(pdf_path)
     print("=" * 60)
+
+
 # --------------------------------------------------
 # Test
 # --------------------------------------------------

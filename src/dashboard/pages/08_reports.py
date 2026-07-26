@@ -1,13 +1,9 @@
 import streamlit as st
-import pandas as pd
-
 from utils.db import get_base_data
 
 st.title("📄 Reports & Export")
 
-st.write(
-    "View dataset statistics, preview the financial data, and export reports."
-)
+st.write("View dataset statistics, preview the financial data, and export reports.")
 
 st.divider()
 
@@ -37,22 +33,15 @@ stats = df[
         "pe_ratio",
         "return_on_equity_pct",
         "debt_to_equity",
-        "composite_quality_score"
+        "composite_quality_score",
     ]
 ].describe()
 
-st.dataframe(
-    stats,
-    use_container_width=True
-)
+st.dataframe(stats, use_container_width=True)
 
 st.subheader("📋 Dataset Preview")
 
-st.dataframe(
-    df.head(20),
-    use_container_width=True,
-    hide_index=True
-)
+st.dataframe(df.head(20), use_container_width=True, hide_index=True)
 
 st.subheader("⬇ Export Data")
 
@@ -62,13 +51,12 @@ st.download_button(
     label="📥 Download Dataset (CSV)",
     data=csv,
     file_name="nifty100_financial_data.csv",
-    mime="text/csv"
+    mime="text/csv",
 )
 
 st.subheader("ℹ️ Project Information")
 
-st.info(
-    """
+st.info("""
 ### Nifty100 Financial Intelligence Platform
 
 **Features**
@@ -90,8 +78,7 @@ st.info(
 - Plotly Express
 
 This dashboard helps analyze Nifty100 companies using financial ratios, market capitalization, valuation metrics, and sector-wise insights.
-"""
-)
+""")
 
 st.divider()
 

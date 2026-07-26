@@ -1,10 +1,10 @@
 import os
+
+import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
-import matplotlib.pyplot as plt
-
-from sqlalchemy import create_engine
 from dotenv import load_dotenv
+from sqlalchemy import create_engine
 
 load_dotenv()
 
@@ -52,36 +52,17 @@ def load_data():
     df = pd.read_sql(query, engine)
 
     # Remove invalid periods
-    df = df[
-        ~df["year"].isin(
-            [
-                "TTM",
-                "Mar 2016 9m",
-                "Mar 2023 15"
-            ]
-        )
-    ].copy()
+    df = df[~df["year"].isin(["TTM", "Mar 2016 9m", "Mar 2023 15"])].copy()
 
     # Convert year
-    df["year_dt"] = pd.to_datetime(
-        df["year"],
-        format="%b %Y",
-        errors="coerce"
-    )
+    df["year_dt"] = pd.to_datetime(df["year"], format="%b %Y", errors="coerce")
 
     df = df.dropna(subset=["year_dt"])
 
     # Keep latest financial year
-    df = (
-        df.sort_values("year_dt")
-          .groupby("company_id")
-          .tail(1)
-          .reset_index(drop=True)
-    )
+    df = df.sort_values("year_dt").groupby("company_id").tail(1).reset_index(drop=True)
 
     return df
-
-
 
 
 def create_radar_chart(df, company_id):
@@ -94,7 +75,7 @@ def create_radar_chart(df, company_id):
         "free_cash_flow_cr",
         "pat_cagr_5yr",
         "revenue_cagr_5yr",
-        "composite_quality_score"
+        "composite_quality_score",
     ]
 
     company = df[df["company_id"] == company_id]
@@ -119,15 +100,10 @@ def create_radar_chart(df, company_id):
         "FCF",
         "PAT CAGR",
         "Revenue CAGR",
-        "Quality Score"
+        "Quality Score",
     ]
 
-    angles = np.linspace(
-        0,
-        2 * np.pi,
-        len(labels),
-        endpoint=False
-    ).tolist()
+    angles = np.linspace(0, 2 * np.pi, len(labels), endpoint=False).tolist()
 
     company_values += company_values[:1]
     peer_values += peer_values[:1]
@@ -137,51 +113,28 @@ def create_radar_chart(df, company_id):
 
     ax = plt.subplot(111, polar=True)
 
-    ax.plot(
-        angles,
-        company_values,
-        linewidth=2,
-        label=company_id
-    )
+    ax.plot(angles, company_values, linewidth=2, label=company_id)
 
-    ax.fill(
-        angles,
-        company_values,
-        alpha=0.25
-    )
+    ax.fill(angles, company_values, alpha=0.25)
 
-    ax.plot(
-        angles,
-        peer_values,
-        linestyle="--",
-        linewidth=2,
-        label="Peer Average"
-    )
+    ax.plot(angles, peer_values, linestyle="--", linewidth=2, label="Peer Average")
 
     ax.set_xticks(angles[:-1])
 
     ax.set_xticklabels(labels)
 
-    plt.title(
-        f"{company.iloc[0]['company_name']}\n{peer_group}"
-    )
+    plt.title(f"{company.iloc[0]['company_name']}\n{peer_group}")
 
-    plt.legend(
-        loc="upper right"
-    )
+    plt.legend(loc="upper right")
 
-    os.makedirs(
-        "reports/radar_charts",
-        exist_ok=True
-    )
+    os.makedirs("reports/radar_charts", exist_ok=True)
 
-    plt.savefig(
-        f"reports/radar_charts/{company_id}_radar.png"
-    )
+    plt.savefig(f"reports/radar_charts/{company_id}_radar.png")
 
     plt.close()
 
     print(f"{company_id} chart created.")
+
 
 if __name__ == "__main__":
 
@@ -191,10 +144,7 @@ if __name__ == "__main__":
 
     for company in df["company_id"]:
 
-        create_radar_chart(
-            df,
-            company
-        )
+        create_radar_chart(df, company)
 
     print("\n======================================")
     print("Radar charts generated successfully.")

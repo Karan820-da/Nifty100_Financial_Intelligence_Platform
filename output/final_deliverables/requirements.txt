@@ -1,0 +1,13 @@
+fastapi
+uvicorn
+streamlit
+pandas
+sqlalchemy
+pymysql
+plotly
+pytest
+pytest-html
+black
+ruff
+requests
+openpyxl

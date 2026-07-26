@@ -1,16 +1,13 @@
 import os
-import sys
 import re
+import sys
+
 import pandas as pd
 
 # -------------------------------------------------
 # Add src folder to Python path
 # -------------------------------------------------
-sys.path.append(
-    os.path.abspath(
-        os.path.join(os.path.dirname(__file__), "..")
-    )
-)
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
 
 from dashboard.utils.db import get_engine
 
@@ -39,14 +36,14 @@ print(f"Loaded {len(df)} records from analysis table.")
 patterns = {
     "years": r"(\d+)\s*Years?:?\s*(-?[\d.]+)%",
     "last_year": r"Last\s*Year:?\s*(-?[\d.]+)%",
-    "ttm": r"TTM:?\s*(-?[\d.]+)%"
+    "ttm": r"TTM:?\s*(-?[\d.]+)%",
 }
 
 metrics = [
     "compounded_sales_growth",
     "compounded_profit_growth",
     "stock_price_cagr",
-    "roe"
+    "roe",
 ]
 
 parsed_rows = []
@@ -76,12 +73,14 @@ for _, row in df.iterrows():
         match = re.search(patterns["years"], text, re.IGNORECASE)
 
         if match:
-            parsed_rows.append({
-                "company_id": company,
-                "metric_type": metric,
-                "period_years": int(match.group(1)),
-                "value_pct": float(match.group(2))
-            })
+            parsed_rows.append(
+                {
+                    "company_id": company,
+                    "metric_type": metric,
+                    "period_years": int(match.group(1)),
+                    "value_pct": float(match.group(2)),
+                }
+            )
             matched = True
 
         # -----------------------------
@@ -89,20 +88,18 @@ for _, row in df.iterrows():
         # -----------------------------
         if not matched:
 
-            match = re.search(
-                patterns["last_year"],
-                text,
-                re.IGNORECASE
-            )
+            match = re.search(patterns["last_year"], text, re.IGNORECASE)
 
             if match:
 
-                parsed_rows.append({
-                    "company_id": company,
-                    "metric_type": metric,
-                    "period_years": 1,
-                    "value_pct": float(match.group(1))
-                })
+                parsed_rows.append(
+                    {
+                        "company_id": company,
+                        "metric_type": metric,
+                        "period_years": 1,
+                        "value_pct": float(match.group(1)),
+                    }
+                )
 
                 matched = True
 
@@ -111,20 +108,18 @@ for _, row in df.iterrows():
         # -----------------------------
         if not matched:
 
-            match = re.search(
-                patterns["ttm"],
-                text,
-                re.IGNORECASE
-            )
+            match = re.search(patterns["ttm"], text, re.IGNORECASE)
 
             if match:
 
-                parsed_rows.append({
-                    "company_id": company,
-                    "metric_type": metric,
-                    "period_years": 0,
-                    "value_pct": float(match.group(1))
-                })
+                parsed_rows.append(
+                    {
+                        "company_id": company,
+                        "metric_type": metric,
+                        "period_years": 0,
+                        "value_pct": float(match.group(1)),
+                    }
+                )
 
                 matched = True
 
@@ -133,11 +128,9 @@ for _, row in df.iterrows():
         # -----------------------------
         if not matched:
 
-            failed_rows.append({
-                "company_id": company,
-                "metric_type": metric,
-                "original_text": text
-            })
+            failed_rows.append(
+                {"company_id": company, "metric_type": metric, "original_text": text}
+            )
 
 # -------------------------------------------------
 # Create Output Folder
@@ -150,15 +143,9 @@ failed_df = pd.DataFrame(failed_rows)
 # -------------------------------------------------
 # Save Outputs
 # -------------------------------------------------
-parsed_df.to_csv(
-    "output/analysis_parsed.csv",
-    index=False
-)
+parsed_df.to_csv("output/analysis_parsed.csv", index=False)
 
-failed_df.to_csv(
-    "output/parse_failures.csv",
-    index=False
-)
+failed_df.to_csv("output/parse_failures.csv", index=False)
 
 # -------------------------------------------------
 # Summary

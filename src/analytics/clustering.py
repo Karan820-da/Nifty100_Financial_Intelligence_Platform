@@ -12,17 +12,17 @@ Author : Karan Taynak
 
 import os
 import warnings
-import seaborn as sns
-import numpy as np
-import pandas as pd
-import matplotlib.pyplot as plt
+from pathlib import Path
 
-from sqlalchemy import text
+import matplotlib.pyplot as plt
+import pandas as pd
+import seaborn as sns
 from scipy.stats import zscore
+from sklearn.cluster import KMeans
 from sklearn.impute import SimpleImputer
 from sklearn.preprocessing import StandardScaler
-from sklearn.cluster import KMeans
-from pathlib import Path
+from sqlalchemy import text
+
 from src.dashboard.utils.db import get_engine
 
 warnings.filterwarnings("ignore")
@@ -32,89 +32,24 @@ warnings.filterwarnings("ignore")
 # ----------------------------------------------------------
 
 FEATURE_COLUMNS = [
-
     "return_on_equity_pct",
-
     "debt_to_equity",
-
     "revenue_cagr_5yr",
-
     "free_cash_flow_cr",
-
-    "operating_profit_margin_pct"
-
+    "operating_profit_margin_pct",
 ]
 
 # ----------------------------------------------------------
 # Load Latest Financial Ratios
 # ----------------------------------------------------------
 
-def load_data():
-
-    """
-    Load latest financial ratios for each company.
-    """
-
-    engine = get_engine()
-
-    query = """
-
-    SELECT
-
-        fr.company_id,
-
-        c.company_name,
-
-        s.broad_sector AS sector,
-
-        fr.return_on_equity_pct,
-
-        fr.debt_to_equity,
-
-        fr.revenue_cagr_5yr,
-
-        fr.free_cash_flow_cr,
-
-        fr.operating_profit_margin_pct
-
-    FROM financial_ratios fr
-
-    INNER JOIN (
-
-        SELECT
-            company_id,
-            MAX(id) AS latest_id
-
-        FROM financial_ratios
-
-        GROUP BY company_id
-
-    ) latest
-
-        ON fr.id = latest.latest_id
-
-    INNER JOIN companies c
-
-        ON fr.company_id = c.id
-
-    INNER JOIN sectors s
-
-        ON fr.company_id = s.company_id
-
-    ORDER BY fr.company_id;
-
-    """
-
-    df = pd.read_sql(text(query), engine)
-
-    return df
 
 # ----------------------------------------------------------
 # Load Latest Financial Ratios
 # ----------------------------------------------------------
 
-def load_data():
 
+def load_data():
     """
     Load latest financial ratios for each company.
     """
@@ -181,9 +116,11 @@ ORDER BY fr.company_id;
 
     return df
 
+
 # ----------------------------------------------------------
 # Dataset Summary
 # ----------------------------------------------------------
+
 
 def dataset_summary(df):
 
@@ -213,12 +150,13 @@ def dataset_summary(df):
 
     print("=" * 60)
 
+
 # ----------------------------------------------------------
 # Sector Median Imputation
 # ----------------------------------------------------------
 
-def sector_imputation(df):
 
+def sector_imputation(df):
     """
     Fill missing values using
     sector-wise median.
@@ -228,50 +166,35 @@ def sector_imputation(df):
 
     for column in FEATURE_COLUMNS:
 
-        df[column] = (
-
-            df.groupby("sector")[column]
-
-            .transform(
-
-                lambda x: x.fillna(x.median())
-
-            )
-
+        df[column] = df.groupby("sector")[column].transform(
+            lambda x: x.fillna(x.median())
         )
 
     return df
+
 
 # ----------------------------------------------------------
 # Global Median Imputation
 # ----------------------------------------------------------
 
+
 def global_imputation(df):
 
     df = df.copy()
 
-    imputer = SimpleImputer(
+    imputer = SimpleImputer(strategy="median")
 
-        strategy="median"
-
-    )
-
-    df[FEATURE_COLUMNS] = imputer.fit_transform(
-
-        df[FEATURE_COLUMNS]
-
-    )
+    df[FEATURE_COLUMNS] = imputer.fit_transform(df[FEATURE_COLUMNS])
 
     return df
-
 
 
 # ----------------------------------------------------------
 # Feature Scaling
 # ----------------------------------------------------------
 
-def scale_features(df):
 
+def scale_features(df):
     """
     Scale numerical features.
     """
@@ -280,17 +203,10 @@ def scale_features(df):
 
     scaled = scaler.fit_transform(df[FEATURE_COLUMNS])
 
-    scaled_df = pd.DataFrame(
-
-        scaled,
-
-        columns=FEATURE_COLUMNS,
-
-        index=df.index
-
-    )
+    scaled_df = pd.DataFrame(scaled, columns=FEATURE_COLUMNS, index=df.index)
 
     return scaled_df, scaler
+
 
 # ----------------------------------------------------------
 # Features for Correlation Analysis
@@ -314,23 +230,16 @@ CORRELATION_FEATURES = [
 # Elbow Method
 # ----------------------------------------------------------
 
+
 def generate_elbow_plot(scaled_df):
 
     inertias = []
 
-    k_values = range(2,11)
+    k_values = range(2, 11)
 
     for k in k_values:
 
-        model = KMeans(
-
-            n_clusters=k,
-
-            random_state=42,
-
-            n_init=10
-
-        )
+        model = KMeans(n_clusters=k, random_state=42, n_init=10)
 
         model.fit(scaled_df)
 
@@ -338,17 +247,9 @@ def generate_elbow_plot(scaled_df):
 
     Path("reports").mkdir(exist_ok=True)
 
-    plt.figure(figsize=(8,5))
+    plt.figure(figsize=(8, 5))
 
-    plt.plot(
-
-        k_values,
-
-        inertias,
-
-        marker="o"
-
-    )
+    plt.plot(k_values, inertias, marker="o")
 
     plt.title("KMeans Elbow Method")
 
@@ -360,41 +261,31 @@ def generate_elbow_plot(scaled_df):
 
     plt.tight_layout()
 
-    plt.savefig(
-
-        "reports/elbow_plot.png",
-
-        dpi=300
-
-    )
+    plt.savefig("reports/elbow_plot.png", dpi=300)
 
     plt.close()
 
     print("✓ Elbow plot saved.")
 
+
 # ----------------------------------------------------------
 # KMeans Clustering
 # ----------------------------------------------------------
 
+
 def run_kmeans(scaled_df):
 
-    model = KMeans(
-
-        n_clusters=5,
-
-        random_state=42,
-
-        n_init=10
-
-    )
+    model = KMeans(n_clusters=5, random_state=42, n_init=10)
 
     labels = model.fit_predict(scaled_df)
 
     return model, labels
 
+
 # ----------------------------------------------------------
 # Distance From Centroid
 # ----------------------------------------------------------
+
 
 def centroid_distance(model, scaled_df):
 
@@ -404,26 +295,19 @@ def centroid_distance(model, scaled_df):
 
     return nearest
 
+
 # ----------------------------------------------------------
 # Assign Cluster Names
 # ----------------------------------------------------------
 
-def assign_cluster_names(df):
 
+def assign_cluster_names(df):
     """
     Assign meaningful names to clusters based on
     average financial characteristics.
     """
 
-    summary = (
-
-        df.groupby("cluster_id")[FEATURE_COLUMNS]
-
-        .mean()
-
-        .round(2)
-
-    )
+    summary = df.groupby("cluster_id")[FEATURE_COLUMNS].mean().round(2)
 
     print("\n")
 
@@ -440,57 +324,37 @@ def assign_cluster_names(df):
     # Default names (can be refined after reviewing summary)
 
     cluster_names = {
-
         0: "Growth Leaders",
-
         1: "High Leverage",
-
         2: "Outlier",
-
         3: "Steady Performers",
-
-        4: "Stable Companies"
-
+        4: "Stable Companies",
     }
 
     df["cluster_name"] = df["cluster_id"].map(cluster_names)
 
     return df
 
+
 # ----------------------------------------------------------
 # Cluster Profiling
 # ----------------------------------------------------------
+
 
 def cluster_profile(df):
     """
     Generate mean and median statistics for each cluster.
     """
 
-    mean_profile = (
-        df.groupby("cluster_id")[FEATURE_COLUMNS]
-        .mean()
-        .round(2)
-    )
+    mean_profile = df.groupby("cluster_id")[FEATURE_COLUMNS].mean().round(2)
 
-    median_profile = (
-        df.groupby("cluster_id")[FEATURE_COLUMNS]
-        .median()
-        .round(2)
-    )
+    median_profile = df.groupby("cluster_id")[FEATURE_COLUMNS].median().round(2)
 
-    profile = pd.concat(
-        {
-            "Mean": mean_profile,
-            "Median": median_profile
-        },
-        axis=1
-    )
+    profile = pd.concat({"Mean": mean_profile, "Median": median_profile}, axis=1)
 
     os.makedirs("output", exist_ok=True)
 
-    profile.to_csv(
-        "output/cluster_profile.csv"
-    )
+    profile.to_csv("output/cluster_profile.csv")
 
     print("\n")
     print("=" * 60)
@@ -504,9 +368,11 @@ def cluster_profile(df):
 
     return profile
 
+
 # ----------------------------------------------------------
 # Correlation Heatmap
 # ----------------------------------------------------------
+
 
 def correlation_heatmap(df):
     """
@@ -530,26 +396,25 @@ def correlation_heatmap(df):
         cmap="RdYlBu_r",
         square=True,
         linewidths=0.5,
-        cbar=True
+        cbar=True,
     )
 
     plt.title("Financial KPI Correlation Matrix")
 
     plt.tight_layout()
 
-    plt.savefig(
-        "reports/correlation_heatmap.png",
-        dpi=300
-    )
+    plt.savefig("reports/correlation_heatmap.png", dpi=300)
 
     plt.close()
 
     print("\n✓ Correlation heatmap saved.")
     print("reports/correlation_heatmap.png")
 
+
 # ----------------------------------------------------------
 # Outlier Detection
 # ----------------------------------------------------------
+
 
 def detect_outliers(df):
     """
@@ -568,49 +433,35 @@ def detect_outliers(df):
             if feature not in sector_df.columns:
                 continue
 
-            values = pd.to_numeric(
-                sector_df[feature],
-                errors="coerce"
-            )
+            values = pd.to_numeric(sector_df[feature], errors="coerce")
 
             if values.notna().sum() < 2:
                 continue
 
-            z_scores = zscore(
-                values,
-                nan_policy="omit"
-            )
+            z_scores = zscore(values, nan_policy="omit")
 
             sector_df[f"{feature}_z"] = z_scores
 
-            flagged = sector_df[
-                sector_df[f"{feature}_z"].abs() > 3
-            ]
+            flagged = sector_df[sector_df[f"{feature}_z"].abs() > 3]
 
             for _, row in flagged.iterrows():
 
-                outliers.append({
-
-                    "company_id": row["company_id"],
-                    "company_name": row["company_name"],
-                    "sector": row["sector"],
-                    "metric": feature,
-                    "value": row[feature],
-                    "z_score": round(
-                        row[f"{feature}_z"],
-                        2
-                    )
-
-                })
+                outliers.append(
+                    {
+                        "company_id": row["company_id"],
+                        "company_name": row["company_name"],
+                        "sector": row["sector"],
+                        "metric": feature,
+                        "value": row[feature],
+                        "z_score": round(row[f"{feature}_z"], 2),
+                    }
+                )
 
     outlier_df = pd.DataFrame(outliers)
 
     os.makedirs("output", exist_ok=True)
 
-    outlier_df.to_csv(
-        "output/outlier_report.csv",
-        index=False
-    )
+    outlier_df.to_csv("output/outlier_report.csv", index=False)
 
     print()
 
@@ -622,9 +473,11 @@ def detect_outliers(df):
 
     return outlier_df
 
+
 # ----------------------------------------------------------
 # Portfolio Statistics
 # ----------------------------------------------------------
+
 
 def portfolio_statistics(df):
     """
@@ -635,39 +488,26 @@ def portfolio_statistics(df):
 
     for feature in CORRELATION_FEATURES:
 
-        values = pd.to_numeric(
-            df[feature],
-            errors="coerce"
+        values = pd.to_numeric(df[feature], errors="coerce")
+
+        stats.append(
+            {
+                "KPI": feature,
+                "P10": round(values.quantile(0.10), 2),
+                "P25": round(values.quantile(0.25), 2),
+                "P50": round(values.quantile(0.50), 2),
+                "P75": round(values.quantile(0.75), 2),
+                "P90": round(values.quantile(0.90), 2),
+                "Mean": round(values.mean(), 2),
+                "Std": round(values.std(), 2),
+            }
         )
-
-        stats.append({
-
-            "KPI": feature,
-
-            "P10": round(values.quantile(0.10), 2),
-
-            "P25": round(values.quantile(0.25), 2),
-
-            "P50": round(values.quantile(0.50), 2),
-
-            "P75": round(values.quantile(0.75), 2),
-
-            "P90": round(values.quantile(0.90), 2),
-
-            "Mean": round(values.mean(), 2),
-
-            "Std": round(values.std(), 2)
-
-        })
 
     stats_df = pd.DataFrame(stats)
 
     os.makedirs("output", exist_ok=True)
 
-    stats_df.to_csv(
-        "output/portfolio_stats.csv",
-        index=False
-    )
+    stats_df.to_csv("output/portfolio_stats.csv", index=False)
 
     print()
 
@@ -677,9 +517,11 @@ def portfolio_statistics(df):
 
     return stats_df
 
+
 # ----------------------------------------------------------
 # Cluster Members
 # ----------------------------------------------------------
+
 
 def export_cluster_members(df):
     """
@@ -687,21 +529,10 @@ def export_cluster_members(df):
     """
 
     members = df[
-        [
-            "cluster_id",
-            "cluster_name",
-            "company_id",
-            "company_name",
-            "sector"
-        ]
-    ].sort_values(
-        ["cluster_id", "company_name"]
-    )
+        ["cluster_id", "cluster_name", "company_id", "company_name", "sector"]
+    ].sort_values(["cluster_id", "company_name"])
 
-    members.to_csv(
-        "output/cluster_members.csv",
-        index=False
-    )
+    members.to_csv("output/cluster_members.csv", index=False)
 
     print("\n✓ Cluster members exported.")
     print("output/cluster_members.csv")
@@ -713,33 +544,14 @@ def export_cluster_members(df):
 # Export Results
 # ----------------------------------------------------------
 
+
 def export_results(df):
 
     os.makedirs("output", exist_ok=True)
 
-    output = df[
+    output = df[["company_id", "cluster_id", "cluster_name", "distance_from_centroid"]]
 
-        [
-
-            "company_id",
-
-            "cluster_id",
-
-            "cluster_name",
-
-            "distance_from_centroid"
-
-        ]
-
-    ]
-
-    output.to_csv(
-
-        "output/cluster_labels.csv",
-
-        index=False
-
-    )
+    output.to_csv("output/cluster_labels.csv", index=False)
 
     print()
 
@@ -772,13 +584,7 @@ if __name__ == "__main__":
 
     model, labels = run_kmeans(scaled_df)
 
-    distances = centroid_distance(
-
-        model,
-
-        scaled_df
-
-    )
+    distances = centroid_distance(model, scaled_df)
 
     df["cluster_id"] = labels
 
@@ -829,4 +635,4 @@ if __name__ == "__main__":
 
     print("output/outlier_report.csv")
 
-    print("output/portfolio_stats.csv") 
+    print("output/portfolio_stats.csv")

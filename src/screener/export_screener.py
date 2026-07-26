@@ -1,11 +1,7 @@
 import os
-import pandas as pd
 
-from engine import (
-    load_config,
-    load_financial_ratios,
-    apply_filters
-)
+import pandas as pd
+from engine import apply_filters, load_config, load_financial_ratios
 
 
 def export_screeners():
@@ -22,39 +18,24 @@ def export_screeners():
         "growth_accelerator",
         "dividend_champion",
         "debt_free_blue_chip",
-        "turnaround_watch"
+        "turnaround_watch",
     ]
 
     output_file = "output/screener_output.xlsx"
 
-    with pd.ExcelWriter(
-        output_file,
-        engine="openpyxl"
-    ) as writer:
+    with pd.ExcelWriter(output_file, engine="openpyxl") as writer:
 
         for preset in presets:
 
             print(f"\nRunning {preset}...")
 
-            result = apply_filters(
-                df.copy(),
-                config[preset]
-            )
+            result = apply_filters(df.copy(), config[preset])
 
-            result = result.sort_values(
-                by="composite_quality_score",
-                ascending=False
-            )
+            result = result.sort_values(by="composite_quality_score", ascending=False)
 
-            result.to_excel(
-                writer,
-                sheet_name=preset[:31],
-                index=False
-            )
+            result.to_excel(writer, sheet_name=preset[:31], index=False)
 
-            print(
-                f"{len(result)} companies exported."
-            )
+            print(f"{len(result)} companies exported.")
 
     print("\n========================================")
     print("Screener export completed successfully.")

@@ -2,7 +2,7 @@ from fastapi import APIRouter
 
 router = APIRouter()
 
-from typing import List
+
 from fastapi import APIRouter, Query
 
 from src.schemas.screener import ScreenerResult
@@ -13,7 +13,7 @@ router = APIRouter()
 
 @router.get(
     "/screener",
-    response_model=List[ScreenerResult],
+    response_model=list[ScreenerResult],
 )
 def screener(
     min_roe: float = Query(15),

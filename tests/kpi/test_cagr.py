@@ -1,9 +1,6 @@
 import unittest
 
-from src.analytics.cagr import (
-    calculate_cagr,
-    calculate_period_cagr
-)
+from src.analytics.cagr import calculate_cagr, calculate_period_cagr
 
 
 class TestCagr(unittest.TestCase):
@@ -34,21 +31,12 @@ class TestCagr(unittest.TestCase):
         self.assertEqual(flag, "INVALID_PERIOD")
 
     def test_insufficient_data(self):
-        value, flag = calculate_period_cagr(
-            [100, 120],
-            5
-        )
+        value, flag = calculate_period_cagr([100, 120], 5)
 
-        self.assertEqual(
-            flag,
-            "INSUFFICIENT"
-        )
+        self.assertEqual(flag, "INSUFFICIENT")
 
     def test_five_year_cagr(self):
-        value, flag = calculate_period_cagr(
-            [100, 120, 140, 160, 180, 200],
-            5
-        )
+        value, flag = calculate_period_cagr([100, 120, 140, 160, 180, 200], 5)
 
         self.assertIsNotNone(value)
         self.assertIsNone(flag)
